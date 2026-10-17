@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:alloy"
+    },
+    "C": {
+      "item": "industrialreforged:carbon_plate"
+    },
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "c": {
+      "item": "industrialreforged:energy_crystal"
+    }
+  },
+  "pattern": [
+    "GA ",
+    "GA ",
+    "CcC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:nano_saber"
+  }
+}

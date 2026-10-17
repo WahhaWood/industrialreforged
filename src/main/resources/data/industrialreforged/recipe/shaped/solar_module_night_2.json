@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "industrialreforged:solar_module_night_1"
+    },
+    "C": {
+      "item": "industrialreforged:circuit"
+    }
+  },
+  "pattern": [
+    " P ",
+    "PCP",
+    " P "
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:solar_module_night_2"
+  }
+}

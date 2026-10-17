@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "h": {
+      "item": "industrialreforged:cell"
+    },
+    "t": {
+      "item": "industrialreforged:iron_casing"
+    }
+  },
+  "pattern": [
+    "t  ",
+    " t ",
+    " ht"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:foam_sprayer"
+  }
+}

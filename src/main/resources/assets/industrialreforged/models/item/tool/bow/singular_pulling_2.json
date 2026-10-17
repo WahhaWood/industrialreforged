@@ -1,0 +1,6 @@
+{
+  "parent": "item/bow",
+  "textures": {
+    "layer0": "industrialreforged:item/tool/electric/singular_bow_pulling_2"
+  }
+}

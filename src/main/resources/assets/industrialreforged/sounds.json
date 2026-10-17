@@ -1,0 +1,194 @@
+{
+  "block.reactor.loop": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/reactor/loop"
+    ]
+  },
+  "block.reactor.low": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/reactor/low"
+    ]
+  },
+  "block.reactor.med": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/reactor/med"
+    ]
+  },
+  "block.reactor.high": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/reactor/high"
+    ]
+  },
+  "block.machine.interrupt": {
+    "category": "block",
+    "sounds": [
+      {
+        "name": "industrialreforged:block/interruptone",
+        "stream": true,
+        "repeat": false
+      }
+    ]
+  },
+  "block.macerator.start": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/macerator"
+    ]
+  },
+  "block.extractor.start": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/extractor"
+    ]
+  },
+  "block.compressor.start": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/compressor"
+    ]
+  },
+  "block.electro_furnace.loop": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/furnace/electro_loop"
+    ]
+  },
+  "block.electro_furnace.start": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/furnace/electro_start"
+    ]
+  },
+  "block.electro_furnace.stop": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/furnace/electro_stop"
+    ]
+  },
+  "block.induction.loop": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/induction/loop"
+    ]
+  },
+  "block.induction.start": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/induction/start"
+    ]
+  },
+  "block.induction.stop": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/induction/stop"
+    ]
+  },
+  "block.machine_telechargedloop": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/telechargedloop"
+    ]
+  },
+  "block.machine_teleuse": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/teleuse"
+    ]
+  },
+  "block.machine_pumpop": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/pumpop"
+    ]
+  },
+  "block.machine_ironfurnaceop": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/ironfurnaceop"
+    ]
+  },
+  "block.machine_massfabloop": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/massfabloop"
+    ]
+  },
+  "block.generator.loop": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/generator"
+    ]
+  },
+  "block.geothermal.loop": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/geothermal"
+    ]
+  },
+  "item.jetpack.fire": {
+    "category": "ambient",
+    "sounds": [
+      "industrialreforged:tool/jetpack/fire"
+    ]
+  },
+  "item.jetpack.loop": {
+    "category": "ambient",
+    "sounds": [
+      "industrialreforged:tool/jetpack/loop"
+    ]
+  },
+  "item.saber.idle": {
+    "category": "ambient",
+    "sounds": [
+      "industrialreforged:tool/saber/idle"
+    ]
+  },
+  "item.saber.power": {
+    "category": "ambient",
+    "sounds": [
+      "industrialreforged:tool/saber/power_up"
+    ]
+  },
+  "item.saber.swing": {
+    "category": "ambient",
+    "sounds": [
+      "industrialreforged:tool/saber/swing_1",
+      "industrialreforged:tool/saber/swing_2",
+      "industrialreforged:tool/saber/swing_3"
+    ]
+  },
+  "item.tool_scanner.use": {
+    "category": "ambient",
+    "sounds": [
+      "industrialreforged:tool/scanner"
+    ]
+  },
+  "item.tool.wrench": {
+    "category": "ambient",
+    "sounds": [
+      "industrialreforged:tool/wrench"
+    ]
+  },
+  "item.tool.treetap": {
+    "category": "ambient",
+    "sounds": [
+      "industrialreforged:tool/treetap"
+    ]
+  },
+  "block.recycler.start": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/recyclerop"
+    ]
+  },
+  "block.matter_generator.scrap": {
+    "category": "block",
+    "sounds": [
+      "industrialreforged:block/massfabscrapsolo"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:wire_1_level"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "T": {
+      "item": "industrialreforged:tin_casing"
+    }
+  },
+  "pattern": [
+    " C ",
+    "TRT",
+    "TRT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:re_battery"
+  }
+}

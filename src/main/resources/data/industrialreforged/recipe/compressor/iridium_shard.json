@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "count": 9,
+    "item": "industrialreforged:iridium_shard"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:iridium_ore"
+  }
+}

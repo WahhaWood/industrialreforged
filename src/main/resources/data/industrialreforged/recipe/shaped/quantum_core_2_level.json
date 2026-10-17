@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:quantum_core_1_level"
+    },
+    "P": {
+      "item": "industrialreforged:toxic_plate"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    "PCP",
+    "CSC",
+    "PCP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:quantum_core_2_level"
+  }
+}

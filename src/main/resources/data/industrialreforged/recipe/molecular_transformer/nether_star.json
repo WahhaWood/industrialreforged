@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:molecular_transformer",
+  "energy": 1000000000,
+  "input": {
+    "item": "minecraft:wither_skeleton_skull"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:nether_star"
+  }
+}

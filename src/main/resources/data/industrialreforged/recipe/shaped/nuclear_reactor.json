@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:reactor_chamber"
+    },
+    "G": {
+      "item": "industrialreforged:generator"
+    },
+    "P": {
+      "item": "industrialreforged:dense_lead_plate"
+    },
+    "c": {
+      "item": "industrialreforged:advanced_circuit"
+    }
+  },
+  "pattern": [
+    "PcP",
+    "CCC",
+    "PGP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:nuclear_reactor"
+  }
+}

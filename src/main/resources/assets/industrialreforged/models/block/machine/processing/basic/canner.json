@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "industrialreforged:block/machine/processing/basic/canner_leftright",
+		"down": "industrialreforged:block/machine/processing/basic/canner_bottom",
+		"up": "industrialreforged:block/machine/processing/basic/canner_top",
+		"north": "industrialreforged:block/machine/processing/basic/canner_front",
+		"east": "industrialreforged:block/machine/processing/basic/canner_leftright",
+		"south": "industrialreforged:block/machine/processing/basic/canner_back",
+		"west": "industrialreforged:block/machine/processing/basic/canner_leftright"
+	}
+}

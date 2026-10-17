@@ -1,0 +1,15 @@
+{
+  "type": "industrialreforged:macerator","category": "misc",
+  "ingredient": {
+    "item": "industrialreforged:crushed_osmium"
+  },
+  "result": {
+    "id": "mekanism:dust_osmium"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ]
+}

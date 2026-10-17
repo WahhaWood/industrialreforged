@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "item": "industrialreforged:carbon_mesh"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:carbon_plate"
+  }
+}

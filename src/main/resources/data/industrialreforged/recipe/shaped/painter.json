@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "minecraft:iron_ingot"
+    },
+    "R": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    " RR",
+    " PR",
+    "P  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:painter"
+  }
+}

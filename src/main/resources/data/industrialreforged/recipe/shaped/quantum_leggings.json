@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "I": {
+      "item": "industrialreforged:iridium"
+    },
+    "L": {
+      "item": "industrialreforged:lapotron_crystal"
+    },
+    "M": {
+      "item": "industrialreforged:machine"
+    },
+    "n": {
+      "item": "industrialreforged:nano_leggings"
+    }
+  },
+  "pattern": [
+    "MLM",
+    "InI",
+    "G G"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:quantum_leggings"
+  }
+}

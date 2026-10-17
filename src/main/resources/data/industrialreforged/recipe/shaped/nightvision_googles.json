@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "G": {
+      "item": "industrialreforged:reinforced_glass"
+    },
+    "L": {
+      "item": "minecraft:redstone"
+    },
+    "R": {
+      "item": "industrialreforged:rubber"
+    },
+    "X": {
+      "item": "industrialreforged:advanced_heat_exchanger"
+    },
+    "b": {
+      "item": "industrialreforged:advanced_re_battery"
+    }
+  },
+  "pattern": [
+    "XbX",
+    "LGL",
+    "RCR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:nightvision_googles"
+  }
+}

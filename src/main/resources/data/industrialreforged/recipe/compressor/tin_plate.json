@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "count": 9,
+    "tag": "c:plates/tin"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:dense_tin_plate"
+  }
+}

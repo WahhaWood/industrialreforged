@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:wire_2_level"
+    },
+    "L": {
+      "tag": "c:dusts/lead"
+    },
+    "S": {
+      "tag": "c:dusts/sulfur"
+    },
+    "T": {
+      "item": "industrialreforged:bronze_casing"
+    }
+  },
+  "pattern": [
+    "CTC",
+    "TST",
+    "TLT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:advanced_re_battery"
+  }
+}

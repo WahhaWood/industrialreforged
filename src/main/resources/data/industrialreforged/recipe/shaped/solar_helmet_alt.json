@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:wire_2_level"
+    },
+    "H": {
+      "item": "minecraft:iron_helmet"
+    },
+    "S": {
+      "item": "industrialreforged:solar_generator_1_level"
+    }
+  },
+  "pattern": [
+    " H ",
+    " S ",
+    "CCC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:solar_helmet"
+  }
+}

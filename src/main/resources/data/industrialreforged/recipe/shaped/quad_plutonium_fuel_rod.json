@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "U": {
+      "item": "industrialreforged:plutonium_fuel_rod"
+    },
+    "I": {
+      "tag": "c:plates/iron"
+    },
+    "C": {
+      "tag": "c:plates/copper"
+    }
+  },
+  "pattern": [
+    "UIU",
+    "CIC",
+    "UIU"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:quad_plutonium_fuel_rod"
+  }
+}

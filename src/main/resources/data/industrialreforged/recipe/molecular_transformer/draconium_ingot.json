@@ -1,0 +1,16 @@
+{
+  "type": "industrialreforged:molecular_transformer","category": "misc",
+  "input": {
+    "item": "industrialreforged:iridium_ingot"
+  },
+  "output": {
+    "id": "draconicevolution:draconium_ingot"
+  },
+  "energy": 10000000,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "draconicevolution"
+    }
+  ]
+}

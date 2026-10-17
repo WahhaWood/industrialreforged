@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 9000,
+  "item": {
+    "count": 1,
+    "id": "industrialreforged:reactor_plating"
+  }
+}

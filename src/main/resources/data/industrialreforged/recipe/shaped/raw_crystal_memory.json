@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "tag": "c:dusts/obsidian"
+    },
+    "S": {
+      "item": "industrialreforged:silicon_dioxide_dust"
+    }
+  },
+  "pattern": [
+    "SOS",
+    "OSO",
+    "SOS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:raw_crystal_memory"
+  }
+}

@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "industrialreforged:block/machine/processing/advanced/block_cutter_leftright_active",
+		"down": "industrialreforged:block/machine/processing/advanced/block_cutter_bottomtop",
+		"up": "industrialreforged:block/machine/processing/advanced/block_cutter_bottomtop",
+		"north": "industrialreforged:block/machine/processing/advanced/block_cutter_front_active",
+		"east": "industrialreforged:block/machine/processing/advanced/block_cutter_leftright_active",
+		"south": "industrialreforged:block/machine/processing/advanced/block_cutter_back",
+		"west": "industrialreforged:block/machine/processing/advanced/block_cutter_leftright_active"
+	}
+}

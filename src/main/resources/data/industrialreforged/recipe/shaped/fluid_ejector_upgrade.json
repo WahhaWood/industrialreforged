@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "industrialreforged:electric_motor"
+    },
+    "T": {
+      "tag": "c:plates/tin"
+    }
+  },
+  "pattern": [
+    "T T",
+    " E ",
+    "T T"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:fluid_ejector_upgrade"
+  }
+}

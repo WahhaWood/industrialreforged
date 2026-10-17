@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "industrialreforged:empty_mug"
+    },
+    {
+      "item": "industrialreforged:coffee_powder"
+    },
+    {
+      "type": "neoforge:components",
+      "components": {
+        "industrialreforged:fluid": {
+          "amount": 1000,
+          "id": "minecraft:water"
+        }
+      },
+      "items": "industrialreforged:cell"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:cold_coffee_mug"
+  }
+}

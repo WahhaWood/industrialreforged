@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 1100,
+  "item": {
+    "count": 1,
+    "id": "industrialreforged:electric_motor"
+  }
+}

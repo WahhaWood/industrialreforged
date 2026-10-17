@@ -1,0 +1,18 @@
+{
+	"variants": {
+		"state=plain,axis=y": { "model": "industrialreforged:block/resource/rubber_log" },
+		"state=plain,axis=x": { "model": "industrialreforged:block/resource/rubber_log", "x": 90, "y": 90 },
+		"state=plain,axis=z": { "model": "industrialreforged:block/resource/rubber_log", "x": 90 },
+		"state=spent,axis=y": { "model": "industrialreforged:block/resource/rubber_log_spent" },
+		"state=spent,axis=x": { "model": "industrialreforged:block/resource/rubber_log_spent", "x": 90, "y": 90 },
+		"state=spent,axis=z": { "model": "industrialreforged:block/resource/rubber_log_spent", "x": 90 },
+		"state=dry_north": { "model": "industrialreforged:block/resource/rubber_log_dry" },
+		"state=dry_south": { "model": "industrialreforged:block/resource/rubber_log_dry", "y": 180 },
+		"state=dry_west": { "model": "industrialreforged:block/resource/rubber_log_dry", "y": 270 },
+		"state=dry_east": { "model": "industrialreforged:block/resource/rubber_log_dry", "y": 90 },
+		"state=wet_north": { "model": "industrialreforged:block/resource/rubber_log_wet" },
+		"state=wet_south": { "model": "industrialreforged:block/resource/rubber_log_wet", "y": 180 },
+		"state=wet_west": { "model": "industrialreforged:block/resource/rubber_log_wet", "y": 270 },
+		"state=wet_east": { "model": "industrialreforged:block/resource/rubber_log_wet", "y": 90 }
+	}
+}

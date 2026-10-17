@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:circuit"
+    },
+    "M": {
+      "item": "industrialreforged:machine"
+    },
+    "T": {
+      "item": "industrialreforged:tin_can"
+    }
+  },
+  "pattern": [
+    " T ",
+    " T ",
+    "CMC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:solid_canner"
+  }
+}

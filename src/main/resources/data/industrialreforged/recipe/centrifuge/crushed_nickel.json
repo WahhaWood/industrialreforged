@@ -1,0 +1,21 @@
+{
+  "type": "industrialreforged:centrifuge",
+  "ingredient": {
+    "item": "industrialreforged:crushed_nickel"
+  },
+  "minHeat": 2000,
+  "result": [
+    {
+      "count": 1,
+      "id": "industrialreforged:nickel_dust"
+    },
+    {
+      "count": 1,
+      "id": "industrialreforged:small_copper_dust"
+    },
+    {
+      "count": 1,
+      "id": "industrialreforged:stone_dust"
+    }
+  ]
+}

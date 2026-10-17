@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "S": {
+      "item": "industrialreforged:rubber"
+    },
+    "U": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "U U",
+    " U ",
+    "SUS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:weeding_trowel"
+  }
+}

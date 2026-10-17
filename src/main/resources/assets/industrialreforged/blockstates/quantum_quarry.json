@@ -1,0 +1,6 @@
+{ 
+  "variants": {
+    "active=false": { "model": "industrialreforged:block/quantum_quarry" },
+    "active=true": { "model": "industrialreforged:block/quantum_quarry_active" }
+  }
+}

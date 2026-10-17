@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:extractor",
+  "ingredient": {
+    "item": "industrialreforged:filled_tin_can"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:tin_can"
+  }
+}

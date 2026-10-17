@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "industrialreforged:rubber"
+    },
+    "W": {
+      "item": "minecraft:white_wool"
+    }
+  },
+  "pattern": [
+    "R R",
+    "R R",
+    "RWR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:rubber_boots"
+  }
+}

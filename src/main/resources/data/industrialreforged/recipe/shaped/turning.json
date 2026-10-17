@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "industrialreforged:machine"
+    },
+    "S": {
+      "item": "industrialreforged:iron_casing"
+    },
+    "U": {
+      "item": "industrialreforged:iron_shaft"
+    },
+    "Y": {
+      "tag": "c:plates/iron"
+    }
+  },
+  "pattern": [
+    "S S",
+    "UDU",
+    "YYY"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:turning"
+  }
+}

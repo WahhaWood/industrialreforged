@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "industrialreforged:iridium"
+    },
+    "L": {
+      "item": "industrialreforged:lapotron_crystal"
+    },
+    "R": {
+      "item": "industrialreforged:rubber_boots"
+    },
+    "n": {
+      "item": "industrialreforged:nano_boots"
+    }
+  },
+  "pattern": [
+    "InI",
+    "RLR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:quantum_boots"
+  }
+}

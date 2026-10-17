@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "industrialreforged:advanced_re_battery"
+    },
+    "C": {
+      "item": "industrialreforged:circuit"
+    },
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "P": {
+      "item": "industrialreforged:gold_casing"
+    },
+    "c": {
+      "item": "industrialreforged:wire_2_level"
+    }
+  },
+  "pattern": [
+    "PGP",
+    "CBC",
+    "ccc"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:scanner"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "industrialreforged:rubber"
+    },
+    "C": {
+      "item": "industrialreforged:copper_plate"
+    }
+  },
+  "pattern": [
+    " R ",
+    "RCR",
+    " R "
+  ],
+  "result": {
+    "count": 2,
+    "id": "industrialreforged:heat_pipe_1"
+  }
+}

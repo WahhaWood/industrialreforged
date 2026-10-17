@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "tag": "c:ingots/bronze"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:bronze_dust"
+  }
+}

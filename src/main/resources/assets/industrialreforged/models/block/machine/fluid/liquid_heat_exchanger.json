@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "industrialreforged:block/machine/fluid/liquid_heat_exchanger_leftright",
+		"down": "industrialreforged:block/machine/fluid/liquid_heat_exchanger_bottom",
+		"up": "industrialreforged:block/machine/fluid/liquid_heat_exchanger_top",
+		"north": "industrialreforged:block/machine/fluid/liquid_heat_exchanger_front",
+		"east": "industrialreforged:block/machine/fluid/liquid_heat_exchanger_leftright",
+		"south": "industrialreforged:block/machine/fluid/liquid_heat_exchanger_back",
+		"west": "industrialreforged:block/machine/fluid/liquid_heat_exchanger_leftright"
+	}
+}

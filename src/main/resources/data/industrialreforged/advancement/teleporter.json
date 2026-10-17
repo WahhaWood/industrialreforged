@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "industrialreforged:teleporter"
+    },
+    "title": {
+      "translate": "advancement.industrialreforged.teleporter.title"
+    },
+    "description": {
+      "translate": "advancement.industrialreforged.teleporter.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "industrialreforged:teleporter"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "parent": "industrialreforged:advanced_circuit"
+}

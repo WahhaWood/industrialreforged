@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:cell"
+    },
+    "G": {
+      "item": "industrialreforged:heat_conductor"
+    },
+    "I": {
+      "item": "industrialreforged:iron_casing"
+    }
+  },
+  "pattern": [
+    "III",
+    "CCC",
+    "IGI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:fermenter"
+  }
+}

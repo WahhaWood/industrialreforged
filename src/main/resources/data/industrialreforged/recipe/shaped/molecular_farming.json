@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:particle_accelerator_upgrade"
+    },
+    "B": {
+      "item": "industrialreforged:iridium_machine"
+    },
+    "D": {
+      "item": "industrialreforged:crop_harvester"
+    },
+    "O": {
+      "item": "industrialreforged:quantum_core_1_level"
+    },
+    "S": {
+      "item": "industrialreforged:singular_circuit"
+    }
+  },
+  "pattern": [
+    "BAB",
+    "SOS",
+    "BDB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:molecular_farming"
+  }
+}

@@ -1,0 +1,6 @@
+{
+	"variants": {
+		"active=false": { "model": "industrialreforged:block/generator/reactor/nuclear_reactor" },
+		"active=true": { "model": "industrialreforged:block/generator/reactor/nuclear_reactor_active" }
+	}
+}

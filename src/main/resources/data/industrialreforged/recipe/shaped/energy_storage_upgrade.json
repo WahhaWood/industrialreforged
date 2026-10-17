@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "industrialreforged:re_battery"
+    },
+    "E": {
+      "item": "industrialreforged:circuit"
+    },
+    "W": {
+      "item": "industrialreforged:wire_2_level"
+    },
+    "w": {
+      "tag": "minecraft:planks"
+    }
+  },
+  "pattern": [
+    "www",
+    "WBW",
+    "wEw"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:energy_storage_upgrade"
+  }
+}

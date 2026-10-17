@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 40170,
+  "item": {
+    "count": 1,
+    "id": "minecraft:emerald"
+  }
+}

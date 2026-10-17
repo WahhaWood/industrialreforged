@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:sunnarium_part"
+    },
+    "E": {
+      "item": "industrialreforged:quantum_circuit"
+    },
+    "P": {
+      "item": "industrialreforged:tungsten_plate"
+    },
+    "R": {
+      "item": "minecraft:lapis_lazuli"
+    }
+  },
+  "pattern": [
+    "RPR",
+    "CEC",
+    "RPR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:singular_circuit"
+  }
+}

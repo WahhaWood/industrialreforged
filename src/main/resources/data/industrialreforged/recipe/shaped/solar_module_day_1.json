@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "P": {
+      "item": "industrialreforged:photocell_1_level"
+    }
+  },
+  "pattern": [
+    "G G",
+    "GPG",
+    "G G"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:solar_module_day_1"
+  }
+}

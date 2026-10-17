@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "B": {
+      "item": "minecraft:water_bucket"
+    }
+  },
+  "pattern": [
+    "G G",
+    "GBG",
+    "G G"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:solar_module_rain_lens_1"
+  }
+}

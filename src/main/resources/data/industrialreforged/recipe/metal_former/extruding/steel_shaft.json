@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:metal_former",
+  "ingredient": {
+    "tag": "c:storage_blocks/steel"
+  },
+  "mode": "EXTRUDING",
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:steel_shaft"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "tag": "c:plates/iron"
+    },
+    "C": {
+      "item": "industrialreforged:circuit"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "H": {
+      "item": "minecraft:hopper"
+    }
+  },
+  "pattern": [
+    "ICI",
+    "GHG",
+    "ICI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:item_filter"
+  }
+}

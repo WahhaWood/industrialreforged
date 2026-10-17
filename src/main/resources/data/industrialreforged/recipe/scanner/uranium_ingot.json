@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 1113,
+  "item": {
+    "count": 1,
+    "id": "industrialreforged:uranium_ingot"
+  }
+}

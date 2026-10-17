@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "tag": "c:plates/tin"
+    },
+    "c": {
+      "tag": "c:plates/copper"
+    },
+    "C": {
+      "item": "industrialreforged:circuit"
+    }
+  },
+  "pattern": [
+    "TcT",
+    "cCc",
+    "TcT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:heatpack"
+  }
+}

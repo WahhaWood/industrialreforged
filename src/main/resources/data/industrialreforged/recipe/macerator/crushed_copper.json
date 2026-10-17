@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "item": "industrialreforged:crushed_copper"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:copper_dust"
+  }
+}

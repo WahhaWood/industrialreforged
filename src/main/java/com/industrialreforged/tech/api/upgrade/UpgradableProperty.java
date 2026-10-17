@@ -1,0 +1,16 @@
+package com.industrialreforged.tech.api.upgrade;
+
+public enum UpgradableProperty {
+   PROCESSING,
+   AUGMENTABLE,
+   REDSTONE_SENSITIVE,
+   TRANSFORMER,
+   ENERGY_STORAGE,
+   ITEM_CONSUMING,
+   ITEM_PRODUCING,
+   FLUID_CONSUMING,
+   FLUID_PRODUCING,
+   STRENGTHENING,
+   PARTICLE_ACCELERATOR,
+   SOUNDPROOFING;
+}

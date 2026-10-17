@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "tag": "c:ingots/tin"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:tin_dust"
+  }
+}

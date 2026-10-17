@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:charging_re_battery"
+    },
+    "M": {
+      "item": "industrialreforged:advanced_re_battery"
+    },
+    "R": {
+      "item": "industrialreforged:heat_exchanger"
+    }
+  },
+  "pattern": [
+    "RMR",
+    "MCM",
+    "RMR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:charging_advanced_re_battery"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "type": "neoforge:components",
+    "components": {
+      "industrialreforged:fluid": {}
+    },
+    "items": "industrialreforged:cell"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:compressed_air_cell"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "tag": "c:plates/copper"
+    },
+    "G": {
+      "tag": "c:plates/lapis"
+    },
+    "S": {
+      "item": "industrialreforged:heat_exchanger"
+    },
+    "c": {
+      "item": "industrialreforged:circuit"
+    }
+  },
+  "pattern": [
+    "GcG",
+    "SCS",
+    "GcG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:advanced_heat_exchanger"
+  }
+}

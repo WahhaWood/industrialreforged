@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "item": "industrialreforged:crushed_tungsten"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:tungsten_dust"
+  }
+}

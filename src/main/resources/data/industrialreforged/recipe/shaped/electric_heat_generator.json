@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "industrialreforged:re_battery"
+    },
+    "C": {
+      "item": "industrialreforged:circuit"
+    },
+    "G": {
+      "item": "industrialreforged:heat_conductor"
+    },
+    "I": {
+      "item": "industrialreforged:iron_casing"
+    }
+  },
+  "pattern": [
+    "IBI",
+    "ICI",
+    "IGI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:electric_heat_generator"
+  }
+}

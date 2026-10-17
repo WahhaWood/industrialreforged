@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "J": {
+      "item": "industrialreforged:energy_pack"
+    },
+    "L": {
+      "item": "industrialreforged:lapotron_crystal"
+    }
+  },
+  "pattern": [
+    "J  ",
+    "C  ",
+    "L  "
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:advanced_lappack"
+  }
+}

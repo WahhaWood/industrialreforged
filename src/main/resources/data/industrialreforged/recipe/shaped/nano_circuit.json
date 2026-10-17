@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:carbon_plate"
+    },
+    "E": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "P": {
+      "tag": "c:plates/nickel"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "RPR",
+    "CEC",
+    "RPR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:nano_circuit"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "tag": "c:plates/silver"
+  },
+  "result": {
+    "count": 8,
+    "id": "industrialreforged:small_silver_dust"
+  }
+}

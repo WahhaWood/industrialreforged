@@ -1,0 +1,19 @@
+{
+  "type": "industrialreforged:macerator","category": "misc",
+  "ingredient": {
+    "tag": "c:ores/aluminum"
+  },
+  "result": {
+    "id": "industrialreforged:crushed_aluminum",
+    "count": 2
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ores/aluminum"
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 26000,
+  "item": {
+    "count": 1,
+    "id": "industrialreforged:superconductor"
+  }
+}

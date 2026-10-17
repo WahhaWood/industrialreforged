@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:mox"
+    },
+    "R": {
+      "item": "industrialreforged:dense_iron_plate"
+    }
+  },
+  "pattern": [
+    "RAR",
+    "RAR",
+    "RAR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:mox_pellet"
+  }
+}

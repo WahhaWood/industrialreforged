@@ -1,0 +1,12 @@
+{
+	"parent": "industrialreforged:block/wiring/chargepad/chargepad_base",
+	"textures": {
+		"particle": "industrialreforged:block/wiring/storage/mfe_leftright",
+		"down": "industrialreforged:block/wiring/storage/mfe_bottomtop",
+		"up": "industrialreforged:block/wiring/chargepad/chargepad_mfe_top_active",
+		"north": "industrialreforged:block/wiring/storage/mfe_front",
+		"east": "industrialreforged:block/wiring/storage/mfe_leftright",
+		"south": "industrialreforged:block/wiring/storage/mfe_back",
+		"west": "industrialreforged:block/wiring/storage/mfe_leftright"
+	}
+}

@@ -1,0 +1,19 @@
+{
+	"pools": [
+		{
+			"name": "industrialreforged",
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "industrialreforged:treetap",
+					"weight": 8
+				},
+				{
+					"type": "empty",
+					"weight": 2
+				}
+			]
+		}
+	]
+}

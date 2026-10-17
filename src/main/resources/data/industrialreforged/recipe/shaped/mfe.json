@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:energy_crystal"
+    },
+    "M": {
+      "item": "industrialreforged:machine"
+    },
+    "c": {
+      "item": "industrialreforged:wire_3_level"
+    }
+  },
+  "pattern": [
+    "cCc",
+    "CMC",
+    "cCc"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:mfe"
+  }
+}

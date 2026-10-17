@@ -1,0 +1,6 @@
+{
+	"parent": "industrialreforged:item/default",
+	"textures": {
+		"layer0": "industrialreforged:item/turning/steel_knurled_axle"
+	}
+}

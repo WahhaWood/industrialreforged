@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "count": 2,
+    "item": "minecraft:ice"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:packed_ice"
+  }
+}

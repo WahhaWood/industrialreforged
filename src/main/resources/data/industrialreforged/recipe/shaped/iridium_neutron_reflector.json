@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:dense_copper_plate"
+    },
+    "I": {
+      "item": "industrialreforged:iridium"
+    },
+    "R": {
+      "item": "industrialreforged:thick_neutron_reflector"
+    }
+  },
+  "pattern": [
+    "RRR",
+    "CIC",
+    "RRR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:iridium_neutron_reflector"
+  }
+}

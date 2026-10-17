@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:circuit"
+    },
+    "F": {
+      "item": "industrialreforged:iron_furnace"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    " C ",
+    "RFR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:electric_furnace_1_level"
+  }
+}

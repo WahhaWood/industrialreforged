@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:generator"
+    },
+    "H": {
+      "item": "industrialreforged:heat_conductor"
+    },
+    "I": {
+      "item": "industrialreforged:iron_casing"
+    }
+  },
+  "pattern": [
+    "IHI",
+    "ICI",
+    "III"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:stirling_generator"
+  }
+}

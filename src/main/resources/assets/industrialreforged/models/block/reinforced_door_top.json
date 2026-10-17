@@ -1,0 +1,8 @@
+{
+	"render_type": "minecraft:cutout_mipped",
+	"parent": "block/door_top",
+	"textures": {
+		"bottom": "industrialreforged:block/reinforced_door_bottom",
+		"top": "industrialreforged:block/reinforced_door_top"
+	}
+}

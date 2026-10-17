@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "count": 4,
+    "tag": "minecraft:saplings"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:bio_chaff"
+  }
+}

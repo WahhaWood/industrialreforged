@@ -1,0 +1,16 @@
+{
+  "type": "industrialreforged:painter_recipe",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "industrialreforged:painter"
+    },
+    {
+      "tag": "minecraft:dyes"
+    }
+  ],
+  "result": {
+    "id": "industrialreforged:painter",
+    "count": 1
+  }
+}

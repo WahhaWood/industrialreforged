@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "R": {
+      "item": "industrialreforged:rubber"
+    },
+    "I": {
+      "tag": "c:ingots/silver"
+    },
+    "P": {
+      "item": "industrialreforged:energium_dust"
+    }
+  },
+  "pattern": [
+    "RRR",
+    "IPI",
+    "RRR"
+  ],
+  "result": {
+    "id": "industrialreforged:wire_5_level",
+    "count": 16
+  }
+}

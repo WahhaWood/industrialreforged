@@ -1,0 +1,13 @@
+{
+  "type": "industrialreforged:tool_use","category": "misc",
+  "tool": {
+    "item": "industrialreforged:forge_hammer"
+  },
+  "input": {
+    "tag": "c:plates/lead"
+  },
+  "result": {
+    "id": "industrialreforged:lead_casing",
+    "count": 2
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 663,
+  "item": {
+    "count": 1,
+    "id": "minecraft:lapis_lazuli"
+  }
+}

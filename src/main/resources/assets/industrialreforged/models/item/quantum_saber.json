@@ -1,0 +1,14 @@
+{
+	"parent": "industrialreforged:item/tool/default",
+	"textures": {
+		"layer0": "industrialreforged:item/tool/electric/quantum_saber"
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"industrialreforged:active": 1
+			},
+			"model": "industrialreforged:item/quantum_saber_active"
+		}
+	]
+}

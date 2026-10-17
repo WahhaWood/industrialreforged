@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "industrialreforged:advanced_circuit"
+    },
+    "title": {
+      "translate": "advancement.industrialreforged.advanced_circuit.title"
+    },
+    "description": {
+      "translate": "advancement.industrialreforged.advanced_circuit.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "industrialreforged:advanced_circuit"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "parent": "industrialreforged:circuit"
+}

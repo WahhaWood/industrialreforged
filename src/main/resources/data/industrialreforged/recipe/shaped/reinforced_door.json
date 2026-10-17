@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "tag": "c:plates/iron"
+    },
+    "L": {
+      "tag": "c:plates/lead"
+    }
+  },
+  "pattern": [
+    "ILI",
+    "ILI",
+    "ILI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:reinforced_door"
+  }
+}

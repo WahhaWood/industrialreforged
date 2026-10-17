@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "count": 9,
+    "tag": "c:ingots/steel"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:steel_block"
+  }
+}

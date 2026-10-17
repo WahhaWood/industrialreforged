@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "crossing_base=false": {
+      "model": "industrialreforged:block/crop/crop"
+    },
+    "crossing_base=true": {
+      "model": "industrialreforged:block/crop/stick_upgraded"
+    }
+  }
+}

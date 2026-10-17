@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "tag": "c:plates/copper"
+    },
+    "I": {
+      "tag": "c:plates/iron"
+    },
+    "U": {
+      "item": "industrialreforged:uranium_fuel_rod"
+    }
+  },
+  "pattern": [
+    "UIU",
+    "CIC",
+    "UIU"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:quad_uranium_fuel_rod"
+  }
+}

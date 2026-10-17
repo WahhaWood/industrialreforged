@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "minecraft:iron_bars"
+    },
+    "I": {
+      "tag": "c:plates/iron"
+    },
+    "M": {
+      "item": "industrialreforged:electric_motor"
+    }
+  },
+  "pattern": [
+    "#I#",
+    "IMI",
+    "#I#"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:heat_vent"
+  }
+}

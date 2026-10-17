@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "industrialreforged:block/steam/refractory_bricks",
+    "down": "industrialreforged:block/steam/refractory_bricks",
+    "up": "industrialreforged:block/steam/refractory_bricks",
+    "north": "industrialreforged:block/steam/coke_kiln_hatch",
+    "east": "industrialreforged:block/steam/refractory_bricks",
+    "south": "industrialreforged:block/steam/refractory_bricks",
+    "west": "industrialreforged:block/steam/refractory_bricks"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 30000,
+  "item": {
+    "count": 1,
+    "id": "minecraft:nether_star"
+  }
+}

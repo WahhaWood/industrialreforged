@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "industrialreforged:block/barrel_sides",
+		"down": "industrialreforged:block/barrel_bottomtop",
+		"up": "industrialreforged:block/barrel_bottomtop",
+		"north": "industrialreforged:block/barrel_tap",
+		"east": "industrialreforged:block/barrel_sides",
+		"south": "industrialreforged:block/barrel_sides",
+		"west": "industrialreforged:block/barrel_sides"
+	}
+}

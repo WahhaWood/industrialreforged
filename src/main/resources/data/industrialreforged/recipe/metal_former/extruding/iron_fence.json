@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:metal_former",
+  "ingredient": {
+    "item": "industrialreforged:iron_casing"
+  },
+  "mode": "EXTRUDING",
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:iron_fence"
+  }
+}

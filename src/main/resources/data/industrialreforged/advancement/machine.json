@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "industrialreforged:machine"
+    },
+    "title": {
+      "translate": "advancement.industrialreforged.machine.title"
+    },
+    "description": {
+      "translate": "advancement.industrialreforged.machine.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "industrialreforged:machine"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "parent": "industrialreforged:root"
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:wire_5_level"
+    },
+    "P": {
+      "tag": "c:plates/gold"
+    },
+    "S": {
+      "item": "industrialreforged:superconductor_cover"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "CPC",
+    "SSS"
+  ],
+  "result": {
+    "count": 3,
+    "id": "industrialreforged:superconductor"
+  }
+}

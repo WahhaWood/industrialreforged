@@ -1,0 +1,8 @@
+{
+	"variants": {
+		"facing=north": { "model": "industrialreforged:block/machine/processing/advanced/molecular_transformer", "y": 0 },
+		"facing=east": { "model": "industrialreforged:block/machine/processing/advanced/molecular_transformer", "y": 90 },
+		"facing=south": { "model": "industrialreforged:block/machine/processing/advanced/molecular_transformer", "y": 180 },
+		"facing=west": { "model": "industrialreforged:block/machine/processing/advanced/molecular_transformer", "y": 270 }
+	}
+}

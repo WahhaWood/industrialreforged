@@ -1,0 +1,13 @@
+{
+  "type": "industrialreforged:centrifuge",
+  "ingredient": {
+    "count": 4,
+    "item": "industrialreforged:clay_dust"
+  },
+  "result": [
+    {
+      "count": 1,
+      "id": "industrialreforged:silicon_dioxide_dust"
+    }
+  ]
+}

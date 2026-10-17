@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "industrialreforged:batbox"
+    },
+    "title": {
+      "translate": "advancement.industrialreforged.batbox.title"
+    },
+    "description": {
+      "translate": "advancement.industrialreforged.batbox.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "industrialreforged:batbox"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "parent": "industrialreforged:wire"
+}

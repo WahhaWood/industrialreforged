@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "industrialreforged:re_battery"
+    },
+    "R": {
+      "item": "industrialreforged:circuit"
+    }
+  },
+  "pattern": [
+    "RMR",
+    "M M",
+    "RMR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:charging_re_battery"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:quantum_circuit"
+    },
+    "G": {
+      "item": "industrialreforged:generator"
+    },
+    "P": {
+      "item": "industrialreforged:titanium_plate"
+    },
+    "S": {
+      "item": "industrialreforged:efsu"
+    },
+    "U": {
+      "item": "industrialreforged:energy_storage_upgrade"
+    }
+  },
+  "pattern": [
+    "CUC",
+    "SGS",
+    "PUP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:solar_connector"
+  }
+}

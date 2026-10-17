@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:compressor_1_level"
+    },
+    "D": {
+      "item": "minecraft:dirt"
+    },
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "P": {
+      "tag": "c:plates/iron"
+    }
+  },
+  "pattern": [
+    " G ",
+    "DCD",
+    "PDP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:recycler_1_level"
+  }
+}

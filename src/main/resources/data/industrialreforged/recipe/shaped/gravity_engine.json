@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:cooling_core"
+    },
+    "E": {
+      "item": "industrialreforged:singular_circuit"
+    },
+    "S": {
+      "item": "industrialreforged:superconductor"
+    },
+    "T": {
+      "item": "industrialreforged:nano_circuit"
+    }
+  },
+  "pattern": [
+    "ESE",
+    "CTC",
+    "ESE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:gravity_engine"
+  }
+}

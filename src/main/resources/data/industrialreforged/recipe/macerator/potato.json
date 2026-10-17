@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "count": 8,
+    "item": "minecraft:potato"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:bio_chaff"
+  }
+}

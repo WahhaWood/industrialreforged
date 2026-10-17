@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:molecular_transformer",
+  "energy": 500000,
+  "input": {
+    "item": "minecraft:end_stone"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:ender_pearl"
+  }
+}

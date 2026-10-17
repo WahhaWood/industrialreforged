@@ -1,0 +1,25 @@
+{
+  "parent": "industrialreforged:item/tool/default",
+  "textures": {
+    "layer0": "industrialreforged:item/painter"
+  },
+  "overrides": [
+    { "predicate": { "industrialreforged.color": 0 }, "model": "industrialreforged:item/painter_default" },
+    { "predicate": { "industrialreforged.color": 0.0625 }, "model": "industrialreforged:item/painter/painter_white" },
+    { "predicate": { "industrialreforged.color": 0.125 }, "model": "industrialreforged:item/painter/painter_orange" },
+    { "predicate": { "industrialreforged.color": 0.1875 }, "model": "industrialreforged:item/painter/painter_magenta" },
+    { "predicate": { "industrialreforged.color": 0.25 }, "model": "industrialreforged:item/painter/painter_light_blue" },
+    { "predicate": { "industrialreforged.color": 0.3125 }, "model": "industrialreforged:item/painter/painter_yellow" },
+    { "predicate": { "industrialreforged.color": 0.375 }, "model": "industrialreforged:item/painter/painter_lime" },
+    { "predicate": { "industrialreforged.color": 0.4375 }, "model": "industrialreforged:item/painter/painter_pink" },
+    { "predicate": { "industrialreforged.color": 0.5 }, "model": "industrialreforged:item/painter/painter_gray" },
+    { "predicate": { "industrialreforged.color": 0.5625 }, "model": "industrialreforged:item/painter/painter_light_gray" },
+    { "predicate": { "industrialreforged.color": 0.625 }, "model": "industrialreforged:item/painter/painter_cyan" },
+    { "predicate": { "industrialreforged.color": 0.6875 }, "model": "industrialreforged:item/painter/painter_purple" },
+    { "predicate": { "industrialreforged.color": 0.75 }, "model": "industrialreforged:item/painter/painter_blue" },
+    { "predicate": { "industrialreforged.color": 0.8125 }, "model": "industrialreforged:item/painter/painter_brown" },
+    { "predicate": { "industrialreforged.color": 0.875 }, "model": "industrialreforged:item/painter/painter_green" },
+    { "predicate": { "industrialreforged.color": 0.9375 }, "model": "industrialreforged:item/painter/painter_red" },
+    { "predicate": { "industrialreforged.color": 1 }, "model": "industrialreforged:item/painter/painter_black" }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "industrialreforged:carbon_fibre"
+    },
+    {
+      "item": "industrialreforged:carbon_fibre"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:carbon_mesh"
+  }
+}

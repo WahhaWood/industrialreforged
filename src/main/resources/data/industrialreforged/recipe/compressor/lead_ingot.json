@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "count": 9,
+    "tag": "c:ingots/lead"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:lead_block"
+  }
+}

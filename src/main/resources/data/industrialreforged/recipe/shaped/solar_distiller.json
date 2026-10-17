@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:cell"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "M": {
+      "item": "industrialreforged:machine"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "G G",
+    "CMC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:solar_distiller"
+  }
+}

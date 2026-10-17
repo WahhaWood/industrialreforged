@@ -1,0 +1,44 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "industrialreforged:block/machine/fluid/solar_distiller"
+      }
+    },
+    {
+      "when": {
+        "north": "true"
+      },
+      "apply": {
+        "model": "industrialreforged:block/machine/fluid/solar_distiller_link"
+      }
+    },
+    {
+      "when": {
+        "east": "true"
+      },
+      "apply": {
+        "model": "industrialreforged:block/machine/fluid/solar_distiller_link",
+        "y": 90
+      }
+    },
+    {
+      "when": {
+        "south": "true"
+      },
+      "apply": {
+        "model": "industrialreforged:block/machine/fluid/solar_distiller_link",
+        "y": 180
+      }
+    },
+    {
+      "when": {
+        "west": "true"
+      },
+      "apply": {
+        "model": "industrialreforged:block/machine/fluid/solar_distiller_link",
+        "y": 270
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 29130,
+  "item": {
+    "count": 1,
+    "id": "industrialreforged:plutonium"
+  }
+}

@@ -1,0 +1,9 @@
+{
+	"parent": "minecraft:block/block",
+	"texture_size": [32, 32],
+	"textures": {
+		"particle": "#0",
+		"resistor": "industrialreforged:block/resistor",
+		"transformer": "industrialreforged:block/transformer"
+	}
+}

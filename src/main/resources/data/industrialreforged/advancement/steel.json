@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "id": "industrialreforged:steel_ingot"
+    },
+    "title": {
+      "translate": "advancement.industrialreforged.steel.title"
+    },
+    "description": {
+      "translate": "advancement.industrialreforged.steel.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "has_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "industrialreforged:steel_ingot"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_item"
+    ]
+  ],
+  "parent": "industrialreforged:machine"
+}

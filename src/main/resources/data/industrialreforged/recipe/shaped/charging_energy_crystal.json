@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "industrialreforged:energy_crystal"
+    },
+    "M": {
+      "item": "industrialreforged:component_heat_exchanger"
+    },
+    "P": {
+      "item": "industrialreforged:charging_advanced_re_battery"
+    }
+  },
+  "pattern": [
+    "MBM",
+    "BPB",
+    "MBM"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:charging_energy_crystal"
+  }
+}

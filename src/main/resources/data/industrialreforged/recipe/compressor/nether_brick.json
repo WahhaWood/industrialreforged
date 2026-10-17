@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "count": 4,
+    "item": "minecraft:nether_brick"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:nether_bricks"
+  }
+}

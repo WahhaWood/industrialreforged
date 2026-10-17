@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 2226,
+  "item": {
+    "count": 1,
+    "id": "industrialreforged:uranium_ore"
+  }
+}

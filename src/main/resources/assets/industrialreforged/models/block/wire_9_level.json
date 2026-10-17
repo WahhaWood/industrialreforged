@@ -1,0 +1,8 @@
+{
+  "render_type": "cutout",
+  "loader": "industrialreforged:wire",
+  "parent": "industrialreforged:block/wire",
+  "textures": {
+    "0": "industrialreforged:block/wire/9"
+  }
+}

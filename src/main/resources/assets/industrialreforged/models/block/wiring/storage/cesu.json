@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "industrialreforged:block/wiring/storage/cesu_leftright",
+		"down": "industrialreforged:block/wiring/storage/cesu_bottomtop",
+		"up": "industrialreforged:block/wiring/storage/cesu_bottomtop",
+		"north": "industrialreforged:block/wiring/storage/cesu_front",
+		"east": "industrialreforged:block/wiring/storage/cesu_leftright",
+		"south": "industrialreforged:block/wiring/storage/cesu_back",
+		"west": "industrialreforged:block/wiring/storage/cesu_leftright"
+	}
+}

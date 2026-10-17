@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "count": 2,
+    "item": "industrialreforged:tin_can"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:tin_dust"
+  }
+}

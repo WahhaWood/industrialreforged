@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "item": "minecraft:lapis_block"
+  },
+  "result": {
+    "count": 9,
+    "id": "industrialreforged:lapis_dust"
+  }
+}

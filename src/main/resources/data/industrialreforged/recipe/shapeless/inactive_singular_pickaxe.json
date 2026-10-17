@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "industrialreforged:singular_pickaxe"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:inactive_singular_pickaxe"
+  }
+}

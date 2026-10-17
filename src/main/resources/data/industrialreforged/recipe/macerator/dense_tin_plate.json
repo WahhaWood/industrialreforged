@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "item": "industrialreforged:dense_tin_plate"
+  },
+  "result": {
+    "count": 9,
+    "id": "industrialreforged:tin_dust"
+  }
+}

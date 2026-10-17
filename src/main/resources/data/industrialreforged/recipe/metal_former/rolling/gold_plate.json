@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:metal_former",
+  "ingredient": {
+    "item": "minecraft:gold_ingot"
+  },
+  "mode": "ROLLING",
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:gold_plate"
+  }
+}

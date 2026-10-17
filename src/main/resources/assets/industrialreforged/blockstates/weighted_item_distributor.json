@@ -1,0 +1,5 @@
+{
+	"variants": {
+		"": { "model": "industrialreforged:block/machine/misc/weighted_item_distributor" }
+	}
+}

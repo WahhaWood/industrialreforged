@@ -1,0 +1,24 @@
+{
+  "type": "industrialreforged:block_cutter","category": "misc",
+  "ingredient": {
+    "tag": "c:storage_blocks/constantan"
+  },
+  "result": {
+    "id": "industrialreforged:constantan_plate",
+    "count": 9
+  },
+  "hardness": 2,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialreforged:constantan_plate"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:storage_blocks/constantan"
+      }
+    }
+  ]
+}

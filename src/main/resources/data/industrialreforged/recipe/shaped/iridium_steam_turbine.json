@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "industrialreforged:iridium"
+    },
+    "T": {
+      "item": "industrialreforged:steel_steam_turbine"
+    }
+  },
+  "pattern": [
+    "B B",
+    "BTB",
+    "B B"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:iridium_steam_turbine"
+  }
+}

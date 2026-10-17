@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 9500,
+  "item": {
+    "count": 1,
+    "id": "industrialreforged:quantum_circuit"
+  }
+}

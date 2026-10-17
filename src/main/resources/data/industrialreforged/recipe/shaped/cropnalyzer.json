@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "tag": "c:glass_blocks"
+    },
+    "D": {
+      "item": "minecraft:redstone"
+    },
+    "L": {
+      "item": "industrialreforged:circuit"
+    },
+    "X": {
+      "item": "industrialreforged:wire_2_level"
+    }
+  },
+  "pattern": [
+    "XX ",
+    "DCD",
+    "DLD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:cropnalyzer"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:coil"
+    },
+    "I": {
+      "tag": "c:ingots/iron"
+    },
+    "L": {
+      "item": "industrialreforged:mining_laser"
+    },
+    "M": {
+      "item": "industrialreforged:advanced_machine"
+    },
+    "m": {
+      "item": "industrialreforged:electric_motor"
+    }
+  },
+  "pattern": [
+    "CLC",
+    "IMI",
+    "ImI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:centrifuge"
+  }
+}

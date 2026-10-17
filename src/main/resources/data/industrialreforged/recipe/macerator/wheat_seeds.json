@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "count": 16,
+    "item": "minecraft:wheat_seeds"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:bio_chaff"
+  }
+}

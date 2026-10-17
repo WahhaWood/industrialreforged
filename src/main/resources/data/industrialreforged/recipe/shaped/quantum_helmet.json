@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "G": {
+      "item": "industrialreforged:reinforced_glass"
+    },
+    "I": {
+      "item": "industrialreforged:iridium"
+    },
+    "L": {
+      "item": "industrialreforged:lapotron_crystal"
+    },
+    "N": {
+      "item": "industrialreforged:hazmat_helmet"
+    },
+    "n": {
+      "item": "industrialreforged:nano_helmet"
+    }
+  },
+  "pattern": [
+    "GnG",
+    "ILI",
+    "CNC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:quantum_helmet"
+  }
+}

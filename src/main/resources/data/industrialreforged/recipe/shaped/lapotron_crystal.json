@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "D": {
+      "item": "industrialreforged:energy_crystal"
+    },
+    "L": {
+      "tag": "c:dusts/lapis"
+    }
+  },
+  "pattern": [
+    "LCL",
+    "LDL",
+    "LCL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:lapotron_crystal"
+  }
+}

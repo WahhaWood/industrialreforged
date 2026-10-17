@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+		"side": "industrialreforged:block/machine/misc/tesla_coil_sides",
+		"end": "industrialreforged:block/machine/misc/tesla_coil_bottomtop"
+	}
+}

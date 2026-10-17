@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 4200,
+  "item": {
+    "count": 1,
+    "id": "industrialreforged:nano_circuit"
+  }
+}

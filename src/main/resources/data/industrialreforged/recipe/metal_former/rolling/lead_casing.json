@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:metal_former",
+  "ingredient": {
+    "tag": "c:plates/lead"
+  },
+  "mode": "ROLLING",
+  "result": {
+    "count": 2,
+    "id": "industrialreforged:lead_casing"
+  }
+}

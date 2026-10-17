@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "industrialreforged:fuel_rod"
+    },
+    {
+      "item": "industrialreforged:plutonium_pellet"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:plutonium_fuel_rod"
+  }
+}

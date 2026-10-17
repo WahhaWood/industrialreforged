@@ -1,0 +1,16 @@
+{
+  "type": "industrialreforged:molecular_transformer","category": "misc",
+  "input": {
+    "item": "minecraft:creeper_head"
+  },
+  "output": {
+    "id": "enderio:enderman_head"
+  },
+  "energy": 200000,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "C": {
+      "item": "industrialreforged:iron_casing"
+    },
+    "E": {
+      "item": "industrialreforged:energy_crystal"
+    }
+  },
+  "pattern": [
+    "ACA",
+    "ECE",
+    "C C"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:energy_pack"
+  }
+}

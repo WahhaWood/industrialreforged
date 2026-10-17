@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "minecraft:glass_bottle"
+    },
+    "M": {
+      "item": "industrialreforged:machine"
+    },
+    "P": {
+      "item": "minecraft:piston"
+    }
+  },
+  "pattern": [
+    "GPG",
+    "GMG",
+    "GPG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:stirling_kinetic_generator"
+  }
+}

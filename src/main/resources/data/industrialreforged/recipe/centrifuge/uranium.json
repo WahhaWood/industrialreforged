@@ -1,0 +1,22 @@
+{
+  "type": "industrialreforged:centrifuge",
+  "ingredient": {
+    "count": 20,
+    "item": "industrialreforged:uranium"
+  },
+  "minHeat": 4000,
+  "result": [
+    {
+      "count": 64,
+      "id": "industrialreforged:uranium_238"
+    },
+    {
+      "count": 48,
+      "id": "industrialreforged:uranium_238"
+    },
+    {
+      "count": 7,
+      "id": "industrialreforged:uranium_235"
+    }
+  ]
+}

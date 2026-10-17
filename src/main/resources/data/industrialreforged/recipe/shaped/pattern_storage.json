@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "L": {
+      "item": "industrialreforged:mining_laser"
+    },
+    "M": {
+      "item": "industrialreforged:advanced_machine"
+    },
+    "R": {
+      "item": "industrialreforged:reinforced_stone"
+    },
+    "c": {
+      "item": "industrialreforged:crystal_memory"
+    }
+  },
+  "pattern": [
+    "RRR",
+    "cMc",
+    "LCL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:pattern_storage"
+  }
+}

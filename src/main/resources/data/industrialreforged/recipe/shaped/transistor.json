@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:alloy"
+    },
+    "C": {
+      "item": "industrialreforged:carbon_plate"
+    },
+    "I": {
+      "item": "industrialreforged:iridium_ingot"
+    }
+  },
+  "pattern": [
+    "ACA",
+    "CIC",
+    "ACA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:transistor"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:molecular_transformer",
+  "energy": 2000000,
+  "input": {
+    "item": "industrialreforged:silver_ingot"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:gold_ingot"
+  }
+}

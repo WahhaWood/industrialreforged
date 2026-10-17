@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:block_cutter",
+  "hardness": 8,
+  "ingredient": {
+    "item": "minecraft:obsidian"
+  },
+  "result": {
+    "count": 4,
+    "id": "industrialreforged:obsidian_plate"
+  }
+}

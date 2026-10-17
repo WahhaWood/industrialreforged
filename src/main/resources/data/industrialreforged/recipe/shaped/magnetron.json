@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "tag": "c:plates/copper"
+    },
+    "S": {
+      "item": "industrialreforged:superconductor"
+    },
+    "T": {
+      "tag": "c:plates/tin"
+    }
+  },
+  "pattern": [
+    "TCT",
+    "CSC",
+    "TCT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:magnetron"
+  }
+}

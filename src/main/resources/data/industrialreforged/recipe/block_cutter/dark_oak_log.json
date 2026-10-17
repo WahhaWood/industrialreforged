@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:block_cutter",
+  "ingredient": {
+    "item": "minecraft:dark_oak_log"
+  },
+  "result": {
+    "count": 6,
+    "id": "minecraft:dark_oak_planks"
+  }
+}

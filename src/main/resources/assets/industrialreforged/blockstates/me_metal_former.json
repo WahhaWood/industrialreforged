@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "industrialreforged:block/me/me_metal_former",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "industrialreforged:block/me/me_metal_former"
+    },
+    "facing=south": {
+      "model": "industrialreforged:block/me/me_metal_former",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "industrialreforged:block/me/me_metal_former",
+      "y": 270
+    }
+  }
+}

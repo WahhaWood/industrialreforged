@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "item": "industrialreforged:iridium_ore"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:iridium_ingot"
+  }
+}

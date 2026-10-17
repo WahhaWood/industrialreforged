@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "count": 5,
+    "item": "minecraft:blaze_powder"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:blaze_rod"
+  }
+}

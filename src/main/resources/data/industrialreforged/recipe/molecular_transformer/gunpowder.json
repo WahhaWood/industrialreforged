@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:molecular_transformer",
+  "energy": 280000,
+  "input": {
+    "item": "minecraft:netherrack"
+  },
+  "output": {
+    "count": 2,
+    "id": "minecraft:gunpowder"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "industrialreforged:nano_shovel"
+    },
+    "U": {
+      "item": "industrialreforged:quantum_circuit"
+    },
+    "Y": {
+      "item": "industrialreforged:lapotron_crystal"
+    }
+  },
+  "pattern": [
+    "U",
+    "D",
+    "Y"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:quantum_shovel"
+  }
+}

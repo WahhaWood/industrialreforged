@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:small_uranium_235"
+    },
+    "U": {
+      "tag": "c:ingots/uranium"
+    }
+  },
+  "pattern": [
+    "UUU",
+    "CCC",
+    "UUU"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:uranium"
+  }
+}

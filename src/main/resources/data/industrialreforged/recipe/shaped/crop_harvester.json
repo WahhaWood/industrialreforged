@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "industrialreforged:machine"
+    },
+    "C": {
+      "item": "industrialreforged:circuit"
+    },
+    "J": {
+      "item": "industrialreforged:crop_stick"
+    },
+    "N": {
+      "item": "minecraft:shears"
+    },
+    "S": {
+      "tag": "c:chests/wooden"
+    }
+  },
+  "pattern": [
+    "CSC",
+    "NBN",
+    "JJJ"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:crop_harvester"
+  }
+}

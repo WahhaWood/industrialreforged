@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:metal_former",
+  "ingredient": {
+    "tag": "c:storage_blocks/bronze"
+  },
+  "mode": "EXTRUDING",
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:bronze_shaft"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "industrialreforged:purified_silver"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:silver_ingot"
+  }
+}

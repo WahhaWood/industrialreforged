@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "tag": "c:dusts/obsidian"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:obsidian_plate"
+  }
+}

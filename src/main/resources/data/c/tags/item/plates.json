@@ -1,0 +1,19 @@
+{
+  "values": [
+    "#c:plates/bronze",
+    "#c:plates/copper",
+    "#c:plates/gold",
+    "#c:plates/iron",
+    "#c:plates/iridium",
+    "#c:plates/lapis",
+    "#c:plates/lead",
+    "#c:plates/nickel",
+    "#c:plates/obsidian",
+    "#c:plates/silver",
+    "#c:plates/steel",
+    "#c:plates/tin",
+    "#c:plates/titanium",
+    "#c:plates/toxic",
+    "#c:plates/tungsten"
+  ]
+}

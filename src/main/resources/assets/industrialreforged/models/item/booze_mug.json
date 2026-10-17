@@ -1,0 +1,44 @@
+{
+	"parent": "industrialreforged:item/default",
+	"textures": {
+		"layer0": "industrialreforged:item/brewing/booze_mug_beer_brew"
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"industrialreforged:brew": 0.1
+			},
+			"model": "industrialreforged:item/brewing/booze_mug_beer_youngster"
+		},
+		{
+			"predicate": {
+				"industrialreforged:brew": 0.2
+			},
+			"model": "industrialreforged:item/brewing/booze_mug_beer_beer"
+		},
+		{
+			"predicate": {
+				"industrialreforged:brew": 0.3
+			},
+			"model": "industrialreforged:item/brewing/booze_mug_beer_ale"
+		},
+		{
+			"predicate": {
+				"industrialreforged:brew": 0.4
+			},
+			"model": "industrialreforged:item/brewing/booze_mug_beer_dragon_blood"
+		},
+		{
+			"predicate": {
+				"industrialreforged:brew": 0.5
+			},
+			"model": "industrialreforged:item/brewing/booze_mug_beer_black_stuff"
+		},
+		{
+			"predicate": {
+				"industrialreforged:brew": 0.9
+			},
+			"model": "industrialreforged:item/brewing/booze_mug_rum"
+		}
+	]
+}

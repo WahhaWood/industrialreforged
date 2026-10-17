@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:nano_circuit"
+    },
+    "P": {
+      "item": "minecraft:heavy_weighted_pressure_plate"
+    },
+    "S": {
+      "item": "industrialreforged:efsu"
+    }
+  },
+  "pattern": [
+    " P ",
+    "CSC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:efsu_chargepad"
+  }
+}

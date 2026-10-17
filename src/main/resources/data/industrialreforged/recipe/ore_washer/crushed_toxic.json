@@ -1,0 +1,16 @@
+{
+  "type": "industrialreforged:ore_washer",
+  "ingredient": {
+    "item": "industrialreforged:crushed_toxic"
+  },
+  "result": [
+    {
+      "count": 1,
+      "id": "industrialreforged:purified_toxic"
+    },
+    {
+      "count": 1,
+      "id": "industrialreforged:stone_dust"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "item": "industrialreforged:crushed_toxic"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:toxic_dust"
+  }
+}

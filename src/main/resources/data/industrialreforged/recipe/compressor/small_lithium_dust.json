@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "count": 9,
+    "item": "industrialreforged:small_lithium_dust"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:lithium_dust"
+  }
+}

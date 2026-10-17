@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:quantum_core_2_level"
+    },
+    "P": {
+      "tag": "c:plates/obsidian"
+    }
+  },
+  "pattern": [
+    "PCP",
+    "CCC",
+    "PCP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:quantum_core_3_level"
+  }
+}

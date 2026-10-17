@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "tag": "c:plates/bronze"
+  },
+  "result": {
+    "count": 8,
+    "id": "industrialreforged:small_bronze_dust"
+  }
+}

@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "industrialreforged:block/wiring/storage/mfe_leftright",
+		"down": "industrialreforged:block/wiring/storage/mfe_bottomtop",
+		"up": "industrialreforged:block/wiring/storage/mfe_bottomtop",
+		"north": "industrialreforged:block/wiring/storage/mfe_front",
+		"east": "industrialreforged:block/wiring/storage/mfe_leftright",
+		"south": "industrialreforged:block/wiring/storage/mfe_back",
+		"west": "industrialreforged:block/wiring/storage/mfe_leftright"
+	}
+}

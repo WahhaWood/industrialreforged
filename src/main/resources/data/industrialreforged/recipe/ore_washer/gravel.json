@@ -1,0 +1,12 @@
+{
+  "type": "industrialreforged:ore_washer",
+  "ingredient": {
+    "item": "minecraft:gravel"
+  },
+  "result": [
+    {
+      "count": 1,
+      "id": "industrialreforged:stone_dust"
+    }
+  ]
+}

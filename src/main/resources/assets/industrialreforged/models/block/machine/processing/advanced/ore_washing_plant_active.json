@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "industrialreforged:block/machine/processing/advanced/ore_washing_plant_left_active",
+		"down": "industrialreforged:block/machine/processing/advanced/ore_washing_plant_bottom",
+		"up": "industrialreforged:block/machine/processing/advanced/ore_washing_plant_top",
+		"north": "industrialreforged:block/machine/processing/advanced/ore_washing_plant_front_active",
+		"east": "industrialreforged:block/machine/processing/advanced/ore_washing_plant_left_active",
+		"south": "industrialreforged:block/machine/processing/advanced/ore_washing_plant_back",
+		"west": "industrialreforged:block/machine/processing/advanced/ore_washing_plant_right_active"
+	}
+}

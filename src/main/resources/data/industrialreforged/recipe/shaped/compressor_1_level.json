@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:circuit"
+    },
+    "M": {
+      "item": "industrialreforged:machine"
+    },
+    "S": {
+      "item": "minecraft:stone"
+    }
+  },
+  "pattern": [
+    "S S",
+    "SMS",
+    "SCS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:compressor_1_level"
+  }
+}

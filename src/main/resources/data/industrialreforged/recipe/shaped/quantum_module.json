@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "K": {
+      "item": "industrialreforged:silicon_dioxide_dust"
+    },
+    "L": {
+      "item": "minecraft:lapis_lazuli"
+    },
+    "P": {
+      "tag": "c:plates/lead"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "S": {
+      "item": "industrialreforged:sunnarium_part"
+    }
+  },
+  "pattern": [
+    "RSR",
+    "LDL",
+    "KPK"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:quantum_module"
+  }
+}

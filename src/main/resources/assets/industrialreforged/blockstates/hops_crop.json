@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "industrialreforged:block/crop/hops_0"
+    },
+    "age=1": {
+      "model": "industrialreforged:block/crop/hops_1"
+    },
+    "age=2": {
+      "model": "industrialreforged:block/crop/hops_2"
+    },
+    "age=3": {
+      "model": "industrialreforged:block/crop/hops_3"
+    },
+    "age=4": {
+      "model": "industrialreforged:block/crop/hops_4"
+    },
+    "age=5": {
+      "model": "industrialreforged:block/crop/hops_5"
+    },
+    "age=6": {
+      "model": "industrialreforged:block/crop/hops_6"
+    }
+  }
+}

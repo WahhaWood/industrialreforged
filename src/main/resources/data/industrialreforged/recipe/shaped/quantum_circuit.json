@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:energy_crystal"
+    },
+    "E": {
+      "item": "industrialreforged:nano_circuit"
+    },
+    "P": {
+      "item": "industrialreforged:titanium_plate"
+    },
+    "R": {
+      "item": "minecraft:glowstone_dust"
+    }
+  },
+  "pattern": [
+    "RPR",
+    "CEC",
+    "RPR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:quantum_circuit"
+  }
+}

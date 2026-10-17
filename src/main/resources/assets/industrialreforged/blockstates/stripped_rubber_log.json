@@ -1,0 +1,7 @@
+{
+	"variants": {
+		"axis=y": { "model": "industrialreforged:block/resource/stripped_rubber_log" },
+		"axis=x": { "model": "industrialreforged:block/resource/stripped_rubber_log", "x": 90, "y": 90 },
+		"axis=z": { "model": "industrialreforged:block/resource/stripped_rubber_log", "x": 90 }
+	}
+}

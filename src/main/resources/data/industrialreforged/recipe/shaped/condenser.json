@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:machine"
+    },
+    "B": {
+      "item": "industrialreforged:circuit"
+    },
+    "C": {
+      "item": "industrialreforged:cell"
+    },
+    "I": {
+      "item": "industrialreforged:iron_casing"
+    }
+  },
+  "pattern": [
+    "CIC",
+    "CAC",
+    "IBI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:condenser"
+  }
+}

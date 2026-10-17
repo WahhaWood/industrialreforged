@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "industrialreforged:quantum_axe"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:inactive_quantum_axe"
+  }
+}

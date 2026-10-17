@@ -1,0 +1,15 @@
+{
+  "type": "industrialreforged:macerator","category": "misc",
+  "ingredient": {
+    "tag": "c:ingots/draconium"
+  },
+  "result": {
+    "id": "draconicevolution:draconium_dust"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "draconicevolution"
+    }
+  ]
+}

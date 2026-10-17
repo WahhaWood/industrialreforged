@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "item": "industrialreforged:coal_ball"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:coal_block"
+  }
+}

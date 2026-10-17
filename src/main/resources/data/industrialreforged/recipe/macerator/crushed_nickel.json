@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "item": "industrialreforged:crushed_nickel"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:nickel_dust"
+  }
+}

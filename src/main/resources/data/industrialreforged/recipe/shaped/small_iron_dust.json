@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "tag": "c:dusts/copper"
+    },
+    "T": {
+      "tag": "c:dusts/tin"
+    }
+  },
+  "pattern": [
+    "CTC",
+    "TCT",
+    "CTC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:small_iron_dust"
+  }
+}

@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "industrialreforged:block/machine/uu/uu_assembly_bench_bottom",
+		"down": "industrialreforged:block/machine/uu/uu_assembly_bench_bottom",
+		"up": "industrialreforged:block/machine/uu/uu_assembly_bench_top",
+		"north": "industrialreforged:block/machine/uu/uu_assembly_bench_side",
+		"east": "industrialreforged:block/machine/uu/uu_assembly_bench_side",
+		"south": "industrialreforged:block/machine/uu/uu_assembly_bench_side",
+		"west": "industrialreforged:block/machine/uu/uu_assembly_bench_side"
+	}
+}

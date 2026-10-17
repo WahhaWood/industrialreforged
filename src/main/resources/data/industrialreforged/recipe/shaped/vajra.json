@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:alloy"
+    },
+    "C": {
+      "item": "industrialreforged:carbon_plate"
+    },
+    "E": {
+      "item": "industrialreforged:energy_crystal"
+    },
+    "L": {
+      "item": "industrialreforged:lapotron_crystal"
+    },
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "V": {
+      "item": "industrialreforged:vajra_core"
+    }
+  },
+  "pattern": [
+    "PEP",
+    "CVC",
+    "ALA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:vajra"
+  }
+}

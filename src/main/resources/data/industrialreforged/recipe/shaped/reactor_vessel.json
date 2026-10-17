@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/lead"
+    },
+    "S": {
+      "item": "minecraft:stone"
+    }
+  },
+  "pattern": [
+    "PSP",
+    "SPS",
+    "PSP"
+  ],
+  "result": {
+    "count": 4,
+    "id": "industrialreforged:reactor_vessel"
+  }
+}

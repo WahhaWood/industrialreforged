@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:block_cutter",
+  "hardness": 5,
+  "ingredient": {
+    "tag": "c:storage_blocks/lapis"
+  },
+  "result": {
+    "count": 9,
+    "id": "industrialreforged:lapis_plate"
+  }
+}

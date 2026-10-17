@@ -1,0 +1,13 @@
+{
+	"variants": {
+		"active=false,facing=north": { "model": "industrialreforged:block/wiring/chargepad/mfsu_chargepad", "y": 0 },
+		"active=false,facing=east": { "model": "industrialreforged:block/wiring/chargepad/mfsu_chargepad", "y": 90 },
+		"active=false,facing=south": { "model": "industrialreforged:block/wiring/chargepad/mfsu_chargepad", "y": 180 },
+		"active=false,facing=west": { "model": "industrialreforged:block/wiring/chargepad/mfsu_chargepad", "y": 270 },
+
+		"active=true,facing=north": { "model": "industrialreforged:block/wiring/chargepad/mfsu_chargepad_active", "y": 0 },
+		"active=true,facing=east": { "model": "industrialreforged:block/wiring/chargepad/mfsu_chargepad_active", "y": 90 },
+		"active=true,facing=south": { "model": "industrialreforged:block/wiring/chargepad/mfsu_chargepad_active", "y": 180 },
+		"active=true,facing=west": { "model": "industrialreforged:block/wiring/chargepad/mfsu_chargepad_active", "y": 270 }
+	}
+}

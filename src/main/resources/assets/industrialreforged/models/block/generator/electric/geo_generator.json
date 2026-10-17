@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "industrialreforged:block/generator/electric/geo_generator_leftrightback",
+		"down": "industrialreforged:block/generator/electric/geo_generator_bottom",
+		"up": "industrialreforged:block/generator/electric/geo_generator_top",
+		"north": "industrialreforged:block/generator/electric/geo_generator_front",
+		"east": "industrialreforged:block/generator/electric/geo_generator_leftrightback",
+		"south": "industrialreforged:block/generator/electric/geo_generator_leftrightback",
+		"west": "industrialreforged:block/generator/electric/geo_generator_leftrightback"
+	}
+}

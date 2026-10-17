@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:metal_former",
+  "ingredient": {
+    "tag": "c:ingots/tin"
+  },
+  "mode": "ROLLING",
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:tin_plate"
+  }
+}

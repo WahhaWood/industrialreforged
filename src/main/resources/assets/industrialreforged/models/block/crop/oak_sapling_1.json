@@ -1,0 +1,7 @@
+{
+	"render_type": "minecraft:cutout_mipped",
+	"parent": "block/cross",
+	"textures": {
+		"cross": "industrialreforged:block/crop/oak_sapling_1"
+	}
+}

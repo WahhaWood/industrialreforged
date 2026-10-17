@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:extractor",
+  "ingredient": {
+    "item": "industrialreforged:compressed_air_cell"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:cell"
+  }
+}

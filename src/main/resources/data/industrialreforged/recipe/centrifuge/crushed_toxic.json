@@ -1,0 +1,17 @@
+{
+  "type": "industrialreforged:centrifuge",
+  "ingredient": {
+    "item": "industrialreforged:crushed_toxic"
+  },
+  "minHeat": 2000,
+  "result": [
+    {
+      "count": 1,
+      "id": "industrialreforged:toxic_dust"
+    },
+    {
+      "count": 1,
+      "id": "industrialreforged:stone_dust"
+    }
+  ]
+}

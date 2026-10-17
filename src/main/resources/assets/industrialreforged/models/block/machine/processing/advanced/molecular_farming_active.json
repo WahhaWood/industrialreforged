@@ -1,0 +1,13 @@
+{
+	"render_type": "minecraft:cutout_mipped",
+	"parent": "block/cube",
+	"textures": {
+		"particle": "industrialreforged:block/machine/processing/advanced/machine_advanced_side",
+		"down": "industrialreforged:block/machine/processing/advanced/machine_advanced_bottom",
+		"up": "industrialreforged:block/machine/processing/advanced/machine_advanced_bottom",
+		"north": "industrialreforged:block/machine/processing/advanced/molecular_farming_front_active",
+		"east": "industrialreforged:block/machine/processing/advanced/machine_advanced_side",
+		"south": "industrialreforged:block/machine/processing/advanced/machine_advanced_side",
+		"west": "industrialreforged:block/machine/processing/advanced/machine_advanced_side"
+	}
+}

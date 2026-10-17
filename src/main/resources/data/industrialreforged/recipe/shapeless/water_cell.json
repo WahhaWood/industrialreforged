@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "industrialreforged:cell"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result": {
+    "components": {
+      "industrialreforged:fluid": {
+        "amount": 1000,
+        "id": "minecraft:water"
+      }
+    },
+    "count": 1,
+    "id": "industrialreforged:cell"
+  }
+}

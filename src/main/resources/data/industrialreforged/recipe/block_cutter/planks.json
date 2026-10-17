@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:block_cutter",
+  "ingredient": {
+    "tag": "minecraft:planks"
+  },
+  "result": {
+    "count": 6,
+    "id": "minecraft:stick"
+  }
+}

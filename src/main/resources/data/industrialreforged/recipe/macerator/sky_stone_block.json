@@ -1,0 +1,15 @@
+{
+  "type": "industrialreforged:macerator","category": "misc",
+  "ingredient": {
+    "item": "ae2:sky_stone_block"
+  },
+  "result": {
+    "id": "ae2:sky_dust"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

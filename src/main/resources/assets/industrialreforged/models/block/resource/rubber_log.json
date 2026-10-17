@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+		"side": "industrialreforged:block/resource/rubber_wood_sides",
+		"end": "industrialreforged:block/resource/rubber_wood_bottomtop"
+	}
+}

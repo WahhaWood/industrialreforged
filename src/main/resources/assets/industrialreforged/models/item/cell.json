@@ -1,0 +1,7 @@
+{
+	"parent": "industrialreforged:item/default",
+	"textures": {
+		"layer0": "industrialreforged:item/cell",
+		"layer1": "industrialreforged:item/cell_overlay"
+	}
+}

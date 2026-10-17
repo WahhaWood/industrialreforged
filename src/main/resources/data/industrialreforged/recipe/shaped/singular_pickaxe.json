@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "U": {
+      "item": "industrialreforged:singular_circuit"
+    },
+    "D": {
+      "item": "industrialreforged:quantum_pickaxe"
+    },
+    "Y": {
+      "item": "industrialreforged:singular_crystal"
+    }
+  },
+  "pattern": [
+    "U",
+    "D",
+    "Y"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:singular_pickaxe"
+  }
+}

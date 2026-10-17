@@ -1,0 +1,6 @@
+{
+	"parent": "industrialreforged:item/default",
+	"textures": {
+		"layer0": "industrialreforged:item/battery/singular_crystal_2"
+	}
+}

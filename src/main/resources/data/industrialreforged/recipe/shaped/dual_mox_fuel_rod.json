@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "tag": "c:plates/iron"
+    },
+    "U": {
+      "item": "industrialreforged:mox_fuel_rod"
+    }
+  },
+  "pattern": [
+    "UIU"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:dual_mox_fuel_rod"
+  }
+}

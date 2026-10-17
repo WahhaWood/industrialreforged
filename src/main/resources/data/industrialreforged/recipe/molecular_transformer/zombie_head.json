@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:molecular_transformer",
+  "energy": 200000,
+  "input": {
+    "item": "minecraft:leather"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:zombie_head"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:block_cutter",
+  "hardness": 8,
+  "ingredient": {
+    "tag": "c:storage_blocks/steel"
+  },
+  "result": {
+    "count": 9,
+    "id": "industrialreforged:steel_plate"
+  }
+}

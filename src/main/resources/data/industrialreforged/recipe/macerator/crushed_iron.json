@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "item": "industrialreforged:crushed_iron"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:iron_dust"
+  }
+}

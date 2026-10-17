@@ -1,0 +1,16 @@
+{
+  "type": "industrialreforged:metal_former","category": "misc",
+  "mode" : "ROLLING",
+  "ingredient": {
+    "tag": "c:ingots/elementium"
+  },
+  "result": {
+    "id": "industrialreforged:elementium_plate"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "botania"
+    }
+  ]
+}

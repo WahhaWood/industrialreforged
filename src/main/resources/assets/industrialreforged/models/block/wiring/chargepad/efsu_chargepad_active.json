@@ -1,0 +1,12 @@
+{
+	"parent": "industrialreforged:block/wiring/chargepad/chargepad_base",
+	"textures": {
+		"particle": "industrialreforged:block/wiring/storage/efsu_leftrightback",
+		"down": "industrialreforged:block/wiring/storage/efsu_bottomtop",
+		"up": "industrialreforged:block/wiring/chargepad/chargepad_efsu_top_active",
+		"north": "industrialreforged:block/wiring/storage/efsu_front",
+		"east": "industrialreforged:block/wiring/storage/efsu_leftrightback",
+		"south": "industrialreforged:block/wiring/storage/efsu_leftrightback",
+		"west": "industrialreforged:block/wiring/storage/efsu_leftrightback"
+	}
+}

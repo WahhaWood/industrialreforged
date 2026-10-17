@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "active=false": {
+      "model": "industrialreforged:block/multiblock/tank_wall"
+    },
+    "active=true": {
+      "model": "industrialreforged:block/multiblock/tank_wall_active"
+    }
+  }
+}

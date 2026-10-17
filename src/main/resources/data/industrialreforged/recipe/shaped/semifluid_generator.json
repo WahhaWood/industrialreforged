@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:cell"
+    },
+    "G": {
+      "item": "industrialreforged:geo_generator"
+    },
+    "I": {
+      "item": "industrialreforged:iron_casing"
+    }
+  },
+  "pattern": [
+    "ICI",
+    "CGC",
+    "ICI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:semifluid_generator"
+  }
+}

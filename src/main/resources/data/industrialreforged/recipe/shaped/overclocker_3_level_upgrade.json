@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:wire_3_level"
+    },
+    "B": {
+      "item": "industrialreforged:nano_circuit"
+    },
+    "S": {
+      "item": "industrialreforged:overclocker_2_level_upgrade"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "ABA",
+    "SSS"
+  ],
+  "result": {
+    "count": 4,
+    "id": "industrialreforged:overclocker_3_level_upgrade"
+  }
+}

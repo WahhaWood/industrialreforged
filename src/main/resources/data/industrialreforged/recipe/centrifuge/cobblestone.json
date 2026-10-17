@@ -1,0 +1,13 @@
+{
+  "type": "industrialreforged:centrifuge",
+  "ingredient": {
+    "item": "minecraft:cobblestone"
+  },
+  "minHeat": 100,
+  "result": [
+    {
+      "count": 1,
+      "id": "industrialreforged:stone_dust"
+    }
+  ]
+}

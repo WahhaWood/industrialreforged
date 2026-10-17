@@ -1,0 +1,6 @@
+{
+	"variants": {
+		"active=false": { "model": "industrialreforged:block/reinforced_stone" },
+		"active=true": { "model": "industrialreforged:block/reinforced_stone_active" }
+	}
+}

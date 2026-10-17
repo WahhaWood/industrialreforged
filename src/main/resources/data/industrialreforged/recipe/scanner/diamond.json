@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 4441,
+  "item": {
+    "count": 1,
+    "id": "minecraft:diamond"
+  }
+}

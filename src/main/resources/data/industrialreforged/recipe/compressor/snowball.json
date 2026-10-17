@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "count": 4,
+    "item": "minecraft:snowball"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:snow_block"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "type": "industrialreforged:centrifuge",
+  "ingredient": {
+    "item": "industrialreforged:slag"
+  },
+  "minHeat": 1500,
+  "result": [
+    {
+      "count": 1,
+      "id": "industrialreforged:small_gold_dust"
+    },
+    {
+      "count": 5,
+      "id": "industrialreforged:coal_dust"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+	"parent": "block/cube_all",
+	"textures": {
+		"all": "industrialreforged:block/resource/reinforced_stone_active"
+	}
+}

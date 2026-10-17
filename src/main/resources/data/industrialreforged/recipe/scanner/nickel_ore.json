@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 1014,
+  "item": {
+    "count": 1,
+    "id": "industrialreforged:nickel_ore"
+  }
+}

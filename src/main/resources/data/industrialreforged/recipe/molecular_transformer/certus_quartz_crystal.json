@@ -1,0 +1,17 @@
+{
+  "type": "industrialreforged:molecular_transformer","category": "misc",
+  "input": {
+    "item": "minecraft:quartz",
+    "count": 1
+  },
+  "output": {
+    "id": "ae2:certus_quartz_crystal"
+  },
+  "energy": 20000000,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
+}

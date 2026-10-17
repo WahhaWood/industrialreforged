@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:coil"
+    },
+    "T": {
+      "item": "industrialreforged:tin_casing"
+    },
+    "X": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    " T ",
+    "CXC",
+    " T "
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:electric_motor"
+  }
+}

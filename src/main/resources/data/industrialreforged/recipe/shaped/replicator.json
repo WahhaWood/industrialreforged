@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "industrialreforged:mfe"
+    },
+    "G": {
+      "item": "industrialreforged:reinforced_glass"
+    },
+    "S": {
+      "item": "industrialreforged:reinforced_stone"
+    },
+    "T": {
+      "item": "industrialreforged:teleporter"
+    },
+    "V": {
+      "item": "industrialreforged:quantum_circuit"
+    }
+  },
+  "pattern": [
+    "SGS",
+    "TTT",
+    "VFV"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:replicator"
+  }
+}

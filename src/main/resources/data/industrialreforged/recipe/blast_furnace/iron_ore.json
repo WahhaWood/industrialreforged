@@ -1,0 +1,18 @@
+{
+  "type": "industrialreforged:blast_furnace",
+  "cells": 6,
+  "duration": 6000,
+  "ingredient": {
+    "tag": "c:ores/iron"
+  },
+  "result": [
+    {
+      "count": 1,
+      "id": "industrialreforged:steel_ingot"
+    },
+    {
+      "count": 1,
+      "id": "industrialreforged:slag"
+    }
+  ]
+}

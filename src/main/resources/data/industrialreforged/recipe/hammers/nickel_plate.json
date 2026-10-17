@@ -1,0 +1,12 @@
+{
+  "type": "industrialreforged:tool_use","category": "misc",
+  "tool": {
+    "item": "industrialreforged:forge_hammer"
+  },
+  "input": {
+    "tag": "c:ingots/nickel"
+  },
+  "result": {
+    "id": "industrialreforged:nickel_plate"
+  }
+}

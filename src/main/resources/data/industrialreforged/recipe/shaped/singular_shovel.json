@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "industrialreforged:quantum_shovel"
+    },
+    "U": {
+      "item": "industrialreforged:singular_circuit"
+    },
+    "Y": {
+      "item": "industrialreforged:singular_crystal"
+    }
+  },
+  "pattern": [
+    "U",
+    "D",
+    "Y"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:singular_shovel"
+  }
+}

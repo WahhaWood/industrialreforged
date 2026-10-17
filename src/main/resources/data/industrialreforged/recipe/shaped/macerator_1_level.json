@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:circuit"
+    },
+    "F": {
+      "item": "minecraft:flint"
+    },
+    "M": {
+      "item": "industrialreforged:machine"
+    },
+    "S": {
+      "item": "minecraft:cobblestone"
+    }
+  },
+  "pattern": [
+    "FFF",
+    "SMS",
+    " C "
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:macerator_1_level"
+  }
+}

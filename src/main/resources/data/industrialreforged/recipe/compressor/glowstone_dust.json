@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "count": 4,
+    "item": "minecraft:glowstone_dust"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:glowstone"
+  }
+}

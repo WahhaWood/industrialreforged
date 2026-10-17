@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:molecular_transformer",
+  "energy": 2000000,
+  "input": {
+    "tag": "c:ingots/tin"
+  },
+  "output": {
+    "count": 1,
+    "id": "industrialreforged:silver_ingot"
+  }
+}

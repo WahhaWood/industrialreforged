@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "industrialreforged:photocell_1_level"
+    },
+    "C": {
+      "item": "industrialreforged:circuit"
+    },
+    "G": {
+      "item": "industrialreforged:generator"
+    },
+    "T": {
+      "item": "industrialreforged:solar_core_1_level"
+    }
+  },
+  "pattern": [
+    "P P",
+    "CGC",
+    " T "
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:solar_generator_1_level"
+  }
+}

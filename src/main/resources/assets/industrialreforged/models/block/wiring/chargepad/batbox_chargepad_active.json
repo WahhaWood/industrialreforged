@@ -1,0 +1,12 @@
+{
+	"parent": "industrialreforged:block/wiring/chargepad/chargepad_base",
+	"textures": {
+		"particle": "industrialreforged:block/wiring/storage/batbox_leftright",
+		"down": "industrialreforged:block/wiring/storage/batbox_bottom",
+		"up": "industrialreforged:block/wiring/chargepad/chargepad_batbox_top_active",
+		"north": "industrialreforged:block/wiring/storage/batbox_front",
+		"east": "industrialreforged:block/wiring/storage/batbox_leftright",
+		"south": "industrialreforged:block/wiring/storage/batbox_back",
+		"west": "industrialreforged:block/wiring/storage/batbox_leftright"
+	}
+}

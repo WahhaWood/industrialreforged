@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "item": "industrialreforged:iridium_ore"
+  },
+  "result": {
+    "count": 9,
+    "id": "industrialreforged:iridium_shard"
+  }
+}

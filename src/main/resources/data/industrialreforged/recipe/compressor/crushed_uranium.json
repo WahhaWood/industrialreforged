@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "item": "industrialreforged:crushed_uranium"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:uranium_ingot"
+  }
+}

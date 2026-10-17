@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:singular_circuit"
+    },
+    "G": {
+      "item": "industrialreforged:gravity_engine"
+    },
+    "I": {
+      "item": "industrialreforged:iridium"
+    },
+    "N": {
+      "item": "industrialreforged:advanced_nano_chestplate"
+    },
+    "P": {
+      "item": "industrialreforged:carbon_plate"
+    },
+    "Q": {
+      "item": "industrialreforged:quantum_chestplate"
+    }
+  },
+  "pattern": [
+    "GNG",
+    "IQI",
+    "PCP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:gravi_chestplate"
+  }
+}

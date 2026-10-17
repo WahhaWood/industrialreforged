@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "U": {
+      "item": "industrialreforged:small_power_unit"
+    }
+  },
+  "pattern": [
+    "PP ",
+    " P ",
+    " U "
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:electric_hoe"
+  }
+}

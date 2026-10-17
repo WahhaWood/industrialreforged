@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "industrialreforged:iridium"
+    },
+    "S": {
+      "item": "industrialreforged:sunnarium"
+    }
+  },
+  "pattern": [
+    "III",
+    "ISI",
+    "III"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:sunnarium_alloy"
+  }
+}

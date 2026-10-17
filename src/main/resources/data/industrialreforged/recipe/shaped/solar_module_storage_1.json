@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "E": {
+      "item": "industrialreforged:energy_storage_upgrade"
+    }
+  },
+  "pattern": [
+    "I I",
+    "IEI",
+    "I I"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:solar_module_storage_1"
+  }
+}

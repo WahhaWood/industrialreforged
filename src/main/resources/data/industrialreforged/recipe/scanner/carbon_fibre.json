@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 150,
+  "item": {
+    "count": 1,
+    "id": "industrialreforged:carbon_fibre"
+  }
+}

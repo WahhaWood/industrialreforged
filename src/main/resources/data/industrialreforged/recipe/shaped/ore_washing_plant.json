@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:machine"
+    },
+    "B": {
+      "item": "minecraft:bucket"
+    },
+    "E": {
+      "item": "industrialreforged:electric_motor"
+    },
+    "I": {
+      "tag": "c:plates/iron"
+    },
+    "W": {
+      "item": "industrialreforged:circuit"
+    }
+  },
+  "pattern": [
+    "III",
+    "BAB",
+    "EWE"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:ore_washing_plant"
+  }
+}

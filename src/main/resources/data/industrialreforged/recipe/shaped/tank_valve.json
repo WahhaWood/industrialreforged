@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": {
+      "item": "industrialreforged:tank_wall"
+    },
+    "B": {
+      "item": "minecraft:bucket"
+    },
+    "L": {
+      "item": "minecraft:lever"
+    }
+  },
+  "pattern": [
+    " L ",
+    "WBW",
+    " W "
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:tank_valve"
+  }
+}

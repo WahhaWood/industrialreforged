@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "industrialreforged:fuel_rod"
+    },
+    {
+      "item": "industrialreforged:mox_pellet"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:mox_fuel_rod"
+  }
+}

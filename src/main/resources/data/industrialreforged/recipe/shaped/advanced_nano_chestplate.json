@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:carbon_plate"
+    },
+    "E": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "G": {
+      "item": "industrialreforged:wire_5_level"
+    },
+    "J": {
+      "item": "industrialreforged:advanced_electric_jetpack"
+    },
+    "N": {
+      "item": "industrialreforged:nano_chestplate"
+    }
+  },
+  "pattern": [
+    "CJC",
+    "CNC",
+    "GEG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:advanced_nano_chestplate"
+  }
+}

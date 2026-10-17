@@ -1,0 +1,172 @@
+{
+  "variants": {
+    "active=false,mode=water_in,facing=north": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_in"
+    },
+    "active=false,mode=water_in,facing=east": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_in",
+      "y": 90
+    },
+    "active=false,mode=water_in,facing=south": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_in",
+      "y": 180
+    },
+    "active=false,mode=water_in,facing=west": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_in",
+      "y": 270
+    },
+    "active=false,mode=water_in,facing=up": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_in_top"
+    },
+    "active=false,mode=water_in,facing=down": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_in_bottom"
+    },
+    "active=false,mode=water_out,facing=north": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_out"
+    },
+    "active=false,mode=water_out,facing=east": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_out",
+      "y": 90
+    },
+    "active=false,mode=water_out,facing=south": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_out",
+      "y": 180
+    },
+    "active=false,mode=water_out,facing=west": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_out",
+      "y": 270
+    },
+    "active=false,mode=water_out,facing=up": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_out_top"
+    },
+    "active=false,mode=water_out,facing=down": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_out_bottom"
+    },
+    "active=false,mode=steam_in,facing=north": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_in"
+    },
+    "active=false,mode=steam_in,facing=east": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_in",
+      "y": 90
+    },
+    "active=false,mode=steam_in,facing=south": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_in",
+      "y": 180
+    },
+    "active=false,mode=steam_in,facing=west": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_in",
+      "y": 270
+    },
+    "active=false,mode=steam_in,facing=up": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_in_top"
+    },
+    "active=false,mode=steam_in,facing=down": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_in_bottom"
+    },
+    "active=false,mode=steam_out,facing=north": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_out"
+    },
+    "active=false,mode=steam_out,facing=east": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_out",
+      "y": 90
+    },
+    "active=false,mode=steam_out,facing=south": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_out",
+      "y": 180
+    },
+    "active=false,mode=steam_out,facing=west": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_out",
+      "y": 270
+    },
+    "active=false,mode=steam_out,facing=up": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_out_top"
+    },
+    "active=false,mode=steam_out,facing=down": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_out_bottom"
+    },
+    "active=true,mode=water_in,facing=north": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_in_active"
+    },
+    "active=true,mode=water_in,facing=east": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_in_active",
+      "y": 90
+    },
+    "active=true,mode=water_in,facing=south": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_in_active",
+      "y": 180
+    },
+    "active=true,mode=water_in,facing=west": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_in_active",
+      "y": 270
+    },
+    "active=true,mode=water_in,facing=up": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_in_active_top"
+    },
+    "active=true,mode=water_in,facing=down": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_in_active_bottom"
+    },
+    "active=true,mode=water_out,facing=north": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_out_active"
+    },
+    "active=true,mode=water_out,facing=east": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_out_active",
+      "y": 90
+    },
+    "active=true,mode=water_out,facing=south": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_out_active",
+      "y": 180
+    },
+    "active=true,mode=water_out,facing=west": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_out_active",
+      "y": 270
+    },
+    "active=true,mode=water_out,facing=up": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_out_active_top"
+    },
+    "active=true,mode=water_out,facing=down": {
+      "model": "industrialreforged:block/multiblock/tank_valve_water_out_active_bottom"
+    },
+    "active=true,mode=steam_in,facing=north": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_in_active"
+    },
+    "active=true,mode=steam_in,facing=east": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_in_active",
+      "y": 90
+    },
+    "active=true,mode=steam_in,facing=south": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_in_active",
+      "y": 180
+    },
+    "active=true,mode=steam_in,facing=west": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_in_active",
+      "y": 270
+    },
+    "active=true,mode=steam_in,facing=up": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_in_active_top"
+    },
+    "active=true,mode=steam_in,facing=down": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_in_active_bottom"
+    },
+    "active=true,mode=steam_out,facing=north": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_out_active"
+    },
+    "active=true,mode=steam_out,facing=east": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_out_active",
+      "y": 90
+    },
+    "active=true,mode=steam_out,facing=south": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_out_active",
+      "y": 180
+    },
+    "active=true,mode=steam_out,facing=west": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_out_active",
+      "y": 270
+    },
+    "active=true,mode=steam_out,facing=up": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_out_active_top"
+    },
+    "active=true,mode=steam_out,facing=down": {
+      "model": "industrialreforged:block/multiblock/tank_valve_steam_out_active_bottom"
+    }
+  }
+}

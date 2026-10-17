@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "L": {
+      "item": "industrialreforged:iron_casing"
+    },
+    "X": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "XLX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:iron_turning_mold"
+  }
+}

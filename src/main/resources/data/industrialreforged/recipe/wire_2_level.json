@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "I": {
+      "item": "minecraft:copper_ingot"
+    },
+    "R": {
+      "item": "industrialreforged:rubber"
+    }
+  },
+  "pattern": [
+    "RRR",
+    "III",
+    "RRR"
+  ],
+  "result": {
+    "id": "industrialreforged:wire_2_level",
+    "count": 16
+  }
+}

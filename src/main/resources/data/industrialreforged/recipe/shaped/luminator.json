@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:wire_1_level"
+    },
+    "D": {
+      "tag": "c:glass_blocks"
+    },
+    "U": {
+      "item": "industrialreforged:wire_2_level"
+    },
+    "X": {
+      "item": "industrialreforged:iron_casing"
+    }
+  },
+  "pattern": [
+    "XUX",
+    "DCD",
+    "DDD"
+  ],
+  "result": {
+    "count": 8,
+    "id": "industrialreforged:luminator"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "industrialreforged:item/wire",
+  "textures": {
+    "0": "industrialreforged:block/wire/9"
+  }
+}

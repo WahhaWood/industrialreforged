@@ -1,0 +1,6 @@
+{
+	"variants": {
+		"active=false": { "model": "industrialreforged:block/machine/processing/basic/turning" },
+		"active=true": { "model": "industrialreforged:block/machine/processing/basic/turning_active" }
+	}
+}

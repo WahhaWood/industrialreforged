@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:carbon_plate"
+    },
+    "E": {
+      "item": "industrialreforged:lapotron_crystal"
+    },
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "H": {
+      "item": "industrialreforged:quantum_circuit"
+    },
+    "S": {
+      "item": "industrialreforged:nano_saber"
+    }
+  },
+  "pattern": [
+    "GH ",
+    "GS ",
+    "CEC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:quantum_saber"
+  }
+}

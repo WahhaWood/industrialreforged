@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:cell"
+    },
+    "G": {
+      "item": "industrialreforged:toxic_dust"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "R",
+    "G",
+    "C"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:weed_ex_cell"
+  }
+}

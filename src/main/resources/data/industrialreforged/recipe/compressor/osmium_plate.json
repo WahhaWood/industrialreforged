@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "count": 9,
+    "item": "industrialreforged:osmium_plate"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:dense_osmium_plate"
+  }
+}

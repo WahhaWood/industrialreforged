@@ -1,0 +1,6 @@
+{
+	"parent": "industrialreforged:item/default",
+	"textures": {
+		"layer0": "industrialreforged:item/reactor/component_heat_vent"
+	}
+}

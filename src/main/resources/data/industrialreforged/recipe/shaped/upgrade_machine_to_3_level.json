@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:quantum_circuit"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "P": {
+      "item": "industrialreforged:titanium_plate"
+    },
+    "T": {
+      "item": "industrialreforged:transformer_upgrade"
+    }
+  },
+  "pattern": [
+    "GCG",
+    "G G",
+    "TPT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:upgrade_machine_to_3_level"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": {
+      "item": "industrialreforged:tungsten_plate"
+    },
+    "I": {
+      "item": "industrialreforged:iridium"
+    },
+    "R": {
+      "item": "industrialreforged:titanium_rotor"
+    }
+  },
+  "pattern": [
+    "WIW",
+    "IRI",
+    "WIW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:tungsten_rotor"
+  }
+}

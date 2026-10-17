@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:alloy"
+    },
+    "I": {
+      "item": "industrialreforged:iridium"
+    },
+    "J": {
+      "item": "industrialreforged:electric_jetpack"
+    },
+    "L": {
+      "item": "industrialreforged:lapotron_crystal"
+    },
+    "n": {
+      "item": "industrialreforged:nano_chestplate"
+    }
+  },
+  "pattern": [
+    "AnA",
+    "ILI",
+    "IJI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:quantum_chestplate"
+  }
+}

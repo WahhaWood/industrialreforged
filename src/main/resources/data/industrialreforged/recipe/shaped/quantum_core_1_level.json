@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:enriched_sunnarium_alloy"
+    },
+    "P": {
+      "item": "minecraft:nether_star"
+    },
+    "S": {
+      "item": "minecraft:ender_eye"
+    }
+  },
+  "pattern": [
+    "PCP",
+    "CSC",
+    "PCP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:quantum_core_1_level"
+  }
+}

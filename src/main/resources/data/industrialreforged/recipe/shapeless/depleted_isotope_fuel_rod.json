@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "industrialreforged:near_depleted_uranium"
+    },
+    {
+      "item": "industrialreforged:coal_dust"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:depleted_isotope_fuel_rod"
+  }
+}

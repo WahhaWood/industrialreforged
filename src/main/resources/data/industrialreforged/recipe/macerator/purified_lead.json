@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "item": "industrialreforged:purified_lead"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:lead_dust"
+  }
+}

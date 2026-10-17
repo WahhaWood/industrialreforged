@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:advanced_machine"
+    },
+    "C": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "L": {
+      "item": "industrialreforged:lapotron_crystal"
+    },
+    "M": {
+      "item": "industrialreforged:mfe"
+    }
+  },
+  "pattern": [
+    "LCL",
+    "LML",
+    "LAL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:mfsu"
+  }
+}

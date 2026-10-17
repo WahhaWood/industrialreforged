@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "count": 32,
+    "item": "industrialreforged:weed"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:bio_chaff"
+  }
+}

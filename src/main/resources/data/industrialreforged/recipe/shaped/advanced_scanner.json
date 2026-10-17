@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "D": {
+      "item": "industrialreforged:energy_crystal"
+    },
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "P": {
+      "item": "industrialreforged:gold_casing"
+    },
+    "S": {
+      "item": "industrialreforged:scanner"
+    },
+    "c": {
+      "item": "industrialreforged:wire_3_level"
+    }
+  },
+  "pattern": [
+    "PDP",
+    "GCG",
+    "cSc"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:advanced_scanner"
+  }
+}

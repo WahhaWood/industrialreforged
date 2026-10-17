@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "type": "neoforge:components",
+      "components": {
+        "industrialreforged:fluid": {
+          "amount": 1000,
+          "id": "minecraft:water"
+        }
+      },
+      "items": "industrialreforged:cell"
+    },
+    {
+      "item": "industrialreforged:cf_powder"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:foam"
+  }
+}

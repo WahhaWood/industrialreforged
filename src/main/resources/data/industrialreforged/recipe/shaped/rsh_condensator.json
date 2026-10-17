@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "S": {
+      "item": "industrialreforged:heat_exchanger"
+    },
+    "V": {
+      "item": "industrialreforged:heat_vent"
+    }
+  },
+  "pattern": [
+    "RRR",
+    "RVR",
+    "RSR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:rsh_condensator"
+  }
+}

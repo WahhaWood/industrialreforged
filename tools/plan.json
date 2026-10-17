@@ -1,0 +1,230 @@
+[
+  {
+    "type": "macerator",
+    "block": "macerator_1_level",
+    "container": "input",
+    "extra": {},
+    "status": "ready",
+    "recipe": "macerator/bio_chaff.json",
+    "input": "industrialreforged:bio_chaff",
+    "input_count": 1,
+    "output": "minecraft:dirt",
+    "output_count": 1
+  },
+  {
+    "type": "compressor",
+    "block": "compressor_1_level",
+    "container": "input",
+    "extra": {},
+    "status": "ready",
+    "recipe": "compressor/blaze_powder.json",
+    "input": "minecraft:blaze_powder",
+    "input_count": 5,
+    "output": "minecraft:blaze_rod",
+    "output_count": 1
+  },
+  {
+    "type": "extractor",
+    "block": "extractor_1_level",
+    "container": "input",
+    "extra": {},
+    "status": "ready",
+    "recipe": "extractor/bricks.json",
+    "input": "minecraft:bricks",
+    "input_count": 1,
+    "output": "minecraft:brick",
+    "output_count": 4
+  },
+  {
+    "type": "centrifuge",
+    "block": "centrifuge",
+    "container": "input",
+    "extra": {
+      "heat": true
+    },
+    "status": "ready",
+    "recipe": "centrifuge/clay_dust.json",
+    "input": "industrialreforged:clay_dust",
+    "input_count": 4,
+    "output": "industrialreforged:silicon_dioxide_dust",
+    "output_count": 1
+  },
+  {
+    "type": "block_cutter",
+    "block": "block_cutter",
+    "container": "input",
+    "extra": {
+      "blade": "industrialreforged:iron_cutting_blade"
+    },
+    "status": "ready",
+    "recipe": "block_cutter/acacia_log.json",
+    "input": "minecraft:acacia_log",
+    "input_count": 1,
+    "output": "minecraft:acacia_planks",
+    "output_count": 6
+  },
+  {
+    "type": "metal_former",
+    "block": "metal_former_1_level",
+    "container": "input",
+    "extra": {},
+    "status": "ready",
+    "recipe": "metal_former/extruding/iron_fence.json",
+    "input": "industrialreforged:iron_casing",
+    "input_count": 1,
+    "output": "industrialreforged:iron_fence",
+    "output_count": 1
+  },
+  {
+    "type": "blast_furnace",
+    "block": "blast_furnace",
+    "container": "input",
+    "extra": {
+      "cells": "industrialreforged:compressed_air_cell",
+      "heat": true,
+      "long": true,
+      "preheat": 50000
+    },
+    "status": "ready",
+    "recipe": "blast_furnace/crushed_iron.json",
+    "input": "industrialreforged:crushed_iron",
+    "input_count": 1,
+    "output": "industrialreforged:steel_ingot",
+    "output_count": 1
+  },
+  {
+    "type": "scanner",
+    "block": "uu_scanner",
+    "container": "input",
+    "extra": {
+      "disk": "industrialreforged:crystal_memory"
+    },
+    "status": "ready",
+    "recipe": "scanner/advanced_circuit.json",
+    "input": "industrialreforged:advanced_circuit",
+    "input_count": 1,
+    "output": "industrialreforged:crystal_memory",
+    "output_count": 1
+  },
+  {
+    "type": "ore_washer",
+    "block": "ore_washing_plant",
+    "container": "input",
+    "extra": {
+      "water": 5000
+    },
+    "status": "ready",
+    "recipe": "ore_washer/crushed_copper.json",
+    "input": "industrialreforged:crushed_copper",
+    "input_count": 1,
+    "output": "industrialreforged:purified_copper",
+    "output_count": 1
+  },
+  {
+    "type": "molecular_transformer",
+    "block": "molecular_transformer",
+    "container": "input",
+    "extra": {},
+    "status": "ready",
+    "recipe": "molecular_transformer/clay.json",
+    "input": "minecraft:dirt",
+    "input_count": 1,
+    "output": "minecraft:clay",
+    "output_count": 1
+  },
+  {
+    "type": "fermenter",
+    "block": "fermenter",
+    "status": "ready",
+    "container": "biomassInput",
+    "extra": {
+      "heat": true,
+      "skip_input": true,
+      "fluid": {
+        "fluid": "industrialreforged:biomass",
+        "amount": 10000
+      },
+      "expected_fluid": {
+        "tank": 1,
+        "fluid": "industrialreforged:biogas",
+        "amount": 1
+      }
+    },
+    "input": "industrialreforged:biomass",
+    "input_count": 1,
+    "output": "industrialreforged:biogas",
+    "output_count": 1
+  },
+  {
+    "type": "condenser",
+    "block": "condenser",
+    "status": "ready",
+    "container": "waterInputSlot",
+    "extra": {
+      "vent": "industrialreforged:heat_vent",
+      "skip_input": true,
+      "fluid": {
+        "fluid": "industrialreforged:steam",
+        "amount": 10000
+      },
+      "expected_fluid": {
+        "tank": 1,
+        "fluid": "minecraft:water",
+        "amount": 10000
+      }
+    },
+    "input": "industrialreforged:steam",
+    "input_count": 1,
+    "output": "minecraft:water",
+    "output_count": 100
+  },
+  {
+    "type": "fluid_bottler",
+    "block": "fluid_bottler",
+    "status": "ready",
+    "container": "fillInput",
+    "extra": {
+      "input_slot": "fillInput",
+      "fluid": {
+        "fluid": "minecraft:water",
+        "amount": 8000
+      }
+    },
+    "input": "minecraft:bucket",
+    "input_count": 4,
+    "output": "minecraft:water_bucket",
+    "output_count": 1
+  },
+  {
+    "type": "canner",
+    "block": "canner",
+    "status": "ready",
+    "container": "canInput",
+    "extra": {
+      "input_slot": "canInput",
+      "fluid": {
+        "fluid": "minecraft:water",
+        "amount": 8000
+      },
+      "mode": 2,
+      "expected_container": "outputSlot"
+    },
+    "input": "industrialreforged:cell",
+    "input_count": 4,
+    "output": "industrialreforged:cell",
+    "output_count": 1
+  },
+  {
+    "type": "solid_canner",
+    "block": "solid_canner",
+    "status": "ready",
+    "container": "input",
+    "extra": {
+      "can": "industrialreforged:tin_can"
+    },
+    "input": "minecraft:potato",
+    "input_count": 1,
+    "output": "industrialreforged:filled_tin_can",
+    "output_count": 1
+  }
+]

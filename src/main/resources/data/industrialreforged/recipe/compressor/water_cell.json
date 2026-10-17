@@ -1,0 +1,17 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "type": "neoforge:components",
+    "components": {
+      "industrialreforged:fluid": {
+        "amount": 1000,
+        "id": "minecraft:water"
+      }
+    },
+    "items": "industrialreforged:cell"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:snow_block"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "item": "industrialreforged:energy_crystal"
+  },
+  "result": {
+    "count": 9,
+    "id": "industrialreforged:energium_dust"
+  }
+}

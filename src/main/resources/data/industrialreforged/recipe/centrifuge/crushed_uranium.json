@@ -1,0 +1,21 @@
+{
+  "type": "industrialreforged:centrifuge",
+  "ingredient": {
+    "item": "industrialreforged:crushed_uranium"
+  },
+  "minHeat": 3000,
+  "result": [
+    {
+      "count": 1,
+      "id": "industrialreforged:small_uranium_235"
+    },
+    {
+      "count": 4,
+      "id": "industrialreforged:uranium_238"
+    },
+    {
+      "count": 1,
+      "id": "industrialreforged:stone_dust"
+    }
+  ]
+}

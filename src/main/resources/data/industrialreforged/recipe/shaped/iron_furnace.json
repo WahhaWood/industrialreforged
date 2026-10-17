@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "I": {
+      "tag": "c:plates/iron"
+    }
+  },
+  "pattern": [
+    " I ",
+    "I I",
+    "IFI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:iron_furnace"
+  }
+}

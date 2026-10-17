@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:alloy"
+    },
+    "C": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "U": {
+      "item": "industrialreforged:overclocker_1_level_upgrade"
+    },
+    "V": {
+      "item": "industrialreforged:advanced_heat_vent"
+    }
+  },
+  "pattern": [
+    "GAG",
+    "CUC",
+    "AVA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:engine_booster"
+  }
+}

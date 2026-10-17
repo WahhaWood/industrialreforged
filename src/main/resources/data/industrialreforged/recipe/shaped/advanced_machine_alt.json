@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:alloy"
+    },
+    "C": {
+      "item": "industrialreforged:carbon_plate"
+    },
+    "M": {
+      "item": "industrialreforged:machine"
+    },
+    "S": {
+      "tag": "c:plates/steel"
+    }
+  },
+  "pattern": [
+    "SAS",
+    "CMC",
+    "SAS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:advanced_machine"
+  }
+}

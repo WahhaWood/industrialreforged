@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:metal_former",
+  "ingredient": {
+    "tag": "c:ingots/nickel"
+  },
+  "mode": "ROLLING",
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:nickel_plate"
+  }
+}

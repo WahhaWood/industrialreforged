@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "type": "neoforge:components",
+      "components": {
+        "industrialreforged:fluid": {
+          "amount": 1000,
+          "id": "minecraft:water"
+        }
+      },
+      "items": "industrialreforged:cell"
+    },
+    "L": {
+      "tag": "c:dusts/lapis"
+    }
+  },
+  "pattern": [
+    "LLL",
+    "LCL",
+    "LLL"
+  ],
+  "result": {
+    "components": {
+      "industrialreforged:fluid": {
+        "amount": 1000,
+        "id": "industrialreforged:coolant"
+      }
+    },
+    "count": 1,
+    "id": "industrialreforged:cell"
+  }
+}

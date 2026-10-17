@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "industrialreforged:steel_plate"
+    },
+    "T": {
+      "item": "industrialreforged:steam_turbine"
+    }
+  },
+  "pattern": [
+    "B B",
+    "BTB",
+    "B B"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:steel_steam_turbine"
+  }
+}

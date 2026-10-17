@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "industrialreforged:bronze_casing"
+    },
+    "T": {
+      "item": "industrialreforged:tin_casing"
+    },
+    "U": {
+      "item": "industrialreforged:small_power_unit"
+    }
+  },
+  "pattern": [
+    " T ",
+    "TBT",
+    " TU"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:wind_meter"
+  }
+}

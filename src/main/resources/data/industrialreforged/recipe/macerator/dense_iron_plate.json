@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "item": "industrialreforged:dense_iron_plate"
+  },
+  "result": {
+    "count": 9,
+    "id": "industrialreforged:iron_dust"
+  }
+}

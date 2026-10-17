@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "tag": "c:ores/uranium"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:uranium_ingot"
+  }
+}

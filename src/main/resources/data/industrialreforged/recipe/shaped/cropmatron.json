@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "tag": "c:chests/wooden"
+    },
+    "C": {
+      "item": "industrialreforged:crop_stick"
+    },
+    "M": {
+      "item": "industrialreforged:machine"
+    },
+    "U": {
+      "item": "industrialreforged:cell"
+    },
+    "c": {
+      "item": "industrialreforged:circuit"
+    }
+  },
+  "pattern": [
+    "cBc",
+    "UMU",
+    "CCC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:cropmatron"
+  }
+}

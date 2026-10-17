@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "s": {
+      "item": "industrialreforged:iron_fence"
+    }
+  },
+  "pattern": [
+    "PPP",
+    "sss",
+    "PPP"
+  ],
+  "result": {
+    "count": 16,
+    "id": "industrialreforged:iron_scaffold"
+  }
+}

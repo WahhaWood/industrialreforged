@@ -1,0 +1,14 @@
+{
+  "type": "industrialreforged:centrifuge",
+  "ingredient": {
+    "count": 2,
+    "item": "minecraft:quartz"
+  },
+  "minHeat": 500,
+  "result": [
+    {
+      "count": 1,
+      "id": "industrialreforged:small_lithium_dust"
+    }
+  ]
+}

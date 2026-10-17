@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:nano_circuit"
+    },
+    "E": {
+      "item": "industrialreforged:singular_crystal"
+    },
+    "M": {
+      "item": "industrialreforged:iridium_machine"
+    },
+    "S": {
+      "item": "industrialreforged:mfsu"
+    }
+  },
+  "pattern": [
+    "ECE",
+    "ESE",
+    "EME"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:efsu"
+  }
+}

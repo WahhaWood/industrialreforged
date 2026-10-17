@@ -1,0 +1,24 @@
+{
+  "type": "industrialreforged:block_cutter","category": "misc",
+  "ingredient": {
+    "tag": "c:storage_blocks/aluminum"
+  },
+  "result": {
+    "id": "industrialreforged:aluminum_plate",
+    "count": 9
+  },
+  "hardness": 2,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialreforged:aluminum_plate"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:storage_blocks/aluminum"
+      }
+    }
+  ]
+}

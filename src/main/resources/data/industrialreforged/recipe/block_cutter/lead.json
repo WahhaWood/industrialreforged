@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:block_cutter",
+  "hardness": 2,
+  "ingredient": {
+    "tag": "c:storage_blocks/lead"
+  },
+  "result": {
+    "count": 9,
+    "id": "industrialreforged:lead_plate"
+  }
+}

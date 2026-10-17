@@ -1,0 +1,6 @@
+{
+	"parent": "industrialreforged:item/default",
+	"textures": {
+		"layer0": "industrialreforged:item/battery/charging_advanced_re_battery_1"
+	}
+}

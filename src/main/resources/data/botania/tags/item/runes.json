@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "industrialreforged:rune_energy",
+      "required": false
+    },
+    {
+      "id": "industrialreforged:rune_night",
+      "required": false
+    },
+    {
+      "id": "industrialreforged:rune_sun",
+      "required": false
+    }
+  ]
+}

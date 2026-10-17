@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+		"side": "industrialreforged:block/resource/stripped_rubber_log",
+		"end": "industrialreforged:block/resource/stripped_rubber_log_top"
+	}
+}

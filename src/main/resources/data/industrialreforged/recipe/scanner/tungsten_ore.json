@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 1500,
+  "item": {
+    "count": 1,
+    "id": "industrialreforged:tungsten_ore"
+  }
+}

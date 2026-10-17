@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "industrialreforged:re_battery"
+    },
+    "I": {
+      "item": "industrialreforged:iron_casing"
+    },
+    "M": {
+      "item": "industrialreforged:electric_motor"
+    },
+    "S": {
+      "item": "industrialreforged:iron_shaft"
+    }
+  },
+  "pattern": [
+    "IBI",
+    "ISI",
+    "IMI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:electric_kinetic_generator"
+  }
+}

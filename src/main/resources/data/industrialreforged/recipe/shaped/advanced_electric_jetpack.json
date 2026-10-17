@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "E": {
+      "item": "industrialreforged:engine_booster"
+    },
+    "G": {
+      "item": "industrialreforged:wire_5_level"
+    },
+    "J": {
+      "item": "industrialreforged:electric_jetpack"
+    },
+    "L": {
+      "item": "industrialreforged:advanced_lappack"
+    },
+    "P": {
+      "item": "industrialreforged:carbon_plate"
+    }
+  },
+  "pattern": [
+    "PJP",
+    "ELE",
+    "GCG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:advanced_electric_jetpack"
+  }
+}

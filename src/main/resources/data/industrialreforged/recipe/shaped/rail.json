@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "tag": "c:ingots/bronze"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "B B",
+    "BsB",
+    "B B"
+  ],
+  "result": {
+    "count": 8,
+    "id": "minecraft:rail"
+  }
+}

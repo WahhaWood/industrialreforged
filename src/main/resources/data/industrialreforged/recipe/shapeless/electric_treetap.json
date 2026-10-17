@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "industrialreforged:treetap"
+    },
+    {
+      "item": "industrialreforged:small_power_unit"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:electric_treetap"
+  }
+}

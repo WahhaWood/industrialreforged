@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 108,
+  "item": {
+    "count": 1,
+    "id": "industrialreforged:tin_ingot"
+  }
+}

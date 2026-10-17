@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 32000,
+  "item": {
+    "count": 1,
+    "id": "industrialreforged:enriched_sunnarium_alloy"
+  }
+}

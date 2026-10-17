@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "item": "industrialreforged:fuel_rod"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:iron_dust"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "industrialreforged:iridium"
+    },
+    "R": {
+      "item": "industrialreforged:steel_shaft"
+    }
+  },
+  "pattern": [
+    " M ",
+    "MRM",
+    " M "
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:iridium_rotor"
+  }
+}

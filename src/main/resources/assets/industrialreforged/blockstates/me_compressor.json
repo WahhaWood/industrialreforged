@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "industrialreforged:block/me/me_compressor",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "industrialreforged:block/me/me_compressor"
+    },
+    "facing=south": {
+      "model": "industrialreforged:block/me/me_compressor",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "industrialreforged:block/me/me_compressor",
+      "y": 270
+    }
+  }
+}

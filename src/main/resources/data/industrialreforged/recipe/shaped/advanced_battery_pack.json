@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:circuit"
+    },
+    "P": {
+      "item": "industrialreforged:copper_casing"
+    },
+    "R": {
+      "item": "industrialreforged:advanced_re_battery"
+    }
+  },
+  "pattern": [
+    "RCR",
+    "RPR",
+    "R R"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:advanced_battery_pack"
+  }
+}

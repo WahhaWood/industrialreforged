@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "industrialreforged:heat_pipe_2"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "industrialreforged:blocks/heat_pipe_2"
+}

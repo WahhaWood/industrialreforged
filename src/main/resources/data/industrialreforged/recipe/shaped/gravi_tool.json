@@ -1,0 +1,36 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:alloy"
+    },
+    "C": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "E": {
+      "item": "industrialreforged:energy_crystal"
+    },
+    "H": {
+      "item": "industrialreforged:electric_hoe"
+    },
+    "K": {
+      "item": "industrialreforged:electric_wrench"
+    },
+    "P": {
+      "item": "industrialreforged:carbon_plate"
+    },
+    "S": {
+      "item": "industrialreforged:electric_treetap"
+    }
+  },
+  "pattern": [
+    "PHP",
+    "AEA",
+    "KCS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:gravi_tool"
+  }
+}

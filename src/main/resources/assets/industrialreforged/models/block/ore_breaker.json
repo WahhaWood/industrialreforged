@@ -1,0 +1,22 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "neoforge:obj",
+  "flip_v": true,
+  "model": "industrialreforged:models/block/obj/ore_breaker.obj",
+  "textures": {
+    "texture0": "industrialreforged:block/machine/ore_breaker_material_cobble",
+    "texture1": "industrialreforged:block/machine/ore_breaker_material_copper",
+    "texture2": "industrialreforged:block/machine/ore_breaker_material_diamond",
+    "texture3": "industrialreforged:block/machine/ore_breaker_material_cobble_iron",
+    "texture4": "industrialreforged:block/machine/ore_breaker_material_resin",
+    "particle": "industrialreforged:block/machine/ore_breaker_material_cobble_iron"
+  },
+  "transform": {
+    "origin": "center",
+    "translation": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  }
+}

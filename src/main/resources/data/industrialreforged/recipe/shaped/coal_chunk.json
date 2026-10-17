@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "industrialreforged:coal_ball"
+    },
+    "R": {
+      "tag": "c:obsidians"
+    }
+  },
+  "pattern": [
+    "MMM",
+    "MRM",
+    "MMM"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:coal_chunk"
+  }
+}

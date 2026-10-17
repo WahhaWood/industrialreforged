@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:block_cutter",
+  "ingredient": {
+    "item": "minecraft:jungle_log"
+  },
+  "result": {
+    "count": 6,
+    "id": "minecraft:jungle_planks"
+  }
+}

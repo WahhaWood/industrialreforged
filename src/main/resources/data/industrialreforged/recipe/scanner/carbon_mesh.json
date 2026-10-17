@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 300,
+  "item": {
+    "count": 1,
+    "id": "industrialreforged:carbon_mesh"
+  }
+}

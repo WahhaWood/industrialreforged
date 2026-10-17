@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "minecraft:copper_ingot"
+    },
+    "F": {
+      "item": "industrialreforged:electric_furnace_1_level"
+    },
+    "M": {
+      "item": "industrialreforged:advanced_machine"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "CFC",
+    "CMC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:induction_furnace"
+  }
+}

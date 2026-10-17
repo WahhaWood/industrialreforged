@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "industrialreforged:iridium_machine"
+    },
+    "Q": {
+      "item": "industrialreforged:quantum_core_3_level"
+    },
+    "D": {
+      "item": "industrialreforged:iridium_drill"
+    },
+    "U": {
+      "item": "industrialreforged:singular_circuit"
+    },
+    "S": {
+      "item": "industrialreforged:singular_crystal"
+    }
+  },
+  "pattern": [
+    "IQI",
+    "USU",
+    "IDI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:quantum_quarry"
+  }
+}

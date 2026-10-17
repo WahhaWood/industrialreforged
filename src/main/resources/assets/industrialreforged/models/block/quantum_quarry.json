@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "particle": "industrialreforged:block/machine/quantum_quarry_side",
+    "down": "industrialreforged:block/machine/quantum_quarry_side",
+    "up": "industrialreforged:block/machine/quantum_quarry_side",
+    "north": "industrialreforged:block/machine/quantum_quarry_front",
+    "south": "industrialreforged:block/machine/quantum_quarry_side",
+    "east": "industrialreforged:block/machine/quantum_quarry_side",
+    "west": "industrialreforged:block/machine/quantum_quarry_side"
+  }
+}

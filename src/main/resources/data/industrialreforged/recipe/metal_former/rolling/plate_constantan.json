@@ -1,0 +1,23 @@
+{
+  "type": "industrialreforged:metal_former","category": "misc",
+  "mode" : "ROLLING",
+  "ingredient": {
+    "tag": "c:ingots/constantan"
+  },
+  "result": {
+    "id": "industrialreforged:constantan_plate"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialreforged:constantan_plate"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/constantan"
+      }
+    }
+  ]
+}

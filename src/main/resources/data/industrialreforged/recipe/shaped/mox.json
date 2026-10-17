@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:plutonium"
+    },
+    "U": {
+      "item": "industrialreforged:uranium_238"
+    }
+  },
+  "pattern": [
+    "UUU",
+    "CCC",
+    "UUU"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:mox"
+  }
+}

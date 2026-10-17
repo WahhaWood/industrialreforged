@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"facing=down": { "model": "industrialreforged:block/wiring/storage/efsu", "x": 90 },
+		"facing=up": { "model": "industrialreforged:block/wiring/storage/efsu", "x": -90 },
+		"facing=north": { "model": "industrialreforged:block/wiring/storage/efsu", "y": 0 },
+		"facing=east": { "model": "industrialreforged:block/wiring/storage/efsu", "y": 90 },
+		"facing=south": { "model": "industrialreforged:block/wiring/storage/efsu", "y": 180 },
+		"facing=west": { "model": "industrialreforged:block/wiring/storage/efsu", "y": 270 }
+	}
+}

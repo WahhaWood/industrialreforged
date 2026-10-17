@@ -1,0 +1,5 @@
+{
+	"variants": {
+		"": { "model": "industrialreforged:block/generator/kinetic/manual_kinetic_generator" }
+	}
+}

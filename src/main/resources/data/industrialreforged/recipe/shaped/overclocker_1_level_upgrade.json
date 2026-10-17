@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:reactor_coolant_cell"
+    },
+    "E": {
+      "item": "industrialreforged:circuit"
+    },
+    "W": {
+      "item": "industrialreforged:wire_2_level"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "WEW"
+  ],
+  "result": {
+    "count": 2,
+    "id": "industrialreforged:overclocker_1_level_upgrade"
+  }
+}

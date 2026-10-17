@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "industrialreforged:circuit"
+    },
+    "K": {
+      "item": "industrialreforged:coil"
+    },
+    "M": {
+      "item": "industrialreforged:machine"
+    },
+    "T": {
+      "item": "industrialreforged:bronze_casing"
+    }
+  },
+  "pattern": [
+    " E ",
+    "TMT",
+    "KKK"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:metal_former_1_level"
+  }
+}

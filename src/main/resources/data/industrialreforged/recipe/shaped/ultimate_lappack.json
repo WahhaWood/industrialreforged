@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:advanced_lappack"
+    },
+    "C": {
+      "item": "industrialreforged:superconductor"
+    },
+    "I": {
+      "item": "industrialreforged:iridium"
+    },
+    "L": {
+      "item": "industrialreforged:lapotron_crystal"
+    }
+  },
+  "pattern": [
+    "LIL",
+    "LAL",
+    "LCL"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:ultimate_lappack"
+  }
+}

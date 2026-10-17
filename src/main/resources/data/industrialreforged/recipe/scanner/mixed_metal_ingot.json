@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 900,
+  "item": {
+    "count": 1,
+    "id": "industrialreforged:mixed_metal_ingot"
+  }
+}

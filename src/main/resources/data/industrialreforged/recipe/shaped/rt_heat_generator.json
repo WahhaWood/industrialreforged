@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:reactor_chamber"
+    },
+    "G": {
+      "item": "industrialreforged:heat_conductor"
+    },
+    "I": {
+      "item": "industrialreforged:iron_casing"
+    }
+  },
+  "pattern": [
+    "III",
+    "ICI",
+    "IGI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:rt_heat_generator"
+  }
+}

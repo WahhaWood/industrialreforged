@@ -1,0 +1,20 @@
+{
+	"parent": "industrialreforged:item/tool/default",
+	"textures": {
+		"layer0": "industrialreforged:item/tool/electric/gravi_tool_hoe"
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"industrialreforged:mode": 0.1
+			},
+			"model": "industrialreforged:item/gravitool/gravi_tool_treetap"
+		},
+		{
+			"predicate": {
+				"industrialreforged:mode": 0.2
+			},
+			"model": "industrialreforged:item/gravitool/gravi_tool_wrench"
+		}
+	]
+}

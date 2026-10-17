@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "industrialreforged:circuit"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "T": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "W": {
+      "item": "industrialreforged:wire_3_level"
+    }
+  },
+  "pattern": [
+    "GGG",
+    "WTW",
+    "GEG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:transformer_upgrade"
+  }
+}

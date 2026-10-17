@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:extractor",
+  "ingredient": {
+    "item": "industrialreforged:rubber_sapling"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:rubber"
+  }
+}

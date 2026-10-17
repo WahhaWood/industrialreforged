@@ -1,0 +1,15 @@
+{
+  "type": "industrialreforged:macerator","category": "misc",
+  "ingredient": {
+    "item": "mekanism:clump_tin"
+  },
+  "result": {
+    "id": "mekanism:dirty_dust_tin"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ]
+}

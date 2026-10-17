@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:wire_2_level"
+    },
+    "B": {
+      "item": "industrialreforged:re_battery"
+    },
+    "C": {
+      "item": "industrialreforged:iron_casing"
+    },
+    "I": {
+      "item": "industrialreforged:circuit"
+    },
+    "M": {
+      "item": "industrialreforged:electric_motor"
+    }
+  },
+  "pattern": [
+    " AC",
+    "BIM",
+    " AC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:small_power_unit"
+  }
+}

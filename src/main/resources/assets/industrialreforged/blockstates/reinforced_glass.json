@@ -1,0 +1,6 @@
+{
+	"variants": {
+		"active=false": { "model": "industrialreforged:block/reinforced_glass" },
+		"active=true": { "model": "industrialreforged:block/reinforced_glass_active" }
+	}
+}

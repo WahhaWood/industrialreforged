@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "industrialreforged:re_battery"
+    },
+    "F": {
+      "item": "minecraft:furnace"
+    },
+    "M": {
+      "item": "industrialreforged:machine"
+    }
+  },
+  "pattern": [
+    "B",
+    "M",
+    "F"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:generator"
+  }
+}

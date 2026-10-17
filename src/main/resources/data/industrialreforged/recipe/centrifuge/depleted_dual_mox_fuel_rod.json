@@ -1,0 +1,25 @@
+{
+  "type": "industrialreforged:centrifuge",
+  "ingredient": {
+    "item": "industrialreforged:depleted_dual_mox_fuel_rod"
+  },
+  "minHeat": 5000,
+  "result": [
+    {
+      "count": 2,
+      "id": "industrialreforged:small_plutonium"
+    },
+    {
+      "count": 6,
+      "id": "industrialreforged:plutonium"
+    },
+    {
+      "count": 3,
+      "id": "industrialreforged:iron_dust"
+    },
+    {
+      "count": 1,
+      "id": "industrialreforged:near_depleted_uranium"
+    }
+  ]
+}

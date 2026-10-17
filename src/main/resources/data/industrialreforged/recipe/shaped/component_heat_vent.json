@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:iron_bars"
+    },
+    "H": {
+      "item": "industrialreforged:heat_vent"
+    },
+    "T": {
+      "tag": "c:plates/tin"
+    }
+  },
+  "pattern": [
+    "BTB",
+    "THT",
+    "BTB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:component_heat_vent"
+  }
+}

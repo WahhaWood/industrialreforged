@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:metal_former",
+  "ingredient": {
+    "tag": "c:plates/iron"
+  },
+  "mode": "EXTRUDING",
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:fuel_rod"
+  }
+}

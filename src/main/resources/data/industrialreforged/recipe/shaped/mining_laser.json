@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "D": {
+      "item": "industrialreforged:alloy"
+    },
+    "L": {
+      "item": "industrialreforged:iron_grip"
+    },
+    "U": {
+      "item": "industrialreforged:energy_crystal"
+    },
+    "X": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "XXU",
+    "DDC",
+    " LD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:mining_laser"
+  }
+}

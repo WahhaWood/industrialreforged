@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "industrialreforged:block/machine/processing/basic/machine_side",
+		"down": "industrialreforged:block/machine/processing/basic/machine_bottom",
+		"up": "industrialreforged:block/machine/processing/basic/machine_top",
+		"north": "industrialreforged:block/machine/processing/basic/compressor_1_level_front_active",
+		"east": "industrialreforged:block/machine/processing/basic/machine_side",
+		"south": "industrialreforged:block/machine/processing/basic/machine_side",
+		"west": "industrialreforged:block/machine/processing/basic/machine_side"
+	}
+}

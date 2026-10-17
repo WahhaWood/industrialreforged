@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "industrialreforged:batbox"
+    },
+    "C": {
+      "item": "industrialreforged:circuit"
+    },
+    "R": {
+      "item": "industrialreforged:re_battery"
+    }
+  },
+  "pattern": [
+    "RCR",
+    "RBR",
+    "R R"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:battery_pack"
+  }
+}

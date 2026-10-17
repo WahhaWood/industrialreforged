@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "industrialreforged:solar_generator_7_level"
+    },
+    "F": {
+      "item": "industrialreforged:photocell_8_level"
+    },
+    "Q": {
+      "item": "industrialreforged:quantum_core_2_level"
+    },
+    "I": {
+      "item": "industrialreforged:iridium"
+    },
+    "T": {
+      "item": "industrialreforged:solar_core_8_level"
+    }
+  },
+  "pattern": [
+    "FQF",
+    "IPI",
+    "PTP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:solar_generator_8_level"
+  }
+}

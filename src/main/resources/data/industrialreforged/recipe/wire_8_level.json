@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "key": {
+    "W": {
+      "item": "industrialreforged:wire_7_level"
+    },
+    "I": {
+      "tag": "c:ingots/toxic"
+    }
+  },
+  "pattern": [
+    "WWW",
+    "WIW",
+    "WWW"
+  ],
+  "result": {
+    "id": "industrialreforged:wire_8_level",
+    "count": 8
+  }
+}

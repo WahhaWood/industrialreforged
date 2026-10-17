@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:alloy"
+    },
+    "D": {
+      "tag": "c:gems/diamond"
+    },
+    "I": {
+      "item": "industrialreforged:iridium_ore"
+    }
+  },
+  "pattern": [
+    "IAI",
+    "ADA",
+    "IAI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:iridium"
+  }
+}

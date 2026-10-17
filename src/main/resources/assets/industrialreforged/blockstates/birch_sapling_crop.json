@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "age=0": {
+      "model": "industrialreforged:block/crop/birch_sapling_0"
+    },
+    "age=1": {
+      "model": "industrialreforged:block/crop/birch_sapling_1"
+    },
+    "age=2": {
+      "model": "industrialreforged:block/crop/birch_sapling_2"
+    },
+    "age=3": {
+      "model": "industrialreforged:block/crop/birch_sapling_3"
+    },
+    "age=4": {
+      "model": "industrialreforged:block/crop/birch_sapling_4"
+    }
+  }
+}

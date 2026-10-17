@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:molecular_transformer",
+  "energy": 220000,
+  "input": {
+    "item": "minecraft:nether_brick"
+  },
+  "output": {
+    "count": 1,
+    "id": "minecraft:quartz"
+  }
+}

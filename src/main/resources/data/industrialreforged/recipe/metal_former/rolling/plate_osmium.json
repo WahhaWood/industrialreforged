@@ -1,0 +1,16 @@
+{
+  "type": "industrialreforged:metal_former","category": "misc",
+  "mode" : "ROLLING",
+  "ingredient": {
+    "tag": "c:ingots/osmium"
+  },
+  "result": {
+    "id": "industrialreforged:osmium_plate"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ]
+}

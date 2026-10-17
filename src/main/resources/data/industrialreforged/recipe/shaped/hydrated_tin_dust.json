@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "type": "neoforge:components",
+      "components": {
+        "industrialreforged:fluid": {
+          "amount": 1000,
+          "id": "minecraft:water"
+        }
+      },
+      "items": "industrialreforged:cell"
+    },
+    "T": {
+      "tag": "c:dusts/tin"
+    }
+  },
+  "pattern": [
+    "TTT",
+    "TCT",
+    "TTT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:hydrated_tin_dust"
+  }
+}

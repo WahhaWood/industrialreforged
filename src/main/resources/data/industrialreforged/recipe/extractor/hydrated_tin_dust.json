@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:extractor",
+  "ingredient": {
+    "item": "industrialreforged:hydrated_tin_dust"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:iodine"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "parent": "industrialreforged:item/default",
+  "textures": {
+    "layer0": "industrialreforged:item/upgrade/fluid_pulling"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "industrialreforged:down": 1
+      },
+      "model": "industrialreforged:item/upgrade/fluid_pulling_down"
+    },
+    {
+      "predicate": {
+        "industrialreforged:up": 1
+      },
+      "model": "industrialreforged:item/upgrade/fluid_pulling_up"
+    },
+    {
+      "predicate": {
+        "industrialreforged:north": 1
+      },
+      "model": "industrialreforged:item/upgrade/fluid_pulling_north"
+    },
+    {
+      "predicate": {
+        "industrialreforged:south": 1
+      },
+      "model": "industrialreforged:item/upgrade/fluid_pulling_south"
+    },
+    {
+      "predicate": {
+        "industrialreforged:west": 1
+      },
+      "model": "industrialreforged:item/upgrade/fluid_pulling_west"
+    },
+    {
+      "predicate": {
+        "industrialreforged:east": 1
+      },
+      "model": "industrialreforged:item/upgrade/fluid_pulling_east"
+    }
+  ]
+}

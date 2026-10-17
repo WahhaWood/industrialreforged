@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "W": {
+      "item": "industrialreforged:tank_wall"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "T": {
+      "item": "minecraft:redstone_torch"
+    }
+  },
+  "pattern": [
+    " T ",
+    "WGW",
+    " W "
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:tank_controller"
+  }
+}

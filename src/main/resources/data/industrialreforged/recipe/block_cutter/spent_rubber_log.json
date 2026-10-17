@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:block_cutter",
+  "ingredient": {
+    "item": "industrialreforged:spent_rubber_log"
+  },
+  "result": {
+    "count": 4,
+    "id": "minecraft:jungle_planks"
+  }
+}

@@ -1,0 +1,44 @@
+{
+	"parent": "industrialreforged:item/default",
+	"textures": {
+		"layer0": "industrialreforged:item/upgrade/advanced_fluid_ejector"
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"industrialreforged:down": 1
+			},
+			"model": "industrialreforged:item/upgrade/advanced_fluid_ejector_down"
+		},
+		{
+			"predicate": {
+				"industrialreforged:up": 1
+			},
+			"model": "industrialreforged:item/upgrade/advanced_fluid_ejector_up"
+		},
+		{
+			"predicate": {
+				"industrialreforged:north": 1
+			},
+			"model": "industrialreforged:item/upgrade/advanced_fluid_ejector_north"
+		},
+		{
+			"predicate": {
+				"industrialreforged:south": 1
+			},
+			"model": "industrialreforged:item/upgrade/advanced_fluid_ejector_south"
+		},
+		{
+			"predicate": {
+				"industrialreforged:west": 1
+			},
+			"model": "industrialreforged:item/upgrade/advanced_fluid_ejector_west"
+		},
+		{
+			"predicate": {
+				"industrialreforged:east": 1
+			},
+			"model": "industrialreforged:item/upgrade/advanced_fluid_ejector_east"
+		}
+	]
+}

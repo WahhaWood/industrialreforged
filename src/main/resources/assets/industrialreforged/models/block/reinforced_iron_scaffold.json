@@ -1,0 +1,7 @@
+{
+	"parent": "block/cube_column",
+	"textures": {
+		"side": "industrialreforged:block/reinforced_iron_scaffold_sides",
+		"end": "industrialreforged:block/iron_scaffold_bottomtop"
+	}
+}

@@ -1,0 +1,6 @@
+{
+	"parent": "minecraft:block/fence_inventory",
+	"textures": {
+		"texture": "industrialreforged:block/fence_iron"
+	}
+}

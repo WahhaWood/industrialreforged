@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "item": "industrialreforged:mixed_metal_ingot",
+    "count": 1
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:alloy"
+  }
+}

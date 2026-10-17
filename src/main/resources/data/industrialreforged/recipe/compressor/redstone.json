@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "count": 9,
+    "item": "minecraft:redstone"
+  },
+  "result": {
+    "count": 1,
+    "id": "minecraft:redstone_block"
+  }
+}

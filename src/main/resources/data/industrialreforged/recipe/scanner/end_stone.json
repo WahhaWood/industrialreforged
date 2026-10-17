@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 15,
+  "item": {
+    "count": 1,
+    "id": "minecraft:end_stone"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "item": "industrialreforged:crushed_titanium"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:titanium_dust"
+  }
+}

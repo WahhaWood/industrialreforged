@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "industrialreforged:heat_pipe_2"
+    },
+    "S": {
+      "item": "industrialreforged:steel_plate"
+    }
+  },
+  "pattern": [
+    " P ",
+    "PSP",
+    " P "
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:heat_pipe_3"
+  }
+}

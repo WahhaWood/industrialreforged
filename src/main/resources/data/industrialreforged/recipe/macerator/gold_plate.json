@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "tag": "c:plates/gold"
+  },
+  "result": {
+    "count": 8,
+    "id": "industrialreforged:small_gold_dust"
+  }
+}

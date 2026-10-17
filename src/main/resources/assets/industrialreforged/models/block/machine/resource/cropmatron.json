@@ -1,0 +1,8 @@
+{
+	"parent": "block/cube_bottom_top",
+	"textures": {
+		"side": "industrialreforged:block/machine/resource/cropmatron_sides",
+		"bottom": "industrialreforged:block/machine/resource/cropmatron_bottom",
+		"top": "industrialreforged:block/machine/resource/cropmatron_top"
+	}
+}

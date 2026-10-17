@@ -1,0 +1,18 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "neoforge:obj",
+  "flip_v": true,
+  "model": "industrialreforged:models/block/obj/me_thermal_centrifuge.obj",
+  "textures": {
+    "texture0": "industrialreforged:block/me/me_thermal_centrifuge",
+    "particle": "industrialreforged:block/me/ae_machine_particle"
+  },
+  "transform": {
+    "origin": "center",
+    "translation": [
+      0.5,
+      0.5,
+      0.5
+    ]
+  }
+}

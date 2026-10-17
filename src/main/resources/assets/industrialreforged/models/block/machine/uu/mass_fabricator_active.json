@@ -1,0 +1,8 @@
+{
+	"parent": "industrialreforged:block/machine/uu/mass_fabricator",
+	"textures": {
+		"east": "industrialreforged:block/machine/uu/mass_fabricator_right_active",
+		"south": "industrialreforged:block/machine/uu/mass_fabricator_back_active",
+		"west": "industrialreforged:block/machine/uu/mass_fabricator_left_active"
+	}
+}

@@ -1,0 +1,13 @@
+{
+  "type": "industrialreforged:centrifuge",
+  "ingredient": {
+    "item": "industrialreforged:purified_tungsten"
+  },
+  "minHeat": 2000,
+  "result": [
+    {
+      "count": 1,
+      "id": "industrialreforged:tungsten_dust"
+    }
+  ]
+}

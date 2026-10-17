@@ -1,0 +1,21 @@
+{
+  "type": "industrialreforged:centrifuge",
+  "ingredient": {
+    "item": "industrialreforged:depleted_quad_plutonium_fuel_rod"
+  },
+  "minHeat": 5000,
+  "result": [
+    {
+      "count": 4,
+      "id": "industrialreforged:small_plutonium"
+    },
+    {
+      "count": 12,
+      "id": "industrialreforged:plutonium"
+    },
+    {
+      "count": 7,
+      "id": "industrialreforged:iron_dust"
+    }
+  ]
+}

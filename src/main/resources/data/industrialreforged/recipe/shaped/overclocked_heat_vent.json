@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "tag": "c:plates/gold"
+    },
+    "V": {
+      "item": "industrialreforged:reactor_heat_vent"
+    }
+  },
+  "pattern": [
+    " G ",
+    "GVG",
+    " G "
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:overclocked_heat_vent"
+  }
+}

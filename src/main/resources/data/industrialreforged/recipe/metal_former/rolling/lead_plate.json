@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:metal_former",
+  "ingredient": {
+    "tag": "c:ingots/lead"
+  },
+  "mode": "ROLLING",
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:lead_plate"
+  }
+}

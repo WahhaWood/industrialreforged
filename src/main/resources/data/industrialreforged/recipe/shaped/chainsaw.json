@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:power_unit"
+    },
+    "P": {
+      "tag": "c:plates/iron"
+    },
+    "G": {
+      "item": "industrialreforged:steel_grip"
+    }
+  },
+  "pattern": [
+    " PP",
+    "PPG",
+    "AP "
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:chainsaw"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "com.industrialreforged.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "BlockEntityMixin",
+    "ClientboundContainerSetDataPacketMixin",
+    "LivingEntityMixin"
+  ],
+  "client": [
+    "ClientPacketListenerMixin",
+    "DownloadingTextureMixin",
+    "MinecraftMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "industrialreforged:block/machine/fluid/pump_leftright",
+		"down": "industrialreforged:block/machine/fluid/pump_bottom",
+		"up": "industrialreforged:block/machine/fluid/pump_top",
+		"north": "industrialreforged:block/machine/fluid/pump_front",
+		"east": "industrialreforged:block/machine/fluid/pump_leftright",
+		"south": "industrialreforged:block/machine/fluid/pump_back",
+		"west": "industrialreforged:block/machine/fluid/pump_leftright"
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "industrialreforged:reactor_plating"
+    },
+    {
+      "item": "industrialreforged:alloy"
+    },
+    {
+      "item": "industrialreforged:alloy"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:containment_reactor_plating"
+  }
+}

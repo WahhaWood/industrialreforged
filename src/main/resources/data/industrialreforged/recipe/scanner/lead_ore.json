@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 1114,
+  "item": {
+    "count": 1,
+    "id": "industrialreforged:lead_ore"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "P": {
+      "item": "industrialreforged:photocell_5_level"
+    },
+    "A": {
+      "item": "industrialreforged:sunnarium_alloy"
+    },
+    "C": {
+      "item": "industrialreforged:singular_circuit"
+    },
+    "G": {
+      "item": "industrialreforged:reinforced_glass"
+    }
+  },
+  "pattern": [
+    "GCG",
+    "APA",
+    "GCG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:photocell_6_level"
+  }
+}

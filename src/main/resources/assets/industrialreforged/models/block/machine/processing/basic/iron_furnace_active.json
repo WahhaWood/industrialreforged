@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "industrialreforged:block/machine/processing/basic/iron_furnace_leftrightback",
+		"down": "industrialreforged:block/machine/processing/basic/iron_furnace_bottom",
+		"up": "industrialreforged:block/machine/processing/basic/iron_furnace_top",
+		"north": "industrialreforged:block/machine/processing/basic/iron_furnace_front_active",
+		"east": "industrialreforged:block/machine/processing/basic/iron_furnace_leftrightback",
+		"south": "industrialreforged:block/machine/processing/basic/iron_furnace_leftrightback",
+		"west": "industrialreforged:block/machine/processing/basic/iron_furnace_leftrightback"
+	}
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "industrialreforged:power_unit"
+    },
+    "I": {
+      "tag": "c:plates/iron"
+    },
+    "G": {
+      "item": "industrialreforged:wooden_grip"
+    },
+    "D": {
+      "item": "industrialreforged:iron_drill_head"
+    }
+  },
+  "pattern": [
+    " G ",
+    "IDI",
+    "IBI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:drill"
+  }
+}

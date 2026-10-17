@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:coil"
+    },
+    "I": {
+      "item": "industrialreforged:iridium"
+    },
+    "M": {
+      "item": "industrialreforged:magnetron"
+    },
+    "S": {
+      "item": "industrialreforged:superconductor"
+    },
+    "T": {
+      "item": "industrialreforged:nano_circuit"
+    }
+  },
+  "pattern": [
+    " M ",
+    "ICI",
+    "STS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:vajra_core"
+  }
+}

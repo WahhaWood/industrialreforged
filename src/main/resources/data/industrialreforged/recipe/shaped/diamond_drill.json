@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "tag": "c:gems/diamond"
+    },
+    "d": {
+      "item": "industrialreforged:drill"
+    }
+  },
+  "pattern": [
+    " D ",
+    "DdD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:diamond_drill"
+  }
+}

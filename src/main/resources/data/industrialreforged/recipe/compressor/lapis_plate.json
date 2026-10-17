@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "count": 9,
+    "tag": "c:plates/lapis"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:dense_lapis_plate"
+  }
+}

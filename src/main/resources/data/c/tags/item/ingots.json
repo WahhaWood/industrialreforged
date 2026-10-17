@@ -1,0 +1,15 @@
+{
+  "values": [
+    "#c:ingots/bronze",
+    "#c:ingots/iridium",
+    "#c:ingots/lead",
+    "#c:ingots/nickel",
+    "#c:ingots/silver",
+    "#c:ingots/steel",
+    "#c:ingots/tin",
+    "#c:ingots/titanium",
+    "#c:ingots/toxic",
+    "#c:ingots/tungsten",
+    "#c:ingots/uranium"
+  ]
+}

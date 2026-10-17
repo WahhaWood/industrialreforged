@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:sand"
+    },
+    "C": {
+      "item": "minecraft:clay_ball"
+    },
+    "S": {
+      "tag": "c:dusts/stone"
+    }
+  },
+  "pattern": [
+    "SAS",
+    "SCS",
+    "SAS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:cf_powder"
+  }
+}

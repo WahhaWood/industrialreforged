@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:alloy"
+    },
+    "B": {
+      "item": "industrialreforged:singular_circuit"
+    },
+    "C": {
+      "item": "industrialreforged:carbon_plate"
+    },
+    "E": {
+      "item": "industrialreforged:efsu"
+    },
+    "S": {
+      "item": "industrialreforged:singular_crystal"
+    },
+    "V": {
+      "item": "industrialreforged:vajra"
+    }
+  },
+  "pattern": [
+    "CSC",
+    "BVB",
+    "AEA"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:advanced_vajra"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "item": "industrialreforged:silver_ingot"
+    },
+    "D": {
+      "item": "industrialreforged:solar_module_night_1"
+    }
+  },
+  "pattern": [
+    "G G",
+    "GDG",
+    "G G"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:solar_module_moon_lens_1"
+  }
+}

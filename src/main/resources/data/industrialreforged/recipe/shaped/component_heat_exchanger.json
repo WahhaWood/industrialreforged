@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "G": {
+      "tag": "c:plates/gold"
+    },
+    "S": {
+      "item": "industrialreforged:heat_exchanger"
+    }
+  },
+  "pattern": [
+    " G ",
+    "GSG",
+    " G "
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:component_heat_exchanger"
+  }
+}

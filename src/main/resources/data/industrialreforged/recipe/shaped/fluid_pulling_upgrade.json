@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "industrialreforged:electric_motor"
+    },
+    "T": {
+      "tag": "c:plates/tin"
+    },
+    "X": {
+      "item": "industrialreforged:treetap"
+    }
+  },
+  "pattern": [
+    "TXT",
+    " E ",
+    "T T"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:fluid_pulling_upgrade"
+  }
+}

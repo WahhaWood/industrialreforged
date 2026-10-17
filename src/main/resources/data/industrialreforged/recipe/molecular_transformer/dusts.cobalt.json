@@ -1,0 +1,17 @@
+{
+  "type": "industrialreforged:molecular_transformer","category": "misc",
+  "input": {
+    "item": "minecraft:lapis_block",
+    "count": 1
+  },
+  "output": {
+    "id": "jaopca:dusts.cobalt"
+  },
+  "energy": 20000000,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "jaopca"
+    }
+  ]
+}

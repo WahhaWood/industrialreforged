@@ -1,0 +1,14 @@
+{
+	"parent": "industrialreforged:item/tool/default",
+	"textures": {
+		"layer0": "industrialreforged:item/tool/electric/nano_saber"
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"industrialreforged:active": 1
+			},
+			"model": "industrialreforged:item/nano_saber_active"
+		}
+	]
+}

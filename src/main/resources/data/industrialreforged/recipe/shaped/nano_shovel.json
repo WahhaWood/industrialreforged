@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "D": {
+      "item": "minecraft:diamond_shovel"
+    },
+    "U": {
+      "item": "industrialreforged:nano_circuit"
+    },
+    "Y": {
+      "item": "industrialreforged:energy_crystal"
+    }
+  },
+  "pattern": [
+    "U",
+    "D",
+    "Y"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:nano_shovel"
+  }
+}

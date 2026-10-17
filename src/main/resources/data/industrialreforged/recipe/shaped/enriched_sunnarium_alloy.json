@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:sunnarium_alloy"
+    },
+    "S": {
+      "item": "industrialreforged:enriched_sunnarium"
+    }
+  },
+  "pattern": [
+    " S ",
+    "SAS",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:enriched_sunnarium_alloy"
+  }
+}

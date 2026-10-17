@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:molecular_transformer",
+  "energy": 1000000,
+  "input": {
+    "item": "minecraft:glowstone_dust"
+  },
+  "output": {
+    "count": 1,
+    "id": "industrialreforged:sunnarium_part"
+  }
+}

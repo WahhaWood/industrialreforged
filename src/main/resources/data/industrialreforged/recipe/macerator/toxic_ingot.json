@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "tag": "c:ingots/toxic"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:toxic_dust"
+  }
+}

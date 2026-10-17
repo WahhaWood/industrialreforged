@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "M": {
+      "item": "industrialreforged:machine"
+    },
+    "A": {
+      "item": "industrialreforged:iron_thin_knurled_axle"
+    }
+  },
+  "pattern": [
+    "A A",
+    " M ",
+    "A A"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:water_kinetic_generator"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "industrialreforged:ore_washer",
+  "ingredient": {
+    "item": "industrialreforged:crushed_titanium"
+  },
+  "result": [
+    {
+      "count": 1,
+      "id": "industrialreforged:purified_titanium"
+    },
+    {
+      "count": 4,
+      "id": "industrialreforged:small_silver_dust"
+    },
+    {
+      "count": 1,
+      "id": "industrialreforged:stone_dust"
+    }
+  ]
+}

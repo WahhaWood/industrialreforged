@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "N": {
+      "item": "industrialreforged:thick_neutron_reflector"
+    },
+    "P": {
+      "item": "industrialreforged:reinforced_glass"
+    }
+  },
+  "pattern": [
+    "PNP",
+    "P P",
+    "PNP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:core_molecular_transformer"
+  }
+}

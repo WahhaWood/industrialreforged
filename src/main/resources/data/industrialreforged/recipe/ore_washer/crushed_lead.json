@@ -1,0 +1,20 @@
+{
+  "type": "industrialreforged:ore_washer",
+  "ingredient": {
+    "item": "industrialreforged:crushed_lead"
+  },
+  "result": [
+    {
+      "count": 1,
+      "id": "industrialreforged:purified_lead"
+    },
+    {
+      "count": 3,
+      "id": "industrialreforged:small_sulfur_dust"
+    },
+    {
+      "count": 1,
+      "id": "industrialreforged:stone_dust"
+    }
+  ]
+}

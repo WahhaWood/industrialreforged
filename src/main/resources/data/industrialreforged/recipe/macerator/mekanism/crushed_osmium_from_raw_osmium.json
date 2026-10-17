@@ -1,0 +1,16 @@
+{
+  "type": "industrialreforged:macerator","category": "misc",
+  "ingredient": {
+    "tag": "c:raw_materials/osmium"
+  },
+  "result": {
+    "id": "industrialreforged:crushed_osmium",
+    "count": 2
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "mekanism"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "item": "industrialreforged:titanium_plate"
+    },
+    "I": {
+      "item": "industrialreforged:iridium"
+    },
+    "R": {
+      "item": "industrialreforged:iridium_rotor"
+    }
+  },
+  "pattern": [
+    "TIT",
+    "IRI",
+    "TIT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:titanium_rotor"
+  }
+}

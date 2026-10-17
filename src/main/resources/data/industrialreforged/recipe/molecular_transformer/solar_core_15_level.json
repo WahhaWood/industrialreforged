@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:molecular_transformer",
+  "energy": 65536000000,
+  "input": {
+    "item": "industrialreforged:solar_core_14_level"
+  },
+  "output": {
+    "count": 1,
+    "id": "industrialreforged:solar_core_15_level"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "industrialreforged:advanced_heat_exchanger"
+    },
+    "H": {
+      "item": "industrialreforged:sextuple_reactor_coolant_cell"
+    },
+    "I": {
+      "item": "industrialreforged:iridium"
+    },
+    "P": {
+      "item": "industrialreforged:reactor_heat_plating"
+    }
+  },
+  "pattern": [
+    "HEH",
+    "PIP",
+    "HEH"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:cooling_core"
+  }
+}

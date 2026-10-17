@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "industrialreforged:iridium"
+    },
+    "M": {
+      "item": "industrialreforged:advanced_machine"
+    }
+  },
+  "pattern": [
+    " I ",
+    "IMI",
+    " I "
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:iridium_machine"
+  }
+}

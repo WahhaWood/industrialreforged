@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:molecular_transformer",
+  "energy": 36000000,
+  "input": {
+    "item": "minecraft:coal"
+  },
+  "output": {
+    "count": 1,
+    "id": "industrialreforged:industrial_diamond"
+  }
+}

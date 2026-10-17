@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:alloy"
+    },
+    "I": {
+      "tag": "c:ingots/iridium"
+    },
+    "C": {
+      "tag": "c:ingots/copper"
+    },
+    "T": {
+      "tag": "c:ingots/tin"
+    },
+    "L": {
+      "tag": "c:ingots/lead"
+    },
+    "N": {
+      "tag": "c:ingots/nickel"
+    },
+    "S": {
+      "tag": "c:ingots/silver"
+    },
+    "E": {
+      "tag": "c:ingots/steel"
+    }
+  },
+  "pattern": [
+    "CIE",
+    "TAL",
+    "NIS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:super_alloy"
+  }
+}

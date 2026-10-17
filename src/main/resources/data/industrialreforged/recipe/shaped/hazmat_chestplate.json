@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "O": {
+      "item": "minecraft:orange_dye"
+    },
+    "R": {
+      "item": "industrialreforged:rubber"
+    }
+  },
+  "pattern": [
+    "R R",
+    "ROR",
+    "ROR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:hazmat_chestplate"
+  }
+}

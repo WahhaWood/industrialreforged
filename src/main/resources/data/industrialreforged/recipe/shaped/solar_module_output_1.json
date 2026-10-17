@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:copper_plate"
+    },
+    "O": {
+      "item": "industrialreforged:circuit"
+    }
+  },
+  "pattern": [
+    "C C",
+    "COC",
+    "C C"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:solar_module_output_1"
+  }
+}

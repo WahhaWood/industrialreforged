@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:wire_2_level"
+    },
+    "X": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "CXC",
+    "CCC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:coil"
+  }
+}

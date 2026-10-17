@@ -1,0 +1,21 @@
+{
+  "values": [
+    "industrialreforged:uranium_block",
+    "industrialreforged:deepslate_uranium_ore",
+    "industrialreforged:titanium_ore",
+    "industrialreforged:deepslate_titanium_ore",
+    "industrialreforged:tungsten_ore",
+    "industrialreforged:deepslate_tungsten_ore",
+    "industrialreforged:toxic_ore",
+    "industrialreforged:teleporter",
+    "industrialreforged:matter_generator",
+    "industrialreforged:replicator",
+    "industrialreforged:uu_scanner",
+    "industrialreforged:pattern_storage",
+    "industrialreforged:molecular_farming",
+    "industrialreforged:molecular_transformer",
+    "industrialreforged:centrifuge",
+    "industrialreforged:nuclear_reactor",
+    "industrialreforged:steel_block"
+  ]
+}

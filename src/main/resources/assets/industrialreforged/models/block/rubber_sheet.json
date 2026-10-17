@@ -1,0 +1,6 @@
+{
+	"parent": "industrialreforged:block/sheet_base",
+	"textures": {
+		"texture": "industrialreforged:block/rubber_sheet"
+	}
+}

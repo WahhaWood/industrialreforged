@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "tag": "c:plates/obsidian"
+  },
+  "result": {
+    "count": 8,
+    "id": "industrialreforged:small_obsidian_dust"
+  }
+}

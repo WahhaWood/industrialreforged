@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "industrialreforged:singular_circuit"
+    },
+    "I": {
+      "item": "industrialreforged:quantum_core_3_level"
+    },
+    "L": {
+      "item": "industrialreforged:singular_crystal"
+    },
+    "M": {
+      "item": "industrialreforged:iridium_machine"
+    },
+    "P": {
+      "item": "industrialreforged:singular_pickaxe"
+    }
+  },
+  "pattern": [
+    "BIB",
+    "LML",
+    "BPB"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:ore_breaker"
+  }
+}

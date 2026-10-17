@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:singular_circuit"
+    },
+    "M": {
+      "item": "industrialreforged:matter_generator"
+    },
+    "R": {
+      "item": "industrialreforged:strengthening_upgrade"
+    },
+    "U": {
+      "item": "industrialreforged:overclocker_3_level_upgrade"
+    }
+  },
+  "pattern": [
+    "MUM",
+    "CRC",
+    "MUM"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:particle_accelerator_upgrade"
+  }
+}

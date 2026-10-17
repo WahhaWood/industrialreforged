@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:carbon_plate"
+    },
+    "G": {
+      "item": "industrialreforged:nightvision_googles"
+    },
+    "c": {
+      "item": "industrialreforged:energy_crystal"
+    }
+  },
+  "pattern": [
+    "CcC",
+    "CGC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:nano_helmet"
+  }
+}

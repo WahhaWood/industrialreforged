@@ -1,0 +1,17 @@
+{
+  "type": "industrialreforged:centrifuge",
+  "ingredient": {
+    "item": "industrialreforged:depleted_tritium_fuel_rod"
+  },
+  "minHeat": 5000,
+  "result": [
+    {
+      "count": 1,
+      "id": "industrialreforged:rtg_pellet"
+    },
+    {
+      "count": 2,
+      "id": "industrialreforged:iron_dust"
+    }
+  ]
+}

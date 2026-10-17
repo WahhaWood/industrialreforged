@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:extractor",
+  "ingredient": {
+    "item": "minecraft:gunpowder"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:sulfur_dust"
+  }
+}

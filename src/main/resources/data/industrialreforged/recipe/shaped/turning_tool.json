@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "T": {
+      "tag": "c:plates/iron"
+    },
+    "U": {
+      "item": "industrialreforged:tin_casing"
+    }
+  },
+  "pattern": [
+    "T  ",
+    " U ",
+    "  U"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:turning_tool"
+  }
+}

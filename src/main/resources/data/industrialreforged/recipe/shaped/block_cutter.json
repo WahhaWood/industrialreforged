@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "industrialreforged:advanced_machine"
+    },
+    "C": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "M": {
+      "item": "industrialreforged:electric_motor"
+    },
+    "V": {
+      "item": "industrialreforged:iron_shaft"
+    }
+  },
+  "pattern": [
+    " C ",
+    " B ",
+    "MVM"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:block_cutter"
+  }
+}

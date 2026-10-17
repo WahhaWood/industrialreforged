@@ -1,0 +1,13 @@
+{
+  "type": "industrialreforged:tool_use","category": "misc",
+  "tool": {
+    "item": "industrialreforged:forge_hammer"
+  },
+  "input": {
+    "tag": "c:plates/tin"
+  },
+  "result": {
+    "id": "industrialreforged:tin_casing",
+    "count": 2
+  }
+}

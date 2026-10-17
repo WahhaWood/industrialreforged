@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "industrialreforged:advanced_machine"
+    },
+    "C": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "L": {
+      "item": "industrialreforged:lapotron_crystal"
+    }
+  },
+  "pattern": [
+    "GCG",
+    "ALA",
+    "GCG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:matter_generator"
+  }
+}

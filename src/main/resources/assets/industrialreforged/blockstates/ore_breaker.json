@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "active=false,facing=north": {
+      "model": "industrialreforged:block/ore_breaker",
+      "y": 0
+    },
+    "active=true,facing=north": {
+      "model": "industrialreforged:block/ore_breaker",
+      "y": 0
+    },
+    "active=false,facing=east": {
+      "model": "industrialreforged:block/ore_breaker",
+      "y": 90
+    },
+    "active=true,facing=east": {
+      "model": "industrialreforged:block/ore_breaker",
+      "y": 90
+    },
+    "active=false,facing=south": {
+      "model": "industrialreforged:block/ore_breaker",
+      "y": 180
+    },
+    "active=true,facing=south": {
+      "model": "industrialreforged:block/ore_breaker",
+      "y": 180
+    },
+    "active=false,facing=west": {
+      "model": "industrialreforged:block/ore_breaker",
+      "y": 270
+    },
+    "active=true,facing=west": {
+      "model": "industrialreforged:block/ore_breaker",
+      "y": 270
+    }
+  }
+}

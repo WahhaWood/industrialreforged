@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:singular_circuit"
+    },
+    "G": {
+      "item": "minecraft:glass"
+    },
+    "M": {
+      "item": "industrialreforged:recycler_3_level"
+    },
+    "P": {
+      "item": "industrialreforged:tungsten_plate"
+    },
+    "T": {
+      "item": "industrialreforged:transformer_upgrade"
+    }
+  },
+  "pattern": [
+    "GCG",
+    "GMG",
+    "TPT"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:recycler_4_level"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "industrialreforged:ore_washer",
+  "ingredient": {
+    "item": "industrialreforged:crushed_osmium"
+  },
+  "result": [
+    {
+      "count": 1,
+      "id": "industrialreforged:purified_osmium"
+    },
+    {
+      "count": 3,
+      "id": "industrialreforged:small_lead_dust"
+    },
+    {
+      "count": 1,
+      "id": "industrialreforged:stone_dust"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:bow"
+    },
+    "C": {
+      "item": "industrialreforged:nano_circuit"
+    },
+    "E": {
+      "item": "industrialreforged:energy_crystal"
+    }
+  },
+  "pattern": [
+    "C",
+    "A",
+    "E"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:nano_bow"
+  }
+}

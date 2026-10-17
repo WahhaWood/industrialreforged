@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "item": "minecraft:coal_block"
+  },
+  "result": {
+    "count": 9,
+    "id": "industrialreforged:coal_dust"
+  }
+}

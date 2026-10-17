@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "industrialreforged:block/machine/processing/advanced/blast_furnace_leftright",
+		"down": "industrialreforged:block/machine/processing/advanced/blast_furnace_bottom",
+		"up": "industrialreforged:block/machine/processing/advanced/blast_furnace_top",
+		"north": "industrialreforged:block/machine/processing/advanced/blast_furnace_front",
+		"east": "industrialreforged:block/machine/processing/advanced/blast_furnace_leftright",
+		"south": "industrialreforged:block/machine/processing/advanced/blast_furnace_back",
+		"west": "industrialreforged:block/machine/processing/advanced/blast_furnace_leftright"
+	}
+}

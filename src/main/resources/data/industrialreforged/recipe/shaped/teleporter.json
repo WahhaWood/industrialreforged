@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "industrialreforged:frequency_transmitter"
+    },
+    "C": {
+      "item": "industrialreforged:wire_5_level"
+    },
+    "D": {
+      "tag": "c:gems/diamond"
+    },
+    "E": {
+      "item": "industrialreforged:advanced_machine"
+    },
+    "M": {
+      "item": "industrialreforged:advanced_circuit"
+    }
+  },
+  "pattern": [
+    "MBM",
+    "CEC",
+    "MDM"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:teleporter"
+  }
+}

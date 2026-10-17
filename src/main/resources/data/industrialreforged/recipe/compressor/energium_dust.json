@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "count": 9,
+    "item": "industrialreforged:energium_dust"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:energy_crystal"
+  }
+}

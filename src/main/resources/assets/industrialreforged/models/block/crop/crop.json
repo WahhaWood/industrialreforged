@@ -1,0 +1,7 @@
+{
+	"render_type": "minecraft:cutout_mipped",
+	"parent": "minecraft:block/crop",
+	"textures": {
+		"crop": "industrialreforged:block/crop/stick"
+	}
+}

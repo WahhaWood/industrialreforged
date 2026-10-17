@@ -1,0 +1,17 @@
+{
+  "type": "industrialreforged:centrifuge",
+  "ingredient": {
+    "item": "industrialreforged:purified_gold"
+  },
+  "minHeat": 2000,
+  "result": [
+    {
+      "count": 1,
+      "id": "industrialreforged:gold_dust"
+    },
+    {
+      "count": 1,
+      "id": "industrialreforged:small_silver_dust"
+    }
+  ]
+}

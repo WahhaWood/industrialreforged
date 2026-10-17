@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "industrialreforged:block/resource/rubber_wood_wet_leftrightback",
+		"down": "industrialreforged:block/resource/rubber_wood_wet_bottomtop",
+		"up": "industrialreforged:block/resource/rubber_wood_wet_bottomtop",
+		"north": "industrialreforged:block/resource/rubber_wood_wet_front",
+		"east": "industrialreforged:block/resource/rubber_wood_wet_leftrightback",
+		"south": "industrialreforged:block/resource/rubber_wood_wet_leftrightback",
+		"west": "industrialreforged:block/resource/rubber_wood_wet_leftrightback"
+	}
+}

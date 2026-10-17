@@ -1,0 +1,10 @@
+{
+  "type": "industrialreforged:macerator",
+  "ingredient": {
+    "tag": "c:plates/iron"
+  },
+  "result": {
+    "count": 8,
+    "id": "industrialreforged:small_iron_dust"
+  }
+}

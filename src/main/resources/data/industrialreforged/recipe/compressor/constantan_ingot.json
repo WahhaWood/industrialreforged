@@ -1,0 +1,23 @@
+{
+  "type": "industrialreforged:compressor","category": "misc",
+  "ingredient": {
+    "tag": "c:ingots/constantan"
+  },
+  "count": 9,
+  "result": {
+    "id": "industrialreforged:constantan_block"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:item_exists",
+      "item": "industrialreforged:constantan_block"
+    },
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:ingots/constantan"
+      }
+    }
+  ]
+}

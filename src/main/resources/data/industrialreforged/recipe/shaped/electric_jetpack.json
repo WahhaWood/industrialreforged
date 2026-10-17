@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:batbox"
+    },
+    "G": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "J": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "N": {
+      "item": "industrialreforged:iron_casing"
+    }
+  },
+  "pattern": [
+    "NGN",
+    "NCN",
+    "J J"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:electric_jetpack"
+  }
+}

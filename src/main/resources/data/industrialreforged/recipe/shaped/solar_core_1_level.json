@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "Q": {
+      "item": "industrialreforged:quantum_module"
+    },
+    "I": {
+      "item": "industrialreforged:iridium_ore"
+    }
+  },
+  "pattern": [
+    "RQR",
+    "QIQ",
+    "RQR"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:solar_core_1_level"
+  }
+}

@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "industrialreforged:block/machine/fluid/weighted_fluid_distributor_out",
+		"down": "industrialreforged:block/machine/fluid/weighted_fluid_distributor_out",
+		"up": "industrialreforged:block/machine/fluid/weighted_fluid_distributor_out",
+		"north": "industrialreforged:block/machine/fluid/weighted_fluid_distributor_in",
+		"east": "industrialreforged:block/machine/fluid/weighted_fluid_distributor_out",
+		"south": "industrialreforged:block/machine/fluid/weighted_fluid_distributor_out",
+		"west": "industrialreforged:block/machine/fluid/weighted_fluid_distributor_out"
+	}
+}

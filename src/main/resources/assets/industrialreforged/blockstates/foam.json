@@ -1,0 +1,6 @@
+{
+	"variants": {
+		"type=normal": { "model": "industrialreforged:block/cf/foam" },
+		"type=reinforced": { "model": "industrialreforged:block/cf/reinforced_foam" }
+	}
+}

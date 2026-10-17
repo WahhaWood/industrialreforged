@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "h": {
+      "type": "neoforge:components",
+      "components": {
+        "industrialreforged:fluid": {
+          "amount": 1000,
+          "id": "industrialreforged:coolant"
+        }
+      },
+      "items": "industrialreforged:cell"
+    },
+    "t": {
+      "tag": "c:plates/tin"
+    }
+  },
+  "pattern": [
+    " t ",
+    "tht",
+    " t "
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:reactor_coolant_cell"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "industrialreforged:machine"
+    },
+    "G": {
+      "item": "industrialreforged:heat_conductor"
+    },
+    "I": {
+      "item": "industrialreforged:iron_casing"
+    }
+  },
+  "pattern": [
+    "III",
+    "IBI",
+    "IGI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:blast_furnace"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 9999,
+  "item": {
+    "count": 1,
+    "id": "industrialreforged:iridium_ingot"
+  }
+}

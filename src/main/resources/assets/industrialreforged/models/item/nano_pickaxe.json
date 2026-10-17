@@ -1,0 +1,6 @@
+{
+	"parent": "industrialreforged:item/tool/default",
+	"textures": {
+		"layer0": "industrialreforged:item/tool/electric/nano_pickaxe"
+	}
+}

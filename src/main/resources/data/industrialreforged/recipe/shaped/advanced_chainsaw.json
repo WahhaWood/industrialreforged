@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "L": {
+      "item": "industrialreforged:lapotron_crystal"
+    },
+    "T": {
+      "item": "industrialreforged:chainsaw"
+    },
+    "U": {
+      "item": "industrialreforged:overclocker_1_level_upgrade"
+    }
+  },
+  "pattern": [
+    " L ",
+    "UTU",
+    "CUC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:advanced_chainsaw"
+  }
+}

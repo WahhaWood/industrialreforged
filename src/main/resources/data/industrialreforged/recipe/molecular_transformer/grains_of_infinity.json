@@ -1,0 +1,17 @@
+{
+  "type": "industrialreforged:molecular_transformer","category": "misc",
+  "input": {
+    "item": "industrialreforged:coal_dust",
+    "count": 1
+  },
+  "output": {
+    "id": "enderio:grains_of_infinity"
+  },
+  "energy": 1000000,
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "enderio"
+    }
+  ]
+}

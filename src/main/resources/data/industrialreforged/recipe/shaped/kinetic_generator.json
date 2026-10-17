@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "E": {
+      "item": "industrialreforged:electric_motor"
+    },
+    "I": {
+      "item": "industrialreforged:iron_casing"
+    },
+    "M": {
+      "item": "industrialreforged:generator"
+    },
+    "A": {
+      "item": "industrialreforged:steel_thin_knurled_axle"
+    }
+  },
+  "pattern": [
+    "III",
+    "MEA",
+    "III"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:kinetic_generator"
+  }
+}

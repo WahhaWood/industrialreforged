@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "industrialreforged:cold_coffee_mug"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:dark_coffee_mug"
+  }
+}

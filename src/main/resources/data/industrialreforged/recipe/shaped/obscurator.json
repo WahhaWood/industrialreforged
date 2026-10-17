@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:wire_3_level"
+    },
+    "D": {
+      "item": "industrialreforged:advanced_circuit"
+    },
+    "T": {
+      "item": "industrialreforged:advanced_re_battery"
+    },
+    "U": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "UTU",
+    "CDC",
+    "UUU"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:obscurator"
+  }
+}

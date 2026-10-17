@@ -1,0 +1,11 @@
+{
+  "type": "industrialreforged:compressor",
+  "ingredient": {
+    "count": 9,
+    "tag": "c:plates/iron"
+  },
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:dense_iron_plate"
+  }
+}

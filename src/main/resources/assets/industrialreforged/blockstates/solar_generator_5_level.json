@@ -1,0 +1,5 @@
+{
+	"variants": {
+		"": { "model": "industrialreforged:block/generator/electric/solar_generator_5_level" }
+	}
+}

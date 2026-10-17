@@ -1,0 +1,17 @@
+{
+  "type": "industrialreforged:centrifuge",
+  "ingredient": {
+    "item": "industrialreforged:rtg_pellet"
+  },
+  "minHeat": 5000,
+  "result": [
+    {
+      "count": 3,
+      "id": "industrialreforged:plutonium"
+    },
+    {
+      "count": 54,
+      "id": "industrialreforged:iron_dust"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "item": "industrialreforged:singular_circuit"
+    },
+    "D": {
+      "item": "industrialreforged:advanced_drill"
+    },
+    "E": {
+      "item": "industrialreforged:singular_crystal"
+    },
+    "T": {
+      "item": "industrialreforged:transformer_upgrade"
+    },
+    "U": {
+      "item": "industrialreforged:overclocker_3_level_upgrade"
+    },
+    "u": {
+      "item": "industrialreforged:overclocker_2_level_upgrade"
+    }
+  },
+  "pattern": [
+    "uTu",
+    "CDC",
+    "UEU"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:ultimate_drill"
+  }
+}

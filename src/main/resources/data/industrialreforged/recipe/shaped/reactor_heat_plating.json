@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "C": {
+      "tag": "c:plates/copper"
+    },
+    "c": {
+      "item": "industrialreforged:reactor_plating"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "CcC",
+    "CCC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:reactor_heat_plating"
+  }
+}

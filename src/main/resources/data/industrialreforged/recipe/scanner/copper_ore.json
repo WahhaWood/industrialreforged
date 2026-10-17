@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 141,
+  "item": {
+    "count": 1,
+    "id": "minecraft:copper_ore"
+  }
+}

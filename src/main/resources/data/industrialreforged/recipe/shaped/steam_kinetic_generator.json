@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "industrialreforged:copper_boiler"
+    },
+    "C": {
+      "item": "industrialreforged:steel_casing"
+    },
+    "E": {
+      "item": "industrialreforged:cell"
+    },
+    "A": {
+      "item": "industrialreforged:steel_knurled_axle"
+    }
+  },
+  "pattern": [
+    "CCC",
+    "BAA",
+    "ECC"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:steam_kinetic_generator"
+  }
+}
