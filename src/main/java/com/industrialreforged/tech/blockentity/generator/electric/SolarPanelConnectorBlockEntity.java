@@ -70,7 +70,7 @@ public class SolarPanelConnectorBlockEntity extends SolarPanelBlockEntity {
       // output out.  The base generator constructor created it with
       // production 0, so receive/extract stayed 0 and nothing could be drawn.
       this.energy.setReceive(0L);
-      this.energy.setExtract(Math.max(Math.round((double)dayOutput * 2.0 * this.outputMult), 0L));
+      this.energy.setExtract(Math.max(Math.round((double)dayOutput * 4.0 * this.outputMult), 0L));
 
       long target = Math.round((double)capacity * this.capacityMult);
       if (target != this.energy.getCapacity()) {
