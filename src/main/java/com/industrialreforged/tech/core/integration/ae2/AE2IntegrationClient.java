@@ -18,5 +18,6 @@ final class AE2IntegrationClient {
    private static void registerScreens(RegisterMenuScreensEvent event) {
       event.register(AE2Integration.ME_MACHINE_MENU.get(), MEMachineScreen::new);
       event.register(AE2Integration.ME_RECYCLER_MENU.get(), MERecyclerScreen::new);
+      event.register(AE2Integration.ME_MATTER_MENU.get(), MEMatterGeneratorScreen::new);
    }
 }

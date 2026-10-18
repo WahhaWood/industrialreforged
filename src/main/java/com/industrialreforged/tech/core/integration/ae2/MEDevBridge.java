@@ -7,10 +7,12 @@ import appeng.api.networking.crafting.CalculationStrategy;
 import appeng.api.networking.crafting.ICraftingPlan;
 import appeng.api.networking.crafting.ICraftingSimulationRequester;
 import appeng.api.networking.security.IActionSource;
+import appeng.api.stacks.AEFluidKey;
 import appeng.api.stacks.AEItemKey;
 import appeng.api.stacks.KeyCounter;
 import appeng.me.helpers.IGridConnectedBlockEntity;
 import com.google.gson.JsonObject;
+import com.industrialreforged.tech.core.ref.IRFluids;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
 import net.minecraft.core.BlockPos;
@@ -77,6 +79,12 @@ public final class MEDevBridge {
                json.addProperty("busy", machine.isBusy());
             }
 
+            if (blockEntity instanceof MEMatterGeneratorBlockEntity generator) {
+               json.addProperty("produced", generator.produced);
+               json.addProperty("saved", generator.saved);
+               json.addProperty("pendingMb", generator.pendingMb());
+            }
+
             if (blockEntity instanceof MERecyclerBlockEntity recycler) {
                json.addProperty("recycled", recycler.recycled);
                json.addProperty("sinceScrap", recycler.sinceScrap());
@@ -101,6 +109,30 @@ public final class MEDevBridge {
                case "extract" -> json.addProperty("extracted", storage.extract(key, count, Actionable.MODULATE, IActionSource.empty()));
                default -> json.addProperty("craftable", grid.getCraftingService().isCraftable(key));
             }
+         }
+         case "uu" -> {
+            // UU matter in the network, mB
+            if (grid == null) {
+               return error("node has no grid");
+            }
+
+            var uu = AEFluidKey.of(IRFluids.UU_MATTER.getFluidStill());
+            var storage = grid.getStorageService().getInventory();
+            if (params.has("take")) {
+               json.addProperty("taken", storage.extract(uu, params.get("take").getAsLong(), Actionable.MODULATE, IActionSource.empty()));
+            }
+
+            json.addProperty("uu", storage.getAvailableStacks().get(uu));
+         }
+         case "fe" -> {
+            // pushes FE into the node the way an energy cable does
+            if (!(blockEntity instanceof AbstractMENodeBlockEntity machine)) {
+               return error("not an ME node");
+            }
+
+            int amount = params.has("amount") ? params.get("amount").getAsInt() : 0;
+            json.addProperty("accepted", machine.feInput().receiveEnergy(amount, false));
+            json.addProperty("stored", machine.feInput().getEnergyStored());
          }
          case "cancel" -> {
             // stops every running job of the network's crafting CPUs, as the Cancel button does

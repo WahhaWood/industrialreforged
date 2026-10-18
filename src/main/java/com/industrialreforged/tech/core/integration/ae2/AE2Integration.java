@@ -21,6 +21,7 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.loading.FMLEnvironment;
+import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.OnDatapackSyncEvent;
@@ -30,7 +31,7 @@ import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 /**
- * AE2 integration: the ME machines and the ME recycler. Everything with {@code appeng.*} types lives in
+ * AE2 integration: the ME machines, the ME recycler and the ME matter generator. Everything with {@code appeng.*} types lives in
  * this package and is reached only through {@link #init}, which {@code IR} calls behind
  * {@code ModList.get().isLoaded("ae2")}. Do not add an "is AE2 loaded" helper here: loading this
  * class without AE2 is exactly what must never happen (1.0.8 crash, DEVNOTES 2026-10-11).
@@ -63,11 +64,23 @@ public final class AE2Integration {
          .build(null)
    );
 
+   public static final DeferredBlock<MEMachineBlock> MATTER_BLOCK = BLOCKS.register("me_matter_generator", () -> new MEMachineBlock(AE2Integration.MATTER_TYPE));
+   public static final DeferredItem<BlockItem> MATTER_ITEM = ITEMS.registerSimpleBlockItem(MATTER_BLOCK);
+   public static final DeferredHolder<BlockEntityType<?>, BlockEntityType<MEMatterGeneratorBlockEntity>> MATTER_TYPE = BLOCK_ENTITIES.register(
+      "me_matter_generator",
+      () -> BlockEntityType.Builder.of((pos, state) -> new MEMatterGeneratorBlockEntity(AE2Integration.MATTER_TYPE.get(), pos, state), MATTER_BLOCK.get())
+         .build(null)
+   );
+
    public static final DeferredHolder<MenuType<?>, MenuType<MEMachineMenu>> ME_MACHINE_MENU = MENUS.register(
       "me_machine", () -> MenuBase.createType(MEMachineMenu::new)
    );
    public static final DeferredHolder<MenuType<?>, MenuType<MERecyclerMenu>> ME_RECYCLER_MENU = MENUS.register(
       "me_recycler", () -> MenuBase.createType(MERecyclerMenu::new)
+   );
+
+   public static final DeferredHolder<MenuType<?>, MenuType<MEMatterGeneratorMenu>> ME_MATTER_MENU = MENUS.register(
+      "me_matter_generator", () -> MenuBase.createType(MEMatterGeneratorMenu::new)
    );
 
    static {
@@ -111,6 +124,7 @@ public final class AE2Integration {
       }
 
       output.accept(RECYCLER_ITEM.get());
+      output.accept(MATTER_ITEM.get());
    }
 
    private static void registerCapabilities(RegisterCapabilitiesEvent event) {
@@ -120,6 +134,15 @@ public final class AE2Integration {
       }
 
       event.registerBlockEntity(AECapabilities.IN_WORLD_GRID_NODE_HOST, RECYCLER_TYPE.get(), (machine, context) -> machine);
+      event.registerBlockEntity(AECapabilities.IN_WORLD_GRID_NODE_HOST, MATTER_TYPE.get(), (machine, context) -> machine);
+
+      // any energy cable can power an ME node: the FE goes into its AE buffer
+      for (MEMachineKind kind : MEMachineKind.values()) {
+         event.registerBlockEntity(Capabilities.EnergyStorage.BLOCK, MACHINE_TYPES.get(kind).get(), (machine, side) -> machine.feInput());
+      }
+
+      event.registerBlockEntity(Capabilities.EnergyStorage.BLOCK, RECYCLER_TYPE.get(), (machine, side) -> machine.feInput());
+      event.registerBlockEntity(Capabilities.EnergyStorage.BLOCK, MATTER_TYPE.get(), (machine, side) -> machine.feInput());
    }
 
    private static void commonSetup(FMLCommonSetupEvent event) {
@@ -131,6 +154,7 @@ public final class AE2Integration {
          }
 
          AEBaseBlockEntity.registerBlockEntityItem(RECYCLER_TYPE.get(), RECYCLER_ITEM.get());
+         AEBaseBlockEntity.registerBlockEntityItem(MATTER_TYPE.get(), MATTER_ITEM.get());
       });
    }
 

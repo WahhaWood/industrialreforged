@@ -312,7 +312,7 @@ public class MEMachineBlockEntity extends AbstractMENodeBlockEntity implements I
             break; // not enough AE: the job waits for power
          }
 
-         energy.extractAEPower(price * crafts, Actionable.MODULATE, PowerMultiplier.ONE);
+         this.payAE(energy, price * crafts);
          for (ItemStack output : recipe.outputs()) {
             AEItemKey key = AEItemKey.of(output);
             if (key != null) {

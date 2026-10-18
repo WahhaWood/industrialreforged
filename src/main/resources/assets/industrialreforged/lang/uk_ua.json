@@ -1284,6 +1284,7 @@
   "block.industrialreforged.me_metal_former": "ME-формувальник",
   "block.industrialreforged.me_thermal_centrifuge": "ME-термоцентрифуга",
   "block.industrialreforged.me_recycler": "ME-пожирач",
+  "block.industrialreforged.me_matter_generator": "ME-генератор матерії",
   "item.industrialreforged.me_recipe_pattern": "Рецепт ME-машини",
   "gui.industrialreforged.me_machine.search": "Пошук…",
   "gui.industrialreforged.me_machine.enable_all": "Увімкнути всі рецепти",
@@ -1299,5 +1300,8 @@
   "gui.industrialreforged.me_recycler.recycled": "З'їдено предметів",
   "gui.industrialreforged.me_recycler.per_tick": "Предметів за тік",
   "gui.industrialreforged.me_recycler.sample": "Слот зразка",
-  "gui.industrialreforged.me_recycler.sample.hint": "Клік предметом: усі такі предмети з ME-мережі підуть в утиль, 1 утильсировина за 8"
+  "gui.industrialreforged.me_recycler.sample.hint": "Клік предметом: усі такі предмети з ME-мережі підуть в утиль, 1 утильсировина за 8",
+  "gui.industrialreforged.me_matter.produced": "Вироблено матерії",
+  "gui.industrialreforged.me_matter.per_tick": "мБ за тік",
+  "gui.industrialreforged.me_matter.saved": "Знижка утильсировини всього"
 }

@@ -106,7 +106,7 @@ public class MERecyclerBlockEntity extends AbstractMENodeBlockEntity {
             continue;
          }
 
-         energy.extractAEPower(AE_PER_ITEM * eaten, Actionable.MODULATE, PowerMultiplier.ONE);
+         this.payAE(energy, AE_PER_ITEM * eaten);
          budget -= eaten;
          done += eaten;
       }

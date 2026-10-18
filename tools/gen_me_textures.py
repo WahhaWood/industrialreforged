@@ -2,7 +2,7 @@
 """Draws the GUI backgrounds of the ME machines in the style of screen/filter.png.
 
 Run from anywhere: python3 tools/gen_me_textures.py
-Writes textures/screen/me_machine.png and textures/screen/me_recycler.png (256x256 each).
+Writes textures/screen/me_machine.png, me_recycler.png and me_matter_generator.png (256x256 each).
 Coordinates here must match MEMachineScreen / MERecyclerScreen and their menus.
 Also paints the ME recycler model texture: the ME macerator one with its blue
 and violet tones turned rusty, so the "eater" is told apart at a glance.
@@ -152,8 +152,32 @@ def me_recycler_model():
     src.save(ASSETS / "block/me/me_recycler.png")
 
 
+def me_matter_generator():
+    im = Image.new("RGBA", (256, 256), (0, 0, 0, 0))
+    panel(im, 176, 78)  # title y 6, four status rows at y 20, 32, 44, 56 (MEMatterGeneratorScreen)
+    im.save(OUT / "me_matter_generator.png")
+
+
+def me_matter_generator_model():
+    """The ME macerator texture with its blue and violet tones turned green (UU matter), greys and the frame stay."""
+    src = Image.open(ASSETS / "block/me/me_macerator.png").convert("RGBA")
+    px = src.load()
+    for y in range(src.height):
+        for x in range(src.width):
+            r, g, b, a = px[x, y]
+            h, s, v = colorsys.rgb_to_hsv(r / 255, g / 255, b / 255)
+            if a == 0 or s < 0.12:
+                continue
+            h = (h - 0.25) % 1.0  # blue/violet (h ~ 0.65..0.75) -> green (h ~ 0.4..0.5)
+            r2, g2, b2 = colorsys.hsv_to_rgb(h, min(1.0, s * 1.1), v)
+            px[x, y] = (round(r2 * 255), round(g2 * 255), round(b2 * 255), a)
+    src.save(ASSETS / "block/me/me_matter_generator.png")
+
+
 if __name__ == "__main__":
     me_machine()
     me_recycler()
     me_recycler_model()
+    me_matter_generator()
+    me_matter_generator_model()
     print("written:", OUT / "me_machine.png", OUT / "me_recycler.png", ASSETS / "block/me/me_recycler.png")

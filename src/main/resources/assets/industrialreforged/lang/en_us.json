@@ -1232,6 +1232,7 @@
   "block.industrialreforged.me_metal_former": "ME Metal Former",
   "block.industrialreforged.me_thermal_centrifuge": "ME Thermal Centrifuge",
   "block.industrialreforged.me_recycler": "ME Recycler",
+  "block.industrialreforged.me_matter_generator": "ME Matter Generator",
   "item.industrialreforged.me_recipe_pattern": "ME Machine Recipe",
   "gui.industrialreforged.me_machine.search": "Search…",
   "gui.industrialreforged.me_machine.enable_all": "Switch all recipes on",
@@ -1247,5 +1248,8 @@
   "gui.industrialreforged.me_recycler.recycled": "Items eaten",
   "gui.industrialreforged.me_recycler.per_tick": "Items per tick",
   "gui.industrialreforged.me_recycler.sample": "Sample slot",
-  "gui.industrialreforged.me_recycler.sample.hint": "Click with an item: every item of this kind in the ME network is recycled, 1 scrap per 8"
+  "gui.industrialreforged.me_recycler.sample.hint": "Click with an item: every item of this kind in the ME network is recycled, 1 scrap per 8",
+  "gui.industrialreforged.me_matter.produced": "Matter made",
+  "gui.industrialreforged.me_matter.per_tick": "mB per tick",
+  "gui.industrialreforged.me_matter.saved": "Scrap discount total"
 }

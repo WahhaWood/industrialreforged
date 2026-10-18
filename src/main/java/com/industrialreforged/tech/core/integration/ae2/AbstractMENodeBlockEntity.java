@@ -8,6 +8,7 @@ import appeng.api.networking.IGrid;
 import appeng.api.networking.IGridNode;
 import appeng.api.networking.IGridNodeListener;
 import appeng.api.networking.energy.IAEPowerStorage;
+import appeng.api.networking.energy.IEnergyService;
 import appeng.api.networking.events.GridPowerStorageStateChanged;
 import appeng.api.networking.security.IActionSource;
 import appeng.api.networking.ticking.IGridTickable;
@@ -24,6 +25,7 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.energy.IEnergyStorage;
 
 /**
  * Common part of the ME machines: a channel-using grid node, an AE buffer (100M, 100G for the molecular
@@ -114,6 +116,68 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
       super.loadTag(tag, registries);
       this.buffer.setStored(tag.getDouble("me_buffer"));
    }
+
+   // ---- FE input: any energy cable can charge the buffer, 2 FE = 1 AE ------------------------------
+
+   /** The buffer as a Forge energy storage: it only takes energy in. Registered for every ME node in {@link AE2Integration}. */
+   public IEnergyStorage feInput() {
+      return this.feInput;
+   }
+
+   /**
+    * Pays {@code ae} for work: the machine's own buffer first (what the cables bring), the network for the rest.
+    * Callers check the whole of it with the network's {@code SIMULATE} first, which counts the buffer too when it is public.
+    */
+   protected final void payAE(IEnergyService energy, double ae) {
+      double own = Math.min(ae, this.buffer.getAmount());
+      if (own > 0) {
+         this.buffer.extract(own, true);
+         this.saveChanges();
+      }
+
+      if (ae - own > 0) {
+         energy.extractAEPower(ae - own, Actionable.MODULATE, PowerMultiplier.ONE);
+      }
+   }
+
+   private final IEnergyStorage feInput = new IEnergyStorage() {
+      @Override
+      public int receiveEnergy(int maxReceive, boolean simulate) {
+         double room = buffer.getMaximum() - buffer.getAmount();
+         int accepted = (int)Math.max(0L, Math.min((long)maxReceive, (long)Math.floor(room * MEMachineKind.FE_PER_AE)));
+         if (accepted > 0 && !simulate) {
+            buffer.insert(accepted / MEMachineKind.FE_PER_AE, true);
+            saveChanges();
+         }
+
+         return accepted;
+      }
+
+      @Override
+      public int extractEnergy(int maxExtract, boolean simulate) {
+         return 0;
+      }
+
+      @Override
+      public int getEnergyStored() {
+         return (int)Math.min(Integer.MAX_VALUE, (long)(buffer.getAmount() * MEMachineKind.FE_PER_AE));
+      }
+
+      @Override
+      public int getMaxEnergyStored() {
+         return (int)Math.min(Integer.MAX_VALUE, (long)(buffer.getMaximum() * MEMachineKind.FE_PER_AE));
+      }
+
+      @Override
+      public boolean canExtract() {
+         return false;
+      }
+
+      @Override
+      public boolean canReceive() {
+         return true;
+      }
+   };
 
    // ---- IAEPowerStorage: the buffer is a public storage of the network --------------------------
 
