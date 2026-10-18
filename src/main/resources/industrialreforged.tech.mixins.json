@@ -8,6 +8,7 @@
   ],
   "mixins": [
     "compat.VeinMinerControllerMixin",
+    "compat.AECraftingPatternInputMixin",
     "compat.CraftingCpuLogicMixin",
     "compat.TaskProgressAccessor"
   ],

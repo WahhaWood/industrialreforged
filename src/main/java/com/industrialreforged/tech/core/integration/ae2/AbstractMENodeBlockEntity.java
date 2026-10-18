@@ -26,8 +26,8 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockState;
 
 /**
- * Common part of the ME machines: a channel-using grid node, a 100M AE buffer that the network sees as
- * one of its power storages, and work driven by AE2's grid ticker (no block entity ticker).
+ * Common part of the ME machines: a channel-using grid node, an AE buffer (100M, 100G for the molecular
+ * transformer) that the network sees as one of its power storages, and work driven by AE2's grid ticker (no block entity ticker).
  *
  * <p>Loaded only when AE2 is present: every class of this package is touched only from behind the
  * {@code ModList.isLoaded("ae2")} guard in {@code IR} (lesson of 1.0.8, see DEVNOTES).
@@ -35,6 +35,8 @@ import net.minecraft.world.level.block.state.BlockState;
 public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity implements IAEPowerStorage, IGridTickable, MenuProvider {
    /** Built-in buffer, AE. Charged by the network like an energy cell and drained by it too. */
    public static final double BUFFER_AE = 100_000_000.0;
+   /** Buffer of the ME molecular transformer, AE: a single recipe of it can cost millions of AE. */
+   public static final double MOLECULAR_BUFFER_AE = 100_000_000_000.0;
    /** Upper bound of operations (items) one machine handles per tick, on average. */
    public static final int OPERATIONS_PER_TICK = 1024;
    /**
@@ -43,13 +45,18 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
     */
    public static final int WORK_INTERVAL = 5;
 
-   private final StoredEnergyAmount buffer = new StoredEnergyAmount(0, BUFFER_AE, this::emitPowerEvent);
+   private final StoredEnergyAmount buffer;
    protected final IActionSource actionSource = IActionSource.ofMachine(this);
    /** Operations per tick during the last work pass, for the GUI. */
    public int lastOperations;
 
    protected AbstractMENodeBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
+      this(type, pos, state, BUFFER_AE);
+   }
+
+   protected AbstractMENodeBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state, double bufferAe) {
       super(type, pos, state);
+      this.buffer = new StoredEnergyAmount(0, bufferAe, this::emitPowerEvent);
       this.getMainNode()
          .setFlags(GridFlags.REQUIRE_CHANNEL)
          .addService(IAEPowerStorage.class, this)

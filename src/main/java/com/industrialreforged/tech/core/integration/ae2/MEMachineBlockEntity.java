@@ -60,7 +60,7 @@ public class MEMachineBlockEntity extends AbstractMENodeBlockEntity implements I
    private List<IPatternDetails> patterns;
 
    public MEMachineBlockEntity(MEMachineKind kind, BlockEntityType<?> type, BlockPos pos, BlockState state) {
-      super(type, pos, state);
+      super(type, pos, state, kind == MEMachineKind.MOLECULAR_TRANSFORMER ? MOLECULAR_BUFFER_AE : BUFFER_AE);
       this.kind = kind;
       this.toggles = new MERecipeToggles(kind.enabledByDefault);
       this.getMainNode().addService(ICraftingProvider.class, this);

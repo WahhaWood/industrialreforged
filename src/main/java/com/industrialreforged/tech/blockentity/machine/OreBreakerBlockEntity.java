@@ -13,8 +13,12 @@ import com.industrialreforged.tech.core.ref.IRBlockEntities;
 import com.industrialreforged.tech.core.ref.IRSounds;
 import com.industrialreforged.tech.core.util.SoundUtil;
 import com.industrialreforged.tech.menu.machine.OreBreakerMenu;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.EnumSet;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
@@ -60,6 +64,10 @@ public class OreBreakerBlockEntity extends AbstractElectricMachineBlockEntity
    private static final int ENERGY_PER_TICK = 128;
    private static final int BASE_TICKS = 60;
    private static final int LANES = 9;
+   /** Real drop rolls kept per ore and reused, see {@link #rollDrops}. */
+   private static final int DROP_POOL = 32;
+   /** One draw in this many is a fresh roll that replaces a random pooled one. */
+   private static final int FRESH_ROLL_EVERY = 8;
 
    public final InvSlotConsumable inputSlot = new InvSlotConsumable(this, "input", LANES) {
       @Override
@@ -79,10 +87,20 @@ public class OreBreakerBlockEntity extends AbstractElectricMachineBlockEntity
    private int energyPerTick = ENERGY_PER_TICK;
    private int activeCooldown;
    private CombinedInvWrapper wrapper;
+   /** Pickaxe with the book's Fortune / Silk Touch, rebuilt only when those change. */
+   private ItemStack tool = ItemStack.EMPTY;
+   private int fortune;
+   private boolean silk;
+   private boolean bookChanged = true;
+   private final Map<Item, List<List<ItemStack>>> dropPools = new HashMap<>();
+   /** Ore a lane could not fit into the output; the lane waits (no energy) until the output or its ore changes. */
+   private final Item[] blockedOre = new Item[LANES];
 
    public OreBreakerBlockEntity(BlockPos blockPos, BlockState blockState) {
       super(CAPACITY, 0, IRBlockEntities.ORE_BREAKER.get(), blockPos, blockState, false);
       this.upgradeSlot.addListener(container -> this.recomputeRates());
+      this.bookSlot.addListener(container -> this.bookChanged = true);
+      this.outputSlot.addListener(container -> Arrays.fill(this.blockedOre, null));
       this.recomputeRates();
    }
 
@@ -223,7 +241,12 @@ public class OreBreakerBlockEntity extends AbstractElectricMachineBlockEntity
    @Override
    public void serverTick() {
       super.serverTick();
-      this.recomputeRates();
+      // the book has no level-free lookup at load time: re-read it on change, and once a second as a safety net
+      if (this.bookChanged || this.level.getGameTime() % 20L == 0L) {
+         this.bookChanged = false;
+         this.recomputeRates();
+         this.refreshTool();
+      }
       com.industrialreforged.tech.core.util.ItemMoveHelper.tick(
          this.level, this.worldPosition, this.upgradeSlot, this.inputSlot, this.outputSlot
       );
@@ -240,12 +263,13 @@ public class OreBreakerBlockEntity extends AbstractElectricMachineBlockEntity
 
       for (int k = 0; k < LANES; k++) {
          int lane = (this.laneCursor + k) % LANES;
-         if (this.inputSlot.getItem(lane).isEmpty()) {
+         ItemStack ore = this.inputSlot.getItem(lane);
+         if (ore.isEmpty()) {
             this.progress[lane] = 0;
             continue;
          }
 
-         if (this.energy.getStored() < draw) {
+         if (this.blockedOre[lane] == ore.getItem() || this.energy.getStored() < draw) {
             maxProgress = Math.max(maxProgress, this.progress[lane]);
             continue;
          }
@@ -258,6 +282,7 @@ public class OreBreakerBlockEntity extends AbstractElectricMachineBlockEntity
                active = true;
             } else {
                this.progress[lane] = this.opTime - 1;
+               this.blockedOre[lane] = ore.getItem();
             }
          }
 
@@ -279,33 +304,33 @@ public class OreBreakerBlockEntity extends AbstractElectricMachineBlockEntity
          return false;
       }
 
-      int n = Math.min(batch, ore.getCount());
-      List<List<ItemStack>> perOre = new java.util.ArrayList<>(n);
-      for (int i = 0; i < n; i++) {
-         List<ItemStack> drops = this.breakOre(ore);
-         if (drops.isEmpty()) {
-            return false;
-         }
-         perOre.add(drops);
+      // ores one by one while their drops still fit; the output is dry-run on a copy of its slots
+      int size = this.outputSlot.getContainerSize();
+      ItemStack[] kinds = new ItemStack[size];
+      int[] counts = new int[size];
+      for (int i = 0; i < size; i++) {
+         kinds[i] = this.outputSlot.getItem(i);
+         counts[i] = kinds[i].getCount();
       }
 
-      // если в выход влезает не всё — уменьшаем пакет, но хотя бы одну руду ломаем
-      while (n > 1) {
-         List<ItemStack> flat = new java.util.ArrayList<>();
-         for (int i = 0; i < n; i++) {
-            flat.addAll(perOre.get(i));
-         }
-         if (this.outputSlot.canAdd(flat)) {
+      int limit = Math.min(batch, ore.getCount());
+      int n = 0;
+      List<ItemStack> flat = new ArrayList<>();
+      while (n < limit) {
+         List<ItemStack> drops = this.rollDrops(ore);
+         ItemStack[] nextKinds = kinds.clone();
+         int[] nextCounts = counts.clone();
+         if (!this.fitsOutput(drops, nextKinds, nextCounts)) {
             break;
          }
-         n--;
+
+         kinds = nextKinds;
+         counts = nextCounts;
+         flat.addAll(drops);
+         n++;
       }
 
-      List<ItemStack> flat = new java.util.ArrayList<>();
-      for (int i = 0; i < n; i++) {
-         flat.addAll(perOre.get(i));
-      }
-      if (!this.outputSlot.canAdd(flat)) {
+      if (n == 0) {
          return false;
       }
 
@@ -318,32 +343,106 @@ public class OreBreakerBlockEntity extends AbstractElectricMachineBlockEntity
       return true;
    }
 
-   /** Дропы как от игрока с киркой: удача и шёлк берутся из книги. */
-   private List<ItemStack> breakOre(ItemStack ore) {
-      int fortune = this.enchantLevel(Enchantments.FORTUNE);
-      boolean silk = this.enchantLevel(Enchantments.SILK_TOUCH) > 0;
-      if (ore.getItem() instanceof BlockItem blockItem && this.level instanceof ServerLevel serverLevel) {
-         ItemStack tool = new ItemStack(Items.NETHERITE_PICKAXE);
-         if (fortune > 0 || silk) {
-            Holder<Enchantment> fortuneHolder = serverLevel.registryAccess()
-               .lookupOrThrow(Registries.ENCHANTMENT)
-               .getOrThrow(Enchantments.FORTUNE);
-            Holder<Enchantment> silkHolder = serverLevel.registryAccess()
-               .lookupOrThrow(Registries.ENCHANTMENT)
-               .getOrThrow(Enchantments.SILK_TOUCH);
-            EnchantmentHelper.updateEnchantments(tool, mutable -> {
-               if (fortune > 0) {
-                  mutable.set(fortuneHolder, fortune);
+   /**
+    * Dry run of {@code outputSlot.add} for each stack in order, on the given slot copy: first into slots of
+    * the same item up to the stack limit, the rest into the first empty slot.
+    */
+   private boolean fitsOutput(List<ItemStack> stacks, ItemStack[] kinds, int[] counts) {
+      for (ItemStack stack : stacks) {
+         int left = stack.getCount();
+         for (int i = 0; i < kinds.length && left > 0; i++) {
+            if (ItemStack.isSameItemSameComponents(kinds[i], stack)) {
+               int move = Math.min(left, Math.min(this.outputSlot.getMaxStackSize(), stack.getMaxStackSize()) - counts[i]);
+               if (move > 0) {
+                  counts[i] += move;
+                  left -= move;
                }
-
-               if (silk) {
-                  mutable.set(silkHolder, 1);
-               }
-            });
+            }
          }
 
+         if (left > 0) {
+            int empty = 0;
+            while (empty < kinds.length && !kinds[empty].isEmpty()) {
+               empty++;
+            }
+            if (empty == kinds.length) {
+               return false;
+            }
+
+            kinds[empty] = stack;
+            counts[empty] = left;
+         }
+      }
+
+      return true;
+   }
+
+   /** Rebuilds the pickaxe when the book's Fortune / Silk Touch change; pooled drops of the old book are dropped. */
+   private void refreshTool() {
+      int fortune = this.enchantLevel(Enchantments.FORTUNE);
+      boolean silk = this.enchantLevel(Enchantments.SILK_TOUCH) > 0;
+      if (!this.tool.isEmpty() && fortune == this.fortune && silk == this.silk) {
+         return;
+      }
+
+      this.fortune = fortune;
+      this.silk = silk;
+      this.dropPools.clear();
+      ItemStack tool = new ItemStack(Items.NETHERITE_PICKAXE);
+      if (fortune > 0 || silk) {
+         var enchantments = this.level.registryAccess().lookupOrThrow(Registries.ENCHANTMENT);
+         Holder<Enchantment> fortuneHolder = enchantments.getOrThrow(Enchantments.FORTUNE);
+         Holder<Enchantment> silkHolder = enchantments.getOrThrow(Enchantments.SILK_TOUCH);
+         EnchantmentHelper.updateEnchantments(tool, mutable -> {
+            if (fortune > 0) {
+               mutable.set(fortuneHolder, fortune);
+            }
+
+            if (silk) {
+               mutable.set(silkHolder, 1);
+            }
+         });
+      }
+
+      this.tool = tool;
+   }
+
+   /**
+    * Drops of one ore. {@code Block.getDrops} runs the loot table and every global loot modifier of the pack
+    * (in a big pack hundreds of condition checks per call), so real rolls are pooled per ore and reused: a draw
+    * takes a random pooled roll, and one draw in {@value #FRESH_ROLL_EVERY} rolls anew over a random pooled one.
+    * Every pooled roll is a real, independent roll, so on average the output is the same as rolling every ore.
+    */
+   private List<ItemStack> rollDrops(ItemStack ore) {
+      if (!ore.isComponentsPatchEmpty()) {
+         return this.breakOre(ore); // the pool is keyed by item only
+      }
+
+      List<List<ItemStack>> pool = this.dropPools.computeIfAbsent(ore.getItem(), item -> new ArrayList<>(DROP_POOL));
+      List<ItemStack> drops;
+      if (pool.size() < DROP_POOL) {
+         drops = this.breakOre(ore);
+         pool.add(drops);
+      } else if (this.level.random.nextInt(FRESH_ROLL_EVERY) == 0) {
+         drops = this.breakOre(ore);
+         pool.set(this.level.random.nextInt(DROP_POOL), drops);
+      } else {
+         drops = pool.get(this.level.random.nextInt(DROP_POOL));
+      }
+
+      List<ItemStack> copy = new ArrayList<>(drops.size());
+      for (ItemStack drop : drops) {
+         copy.add(drop.copy());
+      }
+
+      return copy;
+   }
+
+   /** Дропы как от игрока с киркой: удача и шёлк берутся из книги. */
+   private List<ItemStack> breakOre(ItemStack ore) {
+      if (ore.getItem() instanceof BlockItem blockItem && this.level instanceof ServerLevel serverLevel) {
          List<ItemStack> drops = Block.getDrops(
-            blockItem.getBlock().defaultBlockState(), serverLevel, this.worldPosition, null, null, tool
+            blockItem.getBlock().defaultBlockState(), serverLevel, this.worldPosition, null, null, this.tool
          );
          if (!drops.isEmpty()) {
             return drops;
@@ -352,7 +451,7 @@ public class OreBreakerBlockEntity extends AbstractElectricMachineBlockEntity
 
       ItemStack result = ore.copyWithCount(1);
 
-      for (int i = 0; i < fortune; i++) {
+      for (int i = 0; i < this.fortune; i++) {
          if (this.level.random.nextFloat() < 0.25F) {
             result.grow(1);
          }

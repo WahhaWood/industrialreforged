@@ -20,6 +20,7 @@ import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -35,6 +36,8 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.EntityCollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.neoforged.neoforge.capabilities.BlockCapabilityCache;
+import net.neoforged.neoforge.capabilities.Capabilities;
 import net.neoforged.neoforge.client.model.data.ModelData;
 import net.neoforged.neoforge.energy.IEnergyStorage;
 import org.jetbrains.annotations.Nullable;
@@ -81,6 +84,14 @@ public class WireBlockEntity extends BlockEntity implements IEnergyWrapper, com.
    private int outputRate;
    @Nullable
    private Direction lastInputDirection;
+   /** Neighbours seen by the last refresh (every 10 ticks or on a neighbour change): wires for the network walk… */
+   private final WireBlockEntity[] wireNeighbors = new WireBlockEntity[6];
+   /** …and sides with an energy consumer, read through NeoForge's capability cache (invalidated by the game itself). */
+   private final boolean[] feeds = new boolean[6];
+   @SuppressWarnings("unchecked")
+   private final BlockCapabilityCache<IEnergyStorage, Direction>[] consumers = new BlockCapabilityCache[6];
+   /** Game tick in which this wire's network has already handed out its energy. */
+   private long servedTick = Long.MIN_VALUE;
 
    public WireBlockEntity(BlockPos pos, BlockState state) {
       super(GTBlockEntities.WIRE.get(), pos, state);
@@ -240,11 +251,10 @@ public class WireBlockEntity extends BlockEntity implements IEnergyWrapper, com.
          return;
       }
 
-      if (this.neighborChange || --this.refreshCooldown <= 0) {
-         this.refreshCooldown = 10;
-         this.neighborChange = false;
-         this.refreshConnections();
+      if (--this.refreshCooldown <= 0) {
+         this.neighborChange = true;
       }
+      this.refreshIfChanged();
 
       if (++this.flowTicks >= 20) {
          this.inputRate = (int)Math.min(this.inputAccumulator / this.flowTicks, Integer.MAX_VALUE);
@@ -257,6 +267,14 @@ public class WireBlockEntity extends BlockEntity implements IEnergyWrapper, com.
       this.pushEnergy();
    }
 
+   private void refreshIfChanged() {
+      if (this.neighborChange) {
+         this.refreshCooldown = 10;
+         this.neighborChange = false;
+         this.refreshConnections();
+      }
+   }
+
    private void refreshConnections() {
       boolean changed = false;
 
@@ -267,11 +285,27 @@ public class WireBlockEntity extends BlockEntity implements IEnergyWrapper, com.
             data.type = type;
             changed = true;
          }
+         this.cacheNeighbor(direction, type);
       }
 
       if (changed) {
          this.sync();
          this.setChanged();
+      }
+   }
+
+   private void cacheNeighbor(Direction direction, ConnectionType type) {
+      int side = direction.ordinal();
+      BlockPos neighborPos = this.worldPosition.relative(direction);
+      // detectType says NONE for an unloaded chunk and for a block without energy
+      BlockEntity neighbor = type == ConnectionType.NONE ? null : this.level.getBlockEntity(neighborPos);
+      this.wireNeighbors[side] = neighbor instanceof WireBlockEntity wire ? wire : null;
+      this.feeds[side] = neighbor != null && !(neighbor instanceof WireBlockEntity);
+      if (this.feeds[side] && this.consumers[side] == null && this.level instanceof ServerLevel serverLevel) {
+         // one cache per side for the wire's lifetime: it follows block entity and chunk changes on its own
+         this.consumers[side] = BlockCapabilityCache.create(
+            Capabilities.EnergyStorage.BLOCK, serverLevel, neighborPos, direction.getOpposite(), () -> !this.isRemoved(), () -> {}
+         );
       }
    }
 
@@ -337,61 +371,39 @@ public class WireBlockEntity extends BlockEntity implements IEnergyWrapper, com.
    // - резистор на стороне потребителя режет его долю (абсолютный — спрос,
    //   процентный — выдачу); трансформер на энергетику не влияет, как и раньше.
    //
-   // Состояния компонента нет: состав собирается свежим BFS каждый тик, поэтому
-   // классу «протухшая сеть» негде завестись. Раздачу делает первый проснувшийся
-   // участник, он же отмечает в SERVED всех участников сети; остальные в этот тик
-   // выходят до BFS. Раньше отметка была только у мастера, и каждый провод с
-   // энергией делал полный BFS, чтобы её найти: O(N²) за тик на сеть из N проводов.
-
-   /** Провода, чья сеть уже раздала энергию в этот тик. */
-   private static final java.util.Map<Level, ServedTick> SERVED = new java.util.WeakHashMap<>();
-
-   private static final class ServedTick {
-      long tick = Long.MIN_VALUE;
-      final java.util.Set<BlockPos> wires = new java.util.HashSet<>();
-   }
+   // Состав сети собирается обходом каждый тик, но по ссылкам на соседей, которые
+   // провод запоминает при рефреше (раз в 10 тиков и сразу при смене соседа), без
+   // поиска блоков в мире. Раздачу делает первый проснувшийся участник, он же
+   // ставит всем участникам отметку servedTick: остальные в этот тик выходят сразу.
 
    private void pushEnergy() {
       if (this.level == null || this.energy <= 0) {
          // В сети есть энергия — какой-нибудь её участник с energy > 0 проснётся
-         // и раздаст за всех. Пустым участникам BFS не нужен.
+         // и раздаст за всех. Пустым участникам обход не нужен.
          return;
       }
 
       long now = this.level.getGameTime();
-      ServedTick served = SERVED.computeIfAbsent(this.level, level -> new ServedTick());
-      if (served.tick != now) {
-         served.tick = now;
-         served.wires.clear();
-      }
-      if (served.wires.contains(this.worldPosition)) {
+      if (this.servedTick == now) {
          return;
       }
 
-      // 1) состав сети: все связные провода, только загруженные чанки
+      // 1) состав сети: связные провода; отметка «обслужен» заодно служит меткой обхода
       java.util.List<WireBlockEntity> members = new java.util.ArrayList<>();
-      java.util.Set<BlockPos> seen = new java.util.HashSet<>();
-      java.util.ArrayDeque<BlockPos> queue = new java.util.ArrayDeque<>();
-      queue.add(this.worldPosition);
-      seen.add(this.worldPosition);
+      java.util.ArrayDeque<WireBlockEntity> queue = new java.util.ArrayDeque<>();
+      this.servedTick = now;
+      queue.add(this);
       while (!queue.isEmpty()) {
-         BlockPos pos = queue.poll();
-         BlockEntity at = pos.equals(this.worldPosition) ? this : this.level.getBlockEntity(pos);
-         if (at instanceof WireBlockEntity wire) {
-            members.add(wire);
-         }
-         for (Direction direction : Direction.values()) {
-            BlockPos next = pos.relative(direction);
-            if (seen.add(next) && this.isNeighborLoaded(next)
-               && this.level.getBlockState(next).getBlock() instanceof WireBlock) {
+         WireBlockEntity wire = queue.poll();
+         members.add(wire);
+         wire.refreshIfChanged();
+         for (WireBlockEntity next : wire.wireNeighbors) {
+            // a wire of an unloaded chunk is removed, so it drops out here
+            if (next != null && next.servedTick != now && !next.isRemoved()) {
+               next.servedTick = now;
                queue.add(next);
             }
          }
-      }
-
-      // 2) сеть обслуживается этим проводом: остальные её участники в этот тик выходят сразу
-      for (WireBlockEntity wire : members) {
-         served.wires.add(wire.worldPosition);
       }
 
       // 3) пул и лимит: сумма буферов, качает самый слабый провод
@@ -412,17 +424,11 @@ public class WireBlockEntity extends BlockEntity implements IEnergyWrapper, com.
       java.util.List<Long> percents = new java.util.ArrayList<>();
       for (WireBlockEntity wire : members) {
          for (Direction direction : Direction.values()) {
-            BlockPos neighborPos = wire.worldPosition.relative(direction);
-            if (!wire.isNeighborLoaded(neighborPos)) {
+            BlockCapabilityCache<IEnergyStorage, Direction> consumer = wire.consumers[direction.ordinal()];
+            if (!wire.feeds[direction.ordinal()] || consumer == null) {
                continue;
             }
-            BlockEntity neighbor = wire.level.getBlockEntity(neighborPos);
-            if (neighbor == null || neighbor instanceof WireBlockEntity) {
-               continue;
-            }
-            IEnergyStorage storage = com.industrialreforged.utils.CapabilitiesUtils.get(
-               neighbor, net.neoforged.neoforge.capabilities.Capabilities.EnergyStorage.BLOCK, direction.getOpposite()
-            );
+            IEnergyStorage storage = consumer.getCapability();
             if (storage == null || !storage.canReceive()) {
                continue;
             }

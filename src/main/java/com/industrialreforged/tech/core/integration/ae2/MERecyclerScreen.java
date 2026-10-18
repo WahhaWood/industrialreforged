@@ -33,7 +33,7 @@ public class MERecyclerScreen extends AbstractContainerScreen<MERecyclerMenu> {
          this.topPos,
          List.of(
             Component.translatable("gui.industrialreforged.me_machine.buffer"),
-            MEMachineScreen.bufferValue(this.menu.buffer),
+            MEMachineScreen.bufferValue(this.menu.buffer, this.menu.entity.getAEMaxPower()),
             Component.translatable("gui.industrialreforged.me_recycler.recycled"),
             Component.literal(NumberUtils.formatToSi(this.menu.recycled)),
             Component.translatable("gui.industrialreforged.me_recycler.per_tick"),

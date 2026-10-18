@@ -190,7 +190,7 @@ public class MEMachineScreen extends AbstractContainerScreen<MEMachineMenu> {
          this.topPos,
          List.of(
             Component.translatable("gui.industrialreforged.me_machine.buffer"),
-            bufferValue(this.menu.buffer),
+            bufferValue(this.menu.buffer, this.menu.entity.getAEMaxPower()),
             Component.translatable("gui.industrialreforged.me_machine.operations"),
             Component.literal(this.menu.lastOperations + " / " + AbstractMENodeBlockEntity.OPERATIONS_PER_TICK),
             Component.translatable("gui.industrialreforged.me_machine.recipes"),
@@ -199,8 +199,8 @@ public class MEMachineScreen extends AbstractContainerScreen<MEMachineMenu> {
       );
    }
 
-   static Component bufferValue(double buffer) {
-      return Component.literal(NumberUtils.formatToSi((long)buffer) + " / " + NumberUtils.formatToSi((long)AbstractMENodeBlockEntity.BUFFER_AE));
+   static Component bufferValue(double buffer, double max) {
+      return Component.literal(NumberUtils.formatToSi((long)buffer) + " / " + NumberUtils.formatToSi((long)max));
    }
 
    /**
