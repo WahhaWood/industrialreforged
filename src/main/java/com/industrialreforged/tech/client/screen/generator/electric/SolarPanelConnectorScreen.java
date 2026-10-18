@@ -39,6 +39,11 @@ public class SolarPanelConnectorScreen extends IRScreenBase<SolarPanelConnectorM
          ScreenApi.rect(graphics, this.leftPos + 16 + i * 18, this.topPos + 58, 233.0F, 30.0F, 18.0F, 18.0F);
       }
 
+      // module slots, same frame as on a single panel
+      for (int i = 0; i < 4; i++) {
+         ScreenApi.rect(graphics, this.leftPos + 96 + i * 18, this.topPos + 38, 233.0F, 30.0F, 18.0F, 18.0F);
+      }
+
       BigEnergyStorage storage = (BigEnergyStorage)((SolarPanelConnectorBlockEntity)((SolarPanelConnectorMenu)this.menu).entity).energy;
       int w = ScreenApi.energyBarWidth(24, storage);
       if (w > 0) {

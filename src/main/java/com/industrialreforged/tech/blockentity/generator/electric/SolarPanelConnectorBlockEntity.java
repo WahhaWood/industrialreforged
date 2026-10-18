@@ -19,7 +19,6 @@ import org.jetbrains.annotations.Nullable;
 public class SolarPanelConnectorBlockEntity extends SolarPanelBlockEntity {
    public InvSlotSolarConnector inventory = new InvSlotSolarConnector(this, "inventory", 9);
    public long staticProduction;
-   private long staticCapacity;
 
    public SolarPanelConnectorBlockEntity(BlockPos pos, BlockState state) {
       super(IRBlockEntities.SOLAR_CONNECTOR.get(), pos, state);
@@ -41,12 +40,13 @@ public class SolarPanelConnectorBlockEntity extends SolarPanelBlockEntity {
    }
 
    /**
-    * Recomputes output and buffer from the solar panels installed in the nine
-    * slots.  Without panels both are zero, so the connector generates 0 FE/t
-    * and offers no buffer at all.
+    * Recomputes output and buffer from the solar panels installed in the nine slots and the modules in the
+    * four module slots. The modules act on the connector as a whole, as they do on one panel: day, night and
+    * rain lenses scale the output of every panel by the weather, storage and output modules the buffer and the
+    * transfer rate. Without panels all of it is zero, so the connector generates 0 FE/t and offers no buffer.
     */
    public void updatePanels() {
-      long production = 0L;
+      long dayOutput = 0L;
       long capacity = 0L;
 
       for (int i = 0; i < this.inventory.getContainerSize(); i++) {
@@ -59,23 +59,24 @@ public class SolarPanelConnectorBlockEntity extends SolarPanelBlockEntity {
 
          int count = stack.getCount();
          long day = IRConfig.CONFIG.getProduction(panel.getLevel());
-         long output = this.sunIsUp ? day : Math.max(day * 6L / 10L, 1L);
-         production += output * (long)count;
+         dayOutput += day * (long)count;
          capacity += Math.max(day * 6400L, 64000L) * (long)count;
       }
 
-      this.staticProduction = production;
+      // the same rules as one panel: rain gives the rain share, otherwise day or 60% of it at night
+      double rate = this.rainWeather ? this.rainRate : this.sunIsUp ? this.dayRate : 0.6 * this.nightRate;
+      this.staticProduction = dayOutput > 0L ? Math.max(Math.round((double)dayOutput * rate), 1L) : 0L;
       // The connector is a pure source: it must be able to push its whole
       // output out.  The base generator constructor created it with
       // production 0, so receive/extract stayed 0 and nothing could be drawn.
       this.energy.setReceive(0L);
-      this.energy.setExtract(Math.max(2L * production, 0L));
+      this.energy.setExtract(Math.max(Math.round((double)dayOutput * 2.0 * this.outputMult), 0L));
 
-      if (capacity != this.staticCapacity) {
-         this.staticCapacity = capacity;
-         this.energy.setCapacity(capacity);
-         if (this.energy.getStored() > capacity) {
-            this.energy.setStored(capacity);
+      long target = Math.round((double)capacity * this.capacityMult);
+      if (target != this.energy.getCapacity()) {
+         this.energy.setCapacity(target);
+         if (this.energy.getStored() > target) {
+            this.energy.setStored(target);
          }
       }
    }

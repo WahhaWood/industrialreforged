@@ -24,6 +24,8 @@ public class SolarPanelBlockEntity extends AbstractElectricGeneratorBlockEntity 
    protected boolean noSunWorld;
    public boolean sunIsVisible = false;
    public boolean sunIsUp;
+   /** Rain in a wet biome: the panel then makes {@link #rainRate} of its day output instead of day or night output. */
+   protected boolean rainWeather;
    public int ticker = IR.random.nextInt(128);
    public long defaultProduction;
    /** Слоты модулей панели (день/ночь/хранение/выход/линзы). */
@@ -57,6 +59,7 @@ public class SolarPanelBlockEntity extends AbstractElectricGeneratorBlockEntity 
       if (this.level != null) {
          boolean raining = this.level.isRaining() || this.level.isThundering();
          boolean rainWeather = this.wetBiome && raining;
+         this.rainWeather = rainWeather;
          this.sunIsUp = this.level.isDay() && !rainWeather;
          this.sunIsVisible = this.level.canSeeSky(this.getBlockPos().above()) && !this.noSunWorld;
          if (rainWeather) {

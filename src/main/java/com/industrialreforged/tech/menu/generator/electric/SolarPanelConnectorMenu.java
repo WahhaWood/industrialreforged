@@ -12,6 +12,8 @@ public class SolarPanelConnectorMenu extends IRMenuBase<SolarPanelConnectorBlock
    public SolarPanelConnectorMenu(int containerId, Inventory inv, SolarPanelConnectorBlockEntity entity) {
       super(TYPE, containerId, inv, entity);
       this.addGrid(entity.inventory, 17, 59, 9, InputSlot::new);
+      // modules of the whole connector, in their own row above the panels
+      this.addGrid(entity.moduleSlot, 97, 39, 4, InputSlot::new);
       this.addPlayerSlots(inv, 17, 86);
       this.addSync(entity.energy);
       this.addDoubleToSync(() -> entity.production, value -> entity.production = (long)value);
