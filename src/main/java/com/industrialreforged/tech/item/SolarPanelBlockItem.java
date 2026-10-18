@@ -23,7 +23,7 @@ public class SolarPanelBlockItem extends BlockItem {
       if (IRConfig.CONFIG_SPEC.isLoaded() && this.getBlock() instanceof SolarPanelBlock panel) {
          long day = IRConfig.CONFIG.getProduction(panel.getLevel());
          long night = Math.max(day * 6L / 10L, 1L);
-         long buffer = Math.max(day * 400L, 4000L);
+         long buffer = Math.max(day * 6400L, 64000L);
          tooltipComponents.add(Component.translatable("tooltip.industrialreforged.solar.day", new Object[]{NumberUtils.formatToSi(day)}));
          tooltipComponents.add(Component.translatable("tooltip.industrialreforged.solar.night", new Object[]{NumberUtils.formatToSi(night)}));
          tooltipComponents.add(Component.translatable("tooltip.industrialreforged.solar.buffer", new Object[]{NumberUtils.formatToSi(buffer)}));

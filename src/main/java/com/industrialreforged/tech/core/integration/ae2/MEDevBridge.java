@@ -68,6 +68,7 @@ public final class MEDevBridge {
             if (blockEntity instanceof AbstractMENodeBlockEntity machine) {
                json.addProperty("buffer", machine.getAECurrentPower());
                json.addProperty("lastOperations", machine.lastOperations);
+               json.addProperty("enabled", machine.enabled);
             }
 
             if (blockEntity instanceof MEMachineBlockEntity machine) {
@@ -149,6 +150,18 @@ public final class MEDevBridge {
             }
 
             json.addProperty("cancelled", cancelled);
+         }
+         case "power" -> {
+            // the GUI on/off switch of an ME node; "enabled" sets it, without it the switch flips
+            if (!(blockEntity instanceof AbstractMENodeBlockEntity machine)) {
+               return error("not an ME node");
+            }
+
+            if (!params.has("enabled") || params.get("enabled").getAsBoolean() != machine.enabled) {
+               machine.toggleEnabled();
+            }
+
+            json.addProperty("enabled", machine.enabled);
          }
          case "toggle" -> {
             if (!(blockEntity instanceof MEMachineBlockEntity machine)) {

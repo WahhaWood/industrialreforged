@@ -121,6 +121,34 @@ def main():
     after = ae2("info", GEN)
     check("8 утильсырья = скидка 250k FE: 7,75M FE хватило на 2 мБ", uu() - before == 2 and count(SCRAP) == 0, f"UU +{uu() - before}, утильсырья {count(SCRAP)}, {after}")
 
+    # --- выключатель: ничего не берёт ни из сети, ни с кабеля, ничего не делает ---
+    ae2("insert", CTRL, item=SCRAP, count=50)
+    ae2("charge", GEN, amount=0)
+    check("выключатель: выключен", ae2("power", GEN, enabled=False).get("enabled") is False)
+    before_uu, before_scrap, before_net = uu(), count(SCRAP), grid_power()
+    fed = ae2("fe", GEN, amount=8_000_000)
+    check("выключенный генератор не принимает FE с кабеля", fed.get("accepted") == 0, str(fed))
+    ae2("fe", MAC2, amount=0)
+    cap = t.call(f"/energy?x={GEN[0]}&y={GEN[1]}&z={GEN[2]}&side=up")
+    wait(80)
+    info = ae2("info", GEN)
+    check("выключенный генератор: материи нет, утильсырьё и буфер целы",
+          uu() == before_uu and count(SCRAP) == before_scrap and info.get("buffer", -1) == 0 and info.get("enabled") is False, f"{info}, {cap}")
+    check("выключенный генератор не тянет энергию из сети", before_net - grid_power() < 300, f"сеть отдала {before_net - grid_power()}")
+    ae2("power", GEN, enabled=True)
+    ae2("fe", GEN, amount=8_000_000)
+    wait(80)
+    check("включили обратно: FE принят, работает (2 мБ по полной цене или со скидкой)", uu() - before_uu >= 2, f"UU +{uu() - before_uu}")
+
+    # --- то же для ME-машины: выключенная не платит и не берёт работу ---
+    ae2("charge", MAC2, amount=0)
+    ae2("power", MAC2, enabled=False)
+    fed = ae2("fe", MAC2, amount=1000)
+    check("выключенный ME-дробитель не принимает FE", fed.get("accepted") == 0, str(fed))
+    ae2("power", MAC2, enabled=True)
+    fed = ae2("fe", MAC2, amount=1000)
+    check("включённый снова принимает FE", fed.get("accepted") == 1000, str(fed))
+
     execs(f"fill 755 {Y - 2} -585 766 {Y + 3} -575 minecraft:air", AREA.replace(" add ", " remove "))
     return t.summary("tests_me_matter")
 

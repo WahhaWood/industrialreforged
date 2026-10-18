@@ -52,6 +52,8 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
    protected final IActionSource actionSource = IActionSource.ofMachine(this);
    /** Operations per tick during the last work pass, for the GUI. */
    public int lastOperations;
+   /** Switched off from the GUI: no work, no energy from the network and none from cables into the buffer. */
+   public boolean enabled = true;
 
    protected AbstractMENodeBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
       this(type, pos, state, BUFFER_AE);
@@ -71,8 +73,17 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
 
    protected abstract boolean hasWork();
 
+
    /** Items held by the machine (queued inputs, undelivered outputs) that drop when it is broken. */
    public abstract void addContentDrops(List<ItemStack> drops);
+
+   public final void toggleEnabled() {
+      this.enabled = !this.enabled;
+      this.saveChanges();
+      if (this.enabled) {
+         this.wake();
+      }
+   }
 
    protected final void wake() {
       this.getMainNode().ifPresent((grid, node) -> grid.getTickManager().alertDevice(node));
@@ -87,6 +98,11 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
    public TickRateModulation tickingRequest(IGridNode node, int ticksSinceLastCall) {
       IGrid grid = node.getGrid();
       if (!this.getMainNode().isActive() || grid == null) {
+         this.lastOperations = 0;
+         return TickRateModulation.SLEEP;
+      }
+
+      if (!this.enabled) {
          this.lastOperations = 0;
          return TickRateModulation.SLEEP;
       }
@@ -110,12 +126,14 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
    public void saveAdditional(CompoundTag tag, HolderLookup.Provider registries) {
       super.saveAdditional(tag, registries);
       tag.putDouble("me_buffer", this.buffer.getAmount());
+      tag.putBoolean("me_enabled", this.enabled);
    }
 
    @Override
    public void loadTag(CompoundTag tag, HolderLookup.Provider registries) {
       super.loadTag(tag, registries);
       this.buffer.setStored(tag.getDouble("me_buffer"));
+      this.enabled = !tag.contains("me_enabled") || tag.getBoolean("me_enabled");
    }
 
    // ---- FE input: any energy cable can charge the buffer, 2 FE = 1 AE ------------------------------
@@ -150,6 +168,10 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
    private final IEnergyStorage feInput = new IEnergyStorage() {
       @Override
       public int receiveEnergy(int maxReceive, boolean simulate) {
+         if (!enabled) {
+            return 0;
+         }
+
          double room = buffer.getMaximum() - buffer.getAmount();
          int accepted = (int)Math.max(0L, Math.min((long)maxReceive, (long)Math.floor(room * MEMachineKind.FE_PER_AE)));
          if (accepted > 0 && !simulate) {

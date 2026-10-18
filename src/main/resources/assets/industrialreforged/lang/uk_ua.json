@@ -1303,5 +1303,10 @@
   "gui.industrialreforged.me_recycler.sample.hint": "Клік предметом: усі такі предмети з ME-мережі підуть в утиль, 1 утильсировина за 8",
   "gui.industrialreforged.me_matter.produced": "Вироблено матерії",
   "gui.industrialreforged.me_matter.per_tick": "мБ за тік",
-  "gui.industrialreforged.me_matter.saved": "Знижка утильсировини всього"
+  "gui.industrialreforged.me_matter.saved": "Знижка утильсировини всього",
+  "gui.industrialreforged.me_matter.on": "Вкл",
+  "gui.industrialreforged.me_matter.off": "Вимк",
+  "gui.industrialreforged.me_matter.lasts": "Власного буфера вистачить приблизно на %s при такій швидкості",
+  "gui.industrialreforged.me_matter.lasts.off": "Вимкнено",
+  "gui.industrialreforged.me_matter.lasts.idle": "Зараз не виробляє"
 }

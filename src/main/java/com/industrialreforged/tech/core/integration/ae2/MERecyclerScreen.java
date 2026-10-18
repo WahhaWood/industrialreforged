@@ -24,6 +24,13 @@ public class MERecyclerScreen extends AbstractContainerScreen<MERecyclerMenu> {
    }
 
    @Override
+   protected void init() {
+      super.init();
+      this.addRenderableWidget(new MEPowerButton(this.leftPos + this.imageWidth - 42, this.topPos + 2, () -> this.menu.enabled,
+         button -> this.minecraft.gameMode.handleInventoryButtonClick(this.menu.containerId, 0)));
+   }
+
+   @Override
    protected void renderBg(GuiGraphics graphics, float partialTick, int mouseX, int mouseY) {
       graphics.blit(TEXTURE, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight);
       MEMachineScreen.renderStatusPanel(
@@ -44,7 +51,7 @@ public class MERecyclerScreen extends AbstractContainerScreen<MERecyclerMenu> {
 
    @Override
    protected void renderLabels(GuiGraphics graphics, int mouseX, int mouseY) {
-      graphics.drawString(this.font, MEMachineScreen.fitTitle(this.font, this.title, this.imageWidth - 16), this.titleLabelX, this.titleLabelY, 0x404040, false);
+      graphics.drawString(this.font, MEMachineScreen.fitTitle(this.font, this.title, this.imageWidth - 54), this.titleLabelX, this.titleLabelY, 0x404040, false);
       graphics.drawString(this.font, this.playerInventoryTitle, this.inventoryLabelX, this.inventoryLabelY, 0x404040, false);
    }
 

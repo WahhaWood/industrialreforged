@@ -70,6 +70,8 @@ public class MEMachineScreen extends AbstractContainerScreen<MEMachineMenu> {
       this.search.setMaxLength(64);
       this.search.setValue(this.filteredQuery);
       this.search.setResponder(value -> this.page = 0);
+      this.addRenderableWidget(new MEPowerButton(this.leftPos + this.imageWidth - 42, this.topPos + 2, () -> this.menu.enabled,
+         button -> this.minecraft.gameMode.handleInventoryButtonClick(this.menu.containerId, 0)));
       this.addRenderableWidget(this.search);
       this.addRenderableWidget(Button.builder(Component.literal("<"), button -> this.turnPage(-1)).bounds(this.leftPos + 7, this.topPos + BOTTOM_Y, 20, 14).build());
       this.addRenderableWidget(Button.builder(Component.literal(">"), button -> this.turnPage(1)).bounds(this.leftPos + 149, this.topPos + BOTTOM_Y, 20, 14).build());
@@ -233,7 +235,7 @@ public class MEMachineScreen extends AbstractContainerScreen<MEMachineMenu> {
 
    @Override
    protected void renderLabels(GuiGraphics graphics, int mouseX, int mouseY) {
-      graphics.drawString(this.font, fitTitle(this.font, this.title, this.imageWidth - 16), 8, 6, 0x404040, false);
+      graphics.drawString(this.font, fitTitle(this.font, this.title, this.imageWidth - 54), 8, 6, 0x404040, false);
       String pages = (this.page + 1) + " / " + this.pageCount();
       graphics.drawString(this.font, pages, (this.imageWidth - this.font.width(pages)) / 2, BOTTOM_Y + 3, 0x404040, false);
    }

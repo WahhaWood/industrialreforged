@@ -1297,5 +1297,10 @@
   "gui.industrialreforged.me_recycler.sample.hint": "Клик предметом: все такие предметы из ME-сети пойдут в утиль, 1 утильсырьё за 8",
   "gui.industrialreforged.me_matter.produced": "Произведено материи",
   "gui.industrialreforged.me_matter.per_tick": "мБ за тик",
-  "gui.industrialreforged.me_matter.saved": "Скидка утильсырья всего"
+  "gui.industrialreforged.me_matter.saved": "Скидка утильсырья всего",
+  "gui.industrialreforged.me_matter.on": "Вкл",
+  "gui.industrialreforged.me_matter.off": "Выкл",
+  "gui.industrialreforged.me_matter.lasts": "Своего буфера хватит примерно на %s при такой скорости",
+  "gui.industrialreforged.me_matter.lasts.off": "Выключен",
+  "gui.industrialreforged.me_matter.lasts.idle": "Сейчас не производит"
 }

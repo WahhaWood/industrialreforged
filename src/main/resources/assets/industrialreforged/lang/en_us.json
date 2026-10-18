@@ -1251,5 +1251,10 @@
   "gui.industrialreforged.me_recycler.sample.hint": "Click with an item: every item of this kind in the ME network is recycled, 1 scrap per 8",
   "gui.industrialreforged.me_matter.produced": "Matter made",
   "gui.industrialreforged.me_matter.per_tick": "mB per tick",
-  "gui.industrialreforged.me_matter.saved": "Scrap discount total"
+  "gui.industrialreforged.me_matter.saved": "Scrap discount total",
+  "gui.industrialreforged.me_matter.on": "On",
+  "gui.industrialreforged.me_matter.off": "Off",
+  "gui.industrialreforged.me_matter.lasts": "Own buffer lasts about %s at this rate",
+  "gui.industrialreforged.me_matter.lasts.off": "Switched off",
+  "gui.industrialreforged.me_matter.lasts.idle": "Not producing now"
 }

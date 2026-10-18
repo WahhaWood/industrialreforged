@@ -5,12 +5,14 @@ import com.industrialreforged.menu.MenuBase;
 import com.industrialreforged.menu.slots.FakeSlot;
 import net.minecraft.world.Container;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 
 /** ME recycler GUI: 18 sample slots (ghosts: a click copies one item, the hand keeps it) and the inventory. */
 public class MERecyclerMenu extends MenuBase<MERecyclerBlockEntity> {
    public double buffer;
    public int lastOperations;
+   public boolean enabled = true;
    public long recycled;
 
    public MERecyclerMenu(int containerId, Inventory inventory, MERecyclerBlockEntity entity) {
@@ -24,7 +26,14 @@ public class MERecyclerMenu extends MenuBase<MERecyclerBlockEntity> {
       this.addPlayerSlots(inventory, 8, 67);
       this.addDoubleToSync(entity::getAECurrentPower, value -> this.buffer = value);
       this.addToSync(() -> entity.lastOperations, value -> this.lastOperations = value);
+      this.addToSync(() -> entity.enabled ? 1 : 0, value -> this.enabled = value != 0);
       this.addLongToSync(() -> entity.recycled, value -> this.recycled = value);
+   }
+
+   @Override
+   public boolean clickMenuButton(Player player, int id) {
+      this.entity.toggleEnabled();
+      return true;
    }
 
    /** A sample: one item, never anything from the recycler blacklist. */
