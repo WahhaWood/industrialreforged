@@ -7,7 +7,11 @@ import appeng.api.networking.crafting.ICraftingProvider;
 import appeng.api.networking.energy.IEnergyService;
 import appeng.api.stacks.GenericStack;
 import appeng.api.stacks.KeyCounter;
+import appeng.crafting.CraftingLink;
 import appeng.crafting.inv.ListCraftingInventory;
+import java.lang.reflect.Field;
+import java.util.UUID;
+import org.jetbrains.annotations.Nullable;
 
 /**
  * Called from {@code CraftingCpuLogicMixin}: a crafting CPU hands an ME machine a whole task in one push.
@@ -21,7 +25,76 @@ import appeng.crafting.inv.ListCraftingInventory;
  * Pushes into an ME machine do not use up the CPU's co-processor operations either.
  */
 public final class MECraftingCpuHooks {
+   /** Id of the crafting job whose {@code pushPattern} call is running (server thread only), so a machine knows who pushed. */
+   private static UUID pushingJob;
+
    private MECraftingCpuHooks() {
+   }
+
+   /** @param cpuLogic the CPU logic (AE2's or AdvancedAE's) that is about to push */
+   public static void beginPush(Object cpuLogic) {
+      pushingJob = jobId(cpuLogic);
+   }
+
+   public static void endPush() {
+      pushingJob = null;
+   }
+
+   @Nullable
+   static UUID pushingJob() {
+      return pushingJob;
+   }
+
+   /** A CPU's job ended without success (cancel, stop): ME machines return what it had pushed and not run. */
+   public static void jobAborted(Object cpuLogic) {
+      UUID id = jobId(cpuLogic);
+      if (id != null) {
+         MEMachineBlockEntity.refundAll(id);
+      }
+   }
+
+   /** The crafting id of the job the CPU runs, or null. The fields are package-private in AE2 and in AdvancedAE's copy. */
+   @Nullable
+   private static UUID jobId(Object cpuLogic) {
+      try {
+         Fields fields = FIELDS.get(cpuLogic.getClass());
+         Object job = fields.job.get(cpuLogic);
+         return job == null ? null : ((CraftingLink)fields.link(job).get(job)).getCraftingID();
+      } catch (ReflectiveOperationException | RuntimeException e) {
+         return null;
+      }
+   }
+
+   private static final ClassValue<Fields> FIELDS = new ClassValue<>() {
+      @Override
+      protected Fields computeValue(Class<?> type) {
+         try {
+            Field job = type.getDeclaredField("job");
+            job.setAccessible(true);
+            return new Fields(job);
+         } catch (ReflectiveOperationException | RuntimeException e) {
+            throw new IllegalStateException(e);
+         }
+      }
+   };
+
+   private static final class Fields {
+      final Field job;
+      private Field link;
+
+      Fields(Field job) {
+         this.job = job;
+      }
+
+      Field link(Object jobInstance) throws ReflectiveOperationException {
+         if (this.link == null) {
+            Field field = jobInstance.getClass().getDeclaredField("link");
+            field.setAccessible(true);
+            this.link = field;
+         }
+
+         return this.link;
+      }
    }
 
    public static boolean isMEMachine(ICraftingProvider provider) {

@@ -18,7 +18,9 @@ import java.util.ArrayList;
 import java.util.Deque;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 import java.util.Set;
+import java.util.UUID;
 import java.util.WeakHashMap;
 import java.util.Collections;
 import net.minecraft.core.BlockPos;
@@ -72,6 +74,13 @@ public class MEMachineBlockEntity extends AbstractMENodeBlockEntity implements I
       for (MEMachineBlockEntity machine : List.copyOf(LOADED)) {
          machine.patterns = null;
          ICraftingProvider.requestUpdate(machine.getMainNode());
+      }
+   }
+
+   /** A crafting job ended unfinished: every loaded machine hands back what that job pushed and has not run. */
+   static void refundAll(UUID jobId) {
+      for (MEMachineBlockEntity machine : List.copyOf(LOADED)) {
+         machine.refundFor(jobId);
       }
    }
 
@@ -186,11 +195,12 @@ public class MEMachineBlockEntity extends AbstractMENodeBlockEntity implements I
          }
       }
 
+      UUID owner = MECraftingCpuHooks.pushingJob();
       Job last = this.queue.peekLast();
-      if (last != null && last.recipe.equals(recipe.id()) && last.inputs.equals(inputs)) {
+      if (last != null && Objects.equals(last.owner, owner) && last.recipe.equals(recipe.id()) && last.inputs.equals(inputs)) {
          last.crafts++;
       } else {
-         this.queue.addLast(new Job(recipe.id(), inputs, 1));
+         this.queue.addLast(new Job(recipe.id(), inputs, 1, owner));
       }
 
       // several CPUs and direct pushes may come in one tick: wake and save once per tick, not per push
@@ -224,6 +234,32 @@ public class MEMachineBlockEntity extends AbstractMENodeBlockEntity implements I
       if (last != null && crafts > 0) {
          last.crafts += crafts;
          this.queued += crafts;
+      }
+   }
+
+   /**
+    * A crafting job ended unfinished (cancelled, stopped): the operations it pushed and the machine has not
+    * run yet are not worth running, their inputs go back to the network. Only jobs pushed through a crafting
+    * CPU have an owner; the id is saved, so this works after a reload and after the CPU was rebuilt.
+    */
+   void refundFor(UUID jobId) {
+      boolean refunded = false;
+      for (var it = this.queue.iterator(); it.hasNext();) {
+         Job job = it.next();
+         if (jobId.equals(job.owner)) {
+            for (GenericStack input : job.inputs) {
+               this.outputBuffer.add(input.what(), input.amount() * job.crafts);
+            }
+
+            this.queued -= job.crafts;
+            it.remove();
+            refunded = true;
+         }
+      }
+
+      if (refunded) {
+         this.saveChanges();
+         this.wake();
       }
    }
 
@@ -339,6 +375,10 @@ public class MEMachineBlockEntity extends AbstractMENodeBlockEntity implements I
          CompoundTag jobTag = new CompoundTag();
          jobTag.putString("recipe", job.recipe.toString());
          jobTag.putLong("crafts", job.crafts);
+         if (job.owner != null) {
+            jobTag.putUUID("owner", job.owner);
+         }
+
          jobTag.put("inputs", writeStacks(job.inputs, registries));
          jobs.add(jobTag);
       }
@@ -365,7 +405,7 @@ public class MEMachineBlockEntity extends AbstractMENodeBlockEntity implements I
          long crafts = jobTag.getLong("crafts");
          List<GenericStack> inputs = readStacks(jobTag.getList("inputs", Tag.TAG_COMPOUND), registries);
          if (id != null && crafts > 0) {
-            this.queue.addLast(new Job(id, inputs, crafts));
+            this.queue.addLast(new Job(id, inputs, crafts, jobTag.hasUUID("owner") ? jobTag.getUUID("owner") : null));
             this.queued += crafts;
          }
       }
@@ -426,12 +466,16 @@ public class MEMachineBlockEntity extends AbstractMENodeBlockEntity implements I
       final ResourceLocation recipe;
       /** Inputs of one craft. */
       final List<GenericStack> inputs;
+      /** Id of the crafting job that pushed it (AE2 saves it with the job); null for a direct push. */
+      @Nullable
+      final UUID owner;
       long crafts;
 
-      Job(ResourceLocation recipe, List<GenericStack> inputs, long crafts) {
+      Job(ResourceLocation recipe, List<GenericStack> inputs, long crafts, @Nullable UUID owner) {
          this.recipe = recipe;
          this.inputs = List.copyOf(inputs);
          this.crafts = crafts;
+         this.owner = owner;
       }
    }
 }

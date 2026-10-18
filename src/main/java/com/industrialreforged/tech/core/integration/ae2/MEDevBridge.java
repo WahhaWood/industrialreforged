@@ -102,6 +102,22 @@ public final class MEDevBridge {
                default -> json.addProperty("craftable", grid.getCraftingService().isCraftable(key));
             }
          }
+         case "cancel" -> {
+            // stops every running job of the network's crafting CPUs, as the Cancel button does
+            if (grid == null) {
+               return error("node has no grid");
+            }
+
+            int cancelled = 0;
+            for (var cpu : grid.getCraftingService().getCpus()) {
+               if (cpu.isBusy()) {
+                  cpu.cancelJob();
+                  cancelled++;
+               }
+            }
+
+            json.addProperty("cancelled", cancelled);
+         }
          case "toggle" -> {
             if (!(blockEntity instanceof MEMachineBlockEntity machine)) {
                return error("not an ME machine");
@@ -210,6 +226,7 @@ public final class MEDevBridge {
       ICraftingPlan job = (ICraftingPlan)plan;
       JsonObject json = new JsonObject();
       json.addProperty("simulation", job.simulation());
+      json.addProperty("bytes", job.bytes());
       json.addProperty("missing", job.missingItems().size());
       if (job.simulation()) {
          json.addProperty("ok", false);

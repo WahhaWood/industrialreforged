@@ -17,13 +17,15 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
  * Crafting CPU: an ME machine takes a whole task in one push (see {@link MECraftingCpuHooks}).
  * AdvancedAE's quantum computer runs a copy of AE2's CPU logic with the same method and local names,
  * so one wrapper serves both. Checked against AE2 19.2.17 and AdvancedAE 1.6.12 (javap: one
  * {@code pushPattern} call, locals {@code task}, {@code expectedOutputs}, {@code patternPower},
- * {@code pushedPatterns} in the LVT). Without a target it does nothing.
+ * {@code pushedPatterns} in the LVT; both have {@code finishJob(boolean)}). Without a target it does nothing.
  */
 @Pseudo
 @Mixin(targets = {"appeng.crafting.execution.CraftingCpuLogic", "net.pedroksl.advanced_ae.common.logic.AdvCraftingCPULogic"}, remap = false)
@@ -51,9 +53,20 @@ public abstract class CraftingCpuLogicMixin {
       @Local(name = "patternPower") LocalDoubleRef patternPower,
       @Local(name = "pushedPatterns") LocalIntRef pushedPatterns
    ) {
-      boolean pushed = original.call(provider, details, inputs);
-      if (!pushed || !MECraftingCpuHooks.isMEMachine(provider)) {
-         return pushed;
+      if (!MECraftingCpuHooks.isMEMachine(provider)) {
+         return original.call(provider, details, inputs);
+      }
+
+      boolean pushed;
+      MECraftingCpuHooks.beginPush(this);
+      try {
+         pushed = original.call(provider, details, inputs);
+      } finally {
+         MECraftingCpuHooks.endPush();
+      }
+
+      if (!pushed) {
+         return false;
       }
 
       // the CPU counts the push right after this call: cancel it out, ME machines cost no co-processor time
@@ -70,5 +83,13 @@ public abstract class CraftingCpuLogicMixin {
       }
 
       return pushed;
+   }
+
+   /** Job over without success (cancel, stop): the ME machines give back what this CPU pushed and they have not run. */
+   @Inject(method = "finishJob", at = @At("HEAD"), require = 0, remap = false)
+   private void ir$returnMEMachineWork(boolean success, CallbackInfo ci) {
+      if (!success) {
+         MECraftingCpuHooks.jobAborted(this);
+      }
    }
 }

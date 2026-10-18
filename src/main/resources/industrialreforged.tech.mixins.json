@@ -10,6 +10,9 @@
     "compat.VeinMinerControllerMixin",
     "compat.AECraftingPatternInputMixin",
     "compat.CraftingCpuLogicMixin",
+    "compat.CraftingTreeNodeMixin",
+    "compat.CraftingTreeProcessMixin",
+    "compat.CraftingTreeProcessAccessor",
     "compat.TaskProgressAccessor"
   ],
   "injectors": {
