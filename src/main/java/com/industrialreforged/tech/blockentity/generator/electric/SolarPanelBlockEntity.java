@@ -72,7 +72,7 @@ public class SolarPanelBlockEntity extends AbstractElectricGeneratorBlockEntity 
             this.production = Math.round((double)this.defaultProduction * 0.6 * this.nightRate);
          }
 
-         this.energy.setExtract(Math.max(1L, Math.round((double)this.defaultProduction * 2L * this.outputMult)));
+         this.energy.setExtract(Math.max(1L, Math.round((double)this.defaultProduction * 4L * this.outputMult)));
       }
    }
 

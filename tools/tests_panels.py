@@ -109,13 +109,13 @@ def main():
     check(f"модуль хранения I: буфер {base_capacity} -> {rnd(base_capacity * 1.1)}",
           capacity_before == base_capacity and capacity_after == rnd(base_capacity * 1.1),
           f"{capacity_before} -> {capacity_after}")
-    base_extract = max(1, rnd(base * 2))
+    base_extract = max(1, rnd(base * 4))
     extract_before = int(be(PANEL)["fields"]["energy"]["extract"])
     be_set(PANEL, setField="moduleSlot", slot=0, item="industrialreforged:solar_module_output_1")
     wait(40)
     extract_after = int(be(PANEL)["fields"]["energy"]["extract"])
-    check(f"модуль выхода I: отдача {base_extract} -> {rnd(base * 2 * 1.1)}",
-          extract_before == base_extract and extract_after == max(1, rnd(base * 2 * 1.1)),
+    check(f"модуль выхода I: отдача {base_extract} -> {rnd(base * 4 * 1.1)}",
+          extract_before == base_extract and extract_after == max(1, rnd(base * 4 * 1.1)),
           f"{extract_before} -> {extract_after}")
 
     # ---- ночные панели удалены -------------------------------------------
