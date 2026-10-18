@@ -28,7 +28,7 @@ import org.jetbrains.annotations.Nullable;
  * ME matter generator: the regular generator's recipe (4M FE per mB, scrap takes off up to 1M FE per mB) with no
  * tank and no slots. Scrap and scrap boxes are taken from the ME network as they are needed, UU matter goes into it
  * as a fluid. Energy comes from the network (AE) and from any energy cable (FE, 2 FE = 1 AE); the cables fill a buffer
- * so big that they never meet its limit, and the buffer is private: the network neither charges nor drains it.
+ * so big that they never meet its limit.
  */
 public class MEMatterGeneratorBlockEntity extends AbstractMENodeBlockEntity {
    /** AE the buffer holds: a trillion times a single ME machine's, so a cable never finds it full. */
@@ -55,11 +55,6 @@ public class MEMatterGeneratorBlockEntity extends AbstractMENodeBlockEntity {
 
    long pendingMb() {
       return this.pendingMb;
-   }
-
-   @Override
-   public boolean isAEPublicPowerStorage() {
-      return false;
    }
 
    /** Never sleeps: energy may arrive over a cable at any moment, which does not wake the node. */

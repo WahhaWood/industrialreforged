@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """E2E ME-генератор материи и FE-вход ME-узлов.
 
-Сеть питается только буфером ME-дробителя (без креативной ячейки), поэтому энергия считается точно:
-ME-дробитель — «сеть», собственный буфер генератора — то, что принёс провод (FE → AE, 2:1).
+Сеть питается только обычной ячейкой энергии (без креативной), поэтому энергия считается точно:
+ячейка — «сеть», собственный буфер генератора или машины — то, что принёс провод (FE → AE, 2:1).
 
 Usage: IRBRIDGE_PORT=9879 python3 tools/tests_me_matter.py
 """
@@ -14,7 +14,7 @@ from bench_me import ae2
 Y = 200
 AREA = "forceload add 750 -590 770 -570"
 CTRL = (760, Y, -580)
-POWER = (759, Y, -580)   # ME-дробитель: его буфер питает сеть
+POWER = (759, Y, -580)   # ячейка энергии: питает сеть
 DRIVE = (761, Y, -580)
 GEN = (760, Y, -579)
 MAC2 = (760, Y, -581)    # второй ME-дробитель: платит за операции из своего буфера
@@ -27,6 +27,10 @@ def count(item):
     return int(ae2("count", CTRL, item=item).get("count", 0))
 
 
+def grid_power():
+    return float(ae2("info", CTRL).get("gridStoredPower", 0))
+
+
 def uu():
     return int(ae2("uu", CTRL).get("uu", 0))
 
@@ -35,7 +39,7 @@ def main():
     execs(AREA, f"fill 755 {Y - 2} -585 766 {Y + 3} -575 minecraft:air")
     wait(5)
     execs(f"setblock {CTRL[0]} {CTRL[1]} {CTRL[2]} ae2:controller",
-          f"setblock {POWER[0]} {POWER[1]} {POWER[2]} industrialreforged:me_macerator",
+          f"setblock {POWER[0]} {POWER[1]} {POWER[2]} ae2:energy_cell",
           f"setblock {DRIVE[0]} {DRIVE[1]} {DRIVE[2]} ae2:drive",
           f"setblock {GEN[0]} {GEN[1]} {GEN[2]} industrialreforged:me_matter_generator",
           f"setblock {MAC2[0]} {MAC2[1]} {MAC2[2]} industrialreforged:me_macerator")
@@ -48,11 +52,11 @@ def main():
     check("ME-генератор в сети, питание есть", info.get("active") is True and info.get("powered") is True, str(info))
 
     # --- FE-вход всех узлов ---
-    start = ae2("info", POWER).get("buffer", 0)
-    fe = ae2("fe", POWER, amount=1000)
+    start = ae2("info", MAC2).get("buffer", 0)
+    fe = ae2("fe", MAC2, amount=1000)
     check("ME-дробитель принимает FE от кабеля (2 FE = 1 AE)", fe.get("accepted") == 1000, str(fe))
-    gained = ae2("info", POWER).get("buffer", 0) - start
-    check("FE ушёл в буфер ME-дробителя: +500 AE (сеть за это время съедает единицы)", 490 < gained < 505, f"+{gained}")
+    gained = ae2("info", MAC2).get("buffer", 0) - start
+    check("FE ушёл в буфер ME-дробителя: ровно +500 AE", gained == 500, f"+{gained}")
     ae2("charge", POWER, amount=100_000)
 
     # --- кабель видит узлы как обычные потребители (capability EnergyStorage на всех сторонах) ---
@@ -64,12 +68,12 @@ def main():
     # --- ME-машина платит за операции сначала из буфера, что принёс кабель ---
     ae2("charge", MAC2, amount=0)
     ae2("fe", MAC2, amount=10_000)  # 5000 AE
-    net_before = ae2("info", POWER).get("buffer", 0)
+    net_before = grid_power()
     own_before = ae2("info", MAC2).get("buffer", 0)
     pushed = ae2("push", MAC2, recipe="industrialreforged:macerator/iron_ore", count=4).get("pushed")
     wait(20)
     own_spent = own_before - ae2("info", MAC2).get("buffer", 0)
-    net_spent = net_before - ae2("info", POWER).get("buffer", 0)
+    net_spent = net_before - grid_power()
     check("4 операции ME-дробителя: 4 × 450 AE из своего буфера", pushed == 4 and 1700 < own_spent < 1900, f"принято {pushed}, потрачено {own_spent}")
     check("сеть за это время почти ничего не отдала (только фоновый расход)", net_spent < 300, f"сеть отдала {net_spent}")
     ae2("charge", POWER, amount=100_000)
@@ -88,8 +92,8 @@ def main():
     info = ae2("info", GEN)
     check("12M FE на буфере = 3 мБ (4M FE за мБ), без утильсырья", uu() == 3 and info.get("produced") == 3, f"UU {uu()}, {info}")
     check("буфер генератора потрачен: 3 × 2M AE", info.get("buffer", -1) < 100, str(info))
-    power = ae2("info", POWER).get("buffer", 0)
-    check("сеть (буфер дробителя) почти не тронута: платил кабельный буфер", power > 90_000, f"буфер сети {power}")
+    power = grid_power()
+    check("сеть (ячейка) почти не тронута: платил кабельный буфер", power > 90_000, f"в ячейке {power}")
 
     # --- утильсырьё и коробки из ME: скидка до 1M FE на мБ ---
     ae2("insert", CTRL, item=SCRAP, count=100)

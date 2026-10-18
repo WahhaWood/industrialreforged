@@ -1,7 +1,5 @@
 package com.industrialreforged.tech.core.integration.ae2;
 
-import appeng.api.config.Actionable;
-import appeng.api.config.PowerMultiplier;
 import appeng.api.crafting.IPatternDetails;
 import appeng.api.networking.IGrid;
 import appeng.api.networking.crafting.ICraftingProvider;
@@ -306,7 +304,7 @@ public class MEMachineBlockEntity extends AbstractMENodeBlockEntity implements I
 
          long crafts = Math.min(budget, job.crafts);
          double price = Math.max(recipe.aeCost(), 1.0E-6); // a free recipe must not divide by zero
-         double available = energy.extractAEPower(price * crafts, Actionable.SIMULATE, PowerMultiplier.ONE);
+         double available = this.availableAE(energy, price * crafts);
          crafts = Math.min(crafts, (long)Math.floor(available / price + 1.0E-6));
          if (crafts <= 0) {
             break; // not enough AE: the job waits for power

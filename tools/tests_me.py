@@ -125,8 +125,8 @@ def build_network(with_power=True):
         execs(f"setblock {pos[0]} {pos[1]} {pos[2]} minecraft:air")
     wait(2)
     execs(f"setblock {CONTROLLER[0]} {CONTROLLER[1]} {CONTROLLER[2]} ae2:controller")
-    if with_power:
-        execs(f"setblock {CELL[0]} {CELL[1]} {CELL[2]} ae2:creative_energy_cell")
+    # без бесконечной энергии сеть питает обычная ячейка энергии, которую тест заряжает сам: буфер ME-машин сети не принадлежит
+    execs(f"setblock {CELL[0]} {CELL[1]} {CELL[2]} ae2:{'creative_energy_cell' if with_power else 'energy_cell'}")
     execs(f"setblock {DRIVE[0]} {DRIVE[1]} {DRIVE[2]} ae2:drive",
           f"setblock {CPU[0]} {CPU[1]} {CPU[2]} ae2:1k_crafting_storage",
           f"setblock {COPROC[0]} {COPROC[1]} {COPROC[2]} ae2:crafting_accelerator",
@@ -224,33 +224,44 @@ def test_me():
 
 
 def test_me_energy():
-    """Без бесконечной энергии: операция стоит FE машины / 2 AE, буфер машины — хранилище сети."""
+    """Без бесконечной энергии: операция стоит FE машины / 2 AE; платит свой буфер (его заряжает кабель), остаток — сеть."""
     status = call("/ae2", {"op": "info", "x": 0, "y": 0, "z": 0})
     if "not active" in str(status.get("error", "")):
         return
 
     build_network(with_power=False)
-    ae2("charge", MAC, amount=1_000_000)
+    ae2("charge", CELL, amount=100_000)       # сеть живая и почти без запаса
+    ae2("charge", MAC, amount=1_000_000)      # то, что принёс кабель
     wait(45)  # AE2 включает питание сети после 30 тиков устойчивой энергии
     before = ae2("info", MAC).get("buffer", 0)
+    grid_before = ae2("info", MAC).get("gridStoredPower", 0)
     pushed = ae2("push", MAC, recipe="industrialreforged:macerator/iron_ore", count=1000).get("pushed")
-    check("сеть на буфере ME-машины: 1000 операций принято", pushed == 1000, f"принято {pushed}")
+    check("сеть на ячейке, машина на своём буфере: 1000 операций принято", pushed == 1000, f"принято {pushed}")
     wait(5)
-    after = ae2("info", MAC).get("buffer", 0)
-    spent = before - after
-    # 1000 операций по 450 AE (3 FE/т × 300 т / 2) = 450 000; сверху — простой сети и запись в ячейку
-    check("ME-дробитель: 1000 операций ≈ 450 000 AE", 450_000 <= spent <= 470_000, f"потрачено {spent:.0f} AE")
     info = ae2("info", MAC)
-    check("буфер ME-машины питает сеть", info.get("powered") is True and info.get("queued") == 0, str(info))
+    spent = before - info.get("buffer", 0)
+    # 1000 операций по 450 AE (3 FE/т × 300 т / 2) = 450 000 ровно из своего буфера
+    check("ME-дробитель: 1000 операций = 450 000 AE из своего буфера", 449_999 <= spent <= 450_001, f"потрачено {spent:.0f} AE")
+    grid_spent = grid_before - info.get("gridStoredPower", 0)
+    check("сеть за операции не платила: расход только на простой и запись в ячейку", grid_spent < 5_000, f"сеть отдала {grid_spent:.0f} AE")
+    check("сеть жива, очередь выполнена", info.get("powered") is True and info.get("queued") == 0, str(info))
 
-    # энергии на всё не хватает: остаток очереди ждёт
+    # буфер пуст, сети почти нечем платить: остаток очереди ждёт
+    ae2("charge", CELL, amount=5_000)
     ae2("charge", MAC, amount=100_000)
     wait(5)
     ae2("push", MAC, recipe="industrialreforged:macerator/iron_ore", count=1000)
     wait(10)
-    # 100 000 AE хватает примерно на 220 операций по 450 AE
+    # 100 000 AE своего буфера хватает на 222 операции по 450 AE, сеть добавит единицы
     left = ae2("info", MAC).get("queued", 0)
     check("нет энергии — операции ждут в очереди, не теряются", 700 <= left < 1000, f"в очереди {left}")
+
+    # буфер закрыт: сеть его не заряжает, даже когда ей некуда девать энергию
+    ae2("charge", MAC, amount=0)
+    execs(f"setblock {CELL[0]} {CELL[1]} {CELL[2]} ae2:creative_energy_cell")
+    wait(100)
+    buffer = ae2("info", MAC).get("buffer", -1)
+    check("сеть с бесконечной энергией не заряжает буфер ME-машины", buffer == 0, f"буфер {buffer}")
 
 
 def main():

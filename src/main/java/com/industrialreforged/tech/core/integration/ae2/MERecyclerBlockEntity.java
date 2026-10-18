@@ -1,7 +1,5 @@
 package com.industrialreforged.tech.core.integration.ae2;
 
-import appeng.api.config.Actionable;
-import appeng.api.config.PowerMultiplier;
 import appeng.api.networking.IGrid;
 import appeng.api.networking.energy.IEnergyService;
 import appeng.api.networking.ticking.TickRateModulation;
@@ -94,7 +92,7 @@ public class MERecyclerBlockEntity extends AbstractMENodeBlockEntity {
          }
 
          AEItemKey key = AEItemKey.of(sample);
-         long affordable = (long)Math.floor(energy.extractAEPower(AE_PER_ITEM * budget, Actionable.SIMULATE, PowerMultiplier.ONE) / AE_PER_ITEM + 1.0E-6);
+         long affordable = (long)Math.floor(this.availableAE(energy, AE_PER_ITEM * budget) / AE_PER_ITEM + 1.0E-6);
          if (affordable <= 0) {
             break;
          }

@@ -28,14 +28,15 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.neoforged.neoforge.energy.IEnergyStorage;
 
 /**
- * Common part of the ME machines: a channel-using grid node, an AE buffer (100M, 100G for the molecular
- * transformer) that the network sees as one of its power storages, and work driven by AE2's grid ticker (no block entity ticker).
+ * Common part of the ME machines: a channel-using grid node, a private AE buffer (100M, 100G for the molecular
+ * transformer) that only energy cables charge (FE, 2 FE = 1 AE) and only this machine spends, and work driven by
+ * AE2's grid ticker (no block entity ticker).
  *
  * <p>Loaded only when AE2 is present: every class of this package is touched only from behind the
  * {@code ModList.isLoaded("ae2")} guard in {@code IR} (lesson of 1.0.8, see DEVNOTES).
  */
 public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity implements IAEPowerStorage, IGridTickable, MenuProvider {
-   /** Built-in buffer, AE. Charged by the network like an energy cell and drained by it too. */
+   /** Built-in buffer, AE. Not a storage of the network: only cables charge it and only the machine draws from it. */
    public static final double BUFFER_AE = 100_000_000.0;
    /** Buffer of the ME molecular transformer, AE: a single recipe of it can cost millions of AE. */
    public static final double MOLECULAR_BUFFER_AE = 100_000_000_000.0;
@@ -126,7 +127,7 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
 
    /**
     * Pays {@code ae} for work: the machine's own buffer first (what the cables bring), the network for the rest.
-    * Callers check the whole of it with the network's {@code SIMULATE} first, which counts the buffer too when it is public.
+    * Callers ask {@link #availableAE} first.
     */
    protected final void payAE(IEnergyService energy, double ae) {
       double own = Math.min(ae, this.buffer.getAmount());
@@ -138,6 +139,12 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
       if (ae - own > 0) {
          energy.extractAEPower(ae - own, Actionable.MODULATE, PowerMultiplier.ONE);
       }
+   }
+
+   /** How much of {@code ae} the machine can pay now: its own buffer and what the network would give for the rest. */
+   protected final double availableAE(IEnergyService energy, double ae) {
+      double own = Math.min(ae, this.buffer.getAmount());
+      return own + (ae - own > 0 ? energy.extractAEPower(ae - own, Actionable.SIMULATE, PowerMultiplier.ONE) : 0.0);
    }
 
    private final IEnergyStorage feInput = new IEnergyStorage() {
@@ -179,7 +186,7 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
       }
    };
 
-   // ---- IAEPowerStorage: the buffer is a public storage of the network --------------------------
+   // ---- IAEPowerStorage: the buffer is the machine's own, the network does not see it ---------------
 
    @Override
    public double injectAEPower(double amt, Actionable mode) {
@@ -213,7 +220,7 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
 
    @Override
    public boolean isAEPublicPowerStorage() {
-      return true;
+      return false;
    }
 
    @Override

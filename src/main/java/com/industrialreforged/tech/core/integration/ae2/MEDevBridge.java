@@ -187,15 +187,15 @@ public final class MEDevBridge {
             json.addProperty("pushed", pushed);
          }
          case "charge" -> {
-            // fill (or empty) the machine's own AE buffer: energy tests run without a creative cell
-            if (!(blockEntity instanceof AbstractMENodeBlockEntity machine)) {
-               return error("not an ME machine");
+            // fill (or empty) the AE buffer of an ME machine or an energy cell: energy tests run without a creative cell
+            if (!(blockEntity instanceof appeng.api.networking.energy.IAEPowerStorage storage)) {
+               return error("not an energy storage");
             }
 
             double amount = params.get("amount").getAsDouble();
-            machine.extractAEPower(Double.MAX_VALUE, Actionable.MODULATE, appeng.api.config.PowerMultiplier.ONE);
-            machine.injectAEPower(amount, Actionable.MODULATE);
-            json.addProperty("buffer", machine.getAECurrentPower());
+            storage.extractAEPower(Double.MAX_VALUE, Actionable.MODULATE, appeng.api.config.PowerMultiplier.ONE);
+            storage.injectAEPower(amount, Actionable.MODULATE);
+            json.addProperty("buffer", storage.getAECurrentPower());
          }
          case "put" -> {
             // e.g. a storage cell into a drive, through the block's item capability
