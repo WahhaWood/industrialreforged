@@ -2,7 +2,7 @@
 
 # IndustrialReforged
 
-**An industrial tech mod for Minecraft 1.21.1 / NeoForge, in the spirit of IndustrialCraft 2.**
+**Индустриальный мод для Minecraft 1.21.1 / NeoForge в духе IndustrialCraft 2.**
 
 ![Minecraft](https://img.shields.io/badge/Minecraft-1.21.1-62B47A)
 ![NeoForge](https://img.shields.io/badge/NeoForge-21.1-E68C2D)
@@ -11,50 +11,50 @@
 
 </div>
 
-Power your world with energy from **1 FE/t up to 1 GFE/t**: generators, machines with upgrades,
-cables and pipes, multiblock reactors, crops and a long tech tree to climb.
+Энергия от **1 FE/t до 1 GFE/t**: генераторы, машины с улучшениями, кабели и трубы,
+многоблочные реакторы, растения и длинное дерево технологий.
 
-## Features
+## Возможности
 
-- **Energy tiers.** Generators from a hand-cranked kinetic generator and Stirling engine to geothermal,
-  thermal and steam plants, solar panels across many levels, and battery blocks up to CESU, MFSU and EFSU.
-- **Machines with upgrades.** Macerators, extractors, compressors, electric furnaces, recyclers, centrifuges, bottlers,
-  cutters and more, each in several levels.
-- **Logistics.** Universal wires, heat pipes, fluid tanks with valves, pumps and fluid regulators.
-- **Multiblock reactors.** Reactor pressure vessel, access hatches and heat management.
-- **Farming and resources.** Rubber trees and resin, molecular farming, new ores such as nickel, silver, tungsten,
-  titan and uranium, ore washing and drilling rigs.
-- **Building.** Scaffolds, reinforced doors, iridium casings and construction foam in many colours.
-- **Translations.** English, Russian and Ukrainian.
+- **Уровни энергии.** От ручного кинетического генератора и двигателя Стирлинга до геотермальных, тепловых и паровых
+  электростанций, солнечные панели многих уровней и накопители вплоть до CESU, MFSU и EFSU.
+- **Машины с улучшениями.** Дробилки, экстракторы, компрессоры, электропечи, переработчики, центрифуги,
+  разливочные машины, резаки и другие, каждая в нескольких уровнях.
+- **Логистика.** Универсальные провода, тепловые трубы, баки с клапанами, насосы и регуляторы жидкости.
+- **Многоблочные реакторы.** Корпус реактора, люки доступа и управление нагревом.
+- **Земледелие и ресурсы.** Каучуковые деревья и смола, молекулярное земледелие, новые руды (никель, серебро,
+  вольфрам, титан, уран), промывка руды и буровые установки.
+- **Строительство.** Леса, укреплённые двери, иридиевые корпуса и строительная пена в разных цветах.
+- **Переводы.** Английский, русский и украинский.
 
-## Integrations
+## Интеграции
 
-All integrations are optional, the mod runs without any of them.
+Все интеграции необязательны: мод работает и без них.
 
-| Mod | What it adds |
+| Мод | Что даёт |
 | --- | --- |
-| Applied Energistics 2 | ME machines: matter generator, recycler, electric furnace; FE cables to ME nodes |
-| Botania | Detected at startup, integration hook in place |
-| Cable Facades, Applied Flux | Compatibility with facades and FE in ME networks |
-| JEI | Recipe viewing |
-| KubeJS | Add and change recipes of our machine types from scripts, see [docs/kubejs.md](docs/kubejs.md) |
+| Applied Energistics 2 | ME-машины (генератор материи, переработчик, электропечь) и FE-кабели к ME-узлам |
+| Botania | определяется при запуске, хук интеграции подготовлен |
+| Cable Facades, Applied Flux | совместимость с фасадами и FE в ME-сетях |
+| JEI | просмотр рецептов |
+| KubeJS | рецепты наших типов машин из скриптов, см. [docs/kubejs.md](docs/kubejs.md) |
 
-## Building
+## Сборка
 
-Java 21 is required.
+Нужна Java 21.
 
 ```sh
-./gradlew build    # build/libs/industrialreforged-<version>.jar
+./gradlew build    # build/libs/industrialreforged-<версия>.jar
 ```
 
-The `tools/` folder holds the dev-server test suite (`tests_*.py`) and texture and balance scripts.
-They are only needed for development.
+В папке `tools/` лежит набор тестов для dev-сервера (`tests_*.py`) и скрипты текстур и баланса.
+Они нужны только для разработки.
 
-## Credits
+## Благодарности
 
-Inspired by **IndustrialCraft 2** and the IC2 team. This is an independent mod, not affiliated with or
-endorsed by the IndustrialCraft 2 authors.
+Вдохновлён **IndustrialCraft 2** и командой IC2. Это независимый мод, он не связан с авторами
+IndustrialCraft 2 и не одобрен ими.
 
-## License
+## Лицензия
 
-The code in this repository is licensed under the [GNU General Public License v3.0](LICENSE).
+Код репозитория распространяется по лицензии [GNU General Public License v3.0](LICENSE).
