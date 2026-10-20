@@ -10,17 +10,24 @@ public class MEMachineMenu extends MenuBase<MEMachineBlockEntity> {
    public double buffer;
    public int lastOperations;
    public boolean enabled = true;
+   public boolean cableOnly;
 
    public MEMachineMenu(int containerId, Inventory inventory, MEMachineBlockEntity entity) {
       super(AE2Integration.ME_MACHINE_MENU.get(), containerId, inventory, entity);
       this.addDoubleToSync(entity::getAECurrentPower, value -> this.buffer = value);
       this.addToSync(() -> entity.lastOperations, value -> this.lastOperations = value);
       this.addToSync(() -> entity.enabled ? 1 : 0, value -> this.enabled = value != 0);
+      this.addToSync(() -> entity.cableOnly ? 1 : 0, value -> this.cableOnly = value != 0);
    }
 
    @Override
    public boolean clickMenuButton(Player player, int id) {
-      this.entity.toggleEnabled();
+      if (id == 1) {
+         this.entity.toggleCableOnly();
+      } else {
+         this.entity.toggleEnabled();
+      }
+
       return true;
    }
 }

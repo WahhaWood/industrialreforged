@@ -1306,6 +1306,10 @@
   "gui.industrialreforged.me_matter.saved": "Знижка утильсировини всього",
   "gui.industrialreforged.me_matter.on": "Вкл",
   "gui.industrialreforged.me_matter.off": "Вимк",
+  "gui.industrialreforged.me_power.cable": "FE",
+  "gui.industrialreforged.me_power.network": "AE",
+  "gui.industrialreforged.me_power.cable.tip": "Енергія: лише кабелі. Клік: брати ще й AE з мережі.",
+  "gui.industrialreforged.me_power.network.tip": "Енергія: кабелі та ME-мережа. Клік: лише кабелі.",
   "gui.industrialreforged.me_matter.lasts": "Власного буфера вистачить приблизно на %s при такій швидкості",
   "gui.industrialreforged.me_matter.lasts.off": "Вимкнено",
   "gui.industrialreforged.me_matter.lasts.idle": "Зараз не виробляє"

@@ -10,7 +10,6 @@ import appeng.api.stacks.AEKey;
 import appeng.api.stacks.GenericStack;
 import appeng.api.stacks.KeyCounter;
 import appeng.api.storage.MEStorage;
-import appeng.api.storage.StorageHelper;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Deque;
@@ -63,6 +62,7 @@ public class MEMachineBlockEntity extends AbstractMENodeBlockEntity implements I
       super(type, pos, state, kind == MEMachineKind.MOLECULAR_TRANSFORMER ? MOLECULAR_BUFFER_AE : BUFFER_AE);
       this.kind = kind;
       this.toggles = new MERecipeToggles(kind.enabledByDefault);
+      this.cableOnly = kind == MEMachineKind.MOLECULAR_TRANSFORMER;
       this.getMainNode().addService(ICraftingProvider.class, this);
    }
 
@@ -273,6 +273,11 @@ public class MEMachineBlockEntity extends AbstractMENodeBlockEntity implements I
    // ---- work ----------------------------------------------------------------------------------
 
    @Override
+   public boolean supportsCableOnly() {
+      return this.kind == MEMachineKind.MOLECULAR_TRANSFORMER;
+   }
+
+   @Override
    protected boolean hasWork() {
       return !this.queue.isEmpty() || !this.outputBuffer.isEmpty();
    }
@@ -352,7 +357,7 @@ public class MEMachineBlockEntity extends AbstractMENodeBlockEntity implements I
       }
 
       for (GenericStack stack : pending) {
-         long inserted = StorageHelper.poweredInsert(energy, storage, stack.what(), stack.amount(), this.actionSource);
+         long inserted = this.insertResult(energy, storage, stack.what(), stack.amount());
          if (inserted > 0) {
             this.outputBuffer.remove(stack.what(), inserted);
          }

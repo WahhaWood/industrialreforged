@@ -11,6 +11,7 @@ public class MEMatterGeneratorMenu extends MenuBase<MEMatterGeneratorBlockEntity
    public long produced;
    public long saved;
    public boolean enabled = true;
+   public boolean cableOnly;
 
    public MEMatterGeneratorMenu(int containerId, Inventory inventory, MEMatterGeneratorBlockEntity entity) {
       super(AE2Integration.ME_MATTER_MENU.get(), containerId, inventory, entity);
@@ -19,11 +20,17 @@ public class MEMatterGeneratorMenu extends MenuBase<MEMatterGeneratorBlockEntity
       this.addLongToSync(() -> entity.produced, value -> this.produced = value);
       this.addLongToSync(() -> entity.saved, value -> this.saved = value);
       this.addToSync(() -> entity.enabled ? 1 : 0, value -> this.enabled = value != 0);
+      this.addToSync(() -> entity.cableOnly ? 1 : 0, value -> this.cableOnly = value != 0);
    }
 
    @Override
    public boolean clickMenuButton(Player player, int id) {
-      this.entity.toggleEnabled();
+      if (id == 1) {
+         this.entity.toggleCableOnly();
+      } else {
+         this.entity.toggleEnabled();
+      }
+
       return true;
    }
 }

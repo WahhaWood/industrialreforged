@@ -24,6 +24,11 @@ public class MEMatterGeneratorScreen extends AbstractContainerScreen<MEMatterGen
       super.init();
       this.addRenderableWidget(new MEPowerButton(this.leftPos + this.imageWidth - 42, this.topPos + 2, () -> this.menu.enabled,
          button -> this.minecraft.gameMode.handleInventoryButtonClick(this.menu.containerId, 0)));
+
+      if (this.menu.entity.supportsCableOnly()) {
+         this.addRenderableWidget(new MEPowerSourceButton(this.leftPos + this.imageWidth - 68, this.topPos + 2, () -> this.menu.cableOnly,
+            button -> this.minecraft.gameMode.handleInventoryButtonClick(this.menu.containerId, 1)));
+      }
    }
 
    @Override
@@ -33,7 +38,7 @@ public class MEMatterGeneratorScreen extends AbstractContainerScreen<MEMatterGen
 
    @Override
    protected void renderLabels(GuiGraphics graphics, int mouseX, int mouseY) {
-      graphics.drawString(this.font, MEMachineScreen.fitTitle(this.font, this.title, this.imageWidth - 54), 8, 6, 0x404040, false);
+      graphics.drawString(this.font, MEMachineScreen.fitTitle(this.font, this.title, this.imageWidth - 80), 8, 6, 0x404040, false);
       this.line(graphics, 20, "gui.industrialreforged.me_machine.buffer", MEMachineScreen.bufferValue(this.menu.buffer, this.menu.entity.getAEMaxPower()).getString());
       this.line(graphics, 32, "gui.industrialreforged.me_matter.produced", NumberUtils.formatToSi(this.menu.produced) + " mB");
       this.line(graphics, 44, "gui.industrialreforged.me_matter.per_tick", this.menu.lastOperations + " / " + MEMatterGeneratorBlockEntity.MB_PER_TICK);

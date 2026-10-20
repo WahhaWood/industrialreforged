@@ -1300,6 +1300,10 @@
   "gui.industrialreforged.me_matter.saved": "Скидка утильсырья всего",
   "gui.industrialreforged.me_matter.on": "Вкл",
   "gui.industrialreforged.me_matter.off": "Выкл",
+  "gui.industrialreforged.me_power.cable": "FE",
+  "gui.industrialreforged.me_power.network": "AE",
+  "gui.industrialreforged.me_power.cable.tip": "Энергия: только кабели. Клик: брать ещё и AE из сети.",
+  "gui.industrialreforged.me_power.network.tip": "Энергия: кабели и ME-сеть. Клик: только кабели.",
   "gui.industrialreforged.me_matter.lasts": "Своего буфера хватит примерно на %s при такой скорости",
   "gui.industrialreforged.me_matter.lasts.off": "Выключен",
   "gui.industrialreforged.me_matter.lasts.idle": "Сейчас не производит"

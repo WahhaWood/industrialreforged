@@ -1,14 +1,12 @@
 package com.industrialreforged.tech.core.integration.ae2;
 
 import appeng.api.config.Actionable;
-import appeng.api.config.PowerMultiplier;
 import appeng.api.networking.IGrid;
 import appeng.api.networking.energy.IEnergyService;
 import appeng.api.networking.ticking.TickRateModulation;
 import appeng.api.stacks.AEFluidKey;
 import appeng.api.stacks.AEItemKey;
 import appeng.api.storage.MEStorage;
-import appeng.api.storage.StorageHelper;
 import com.industrialreforged.tech.blockentity.machine.MatterGeneratorBlockEntity;
 import com.industrialreforged.tech.core.ref.IRFluids;
 import com.industrialreforged.tech.core.ref.IRItems;
@@ -51,6 +49,12 @@ public class MEMatterGeneratorBlockEntity extends AbstractMENodeBlockEntity {
 
    public MEMatterGeneratorBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
       super(type, pos, state, BUFFER_AE);
+      this.cableOnly = true;
+   }
+
+   @Override
+   public boolean supportsCableOnly() {
+      return true;
    }
 
    long pendingMb() {
@@ -74,7 +78,7 @@ public class MEMatterGeneratorBlockEntity extends AbstractMENodeBlockEntity {
          return TickRateModulation.SLOWER; // no room for matter: stop making it until there is
       }
 
-      long availableFe = (long)Math.min(4.0E18, (this.getAECurrentPower() + energy.extractAEPower(1.0E18, Actionable.SIMULATE, PowerMultiplier.ONE)) * MEMachineKind.FE_PER_AE);
+      long availableFe = (long)Math.min(4.0E18, this.availableAE(energy, 1.0E18) * MEMachineKind.FE_PER_AE);
       long budget = (long)MB_PER_TICK * ticks;
       // even with the whole discount a mB costs PRICE - MAX_DISCOUNT: no point looking at the network below that
       long byPower = Math.min(budget, availableFe / (PRICE - MAX_DISCOUNT));
@@ -160,7 +164,7 @@ public class MEMatterGeneratorBlockEntity extends AbstractMENodeBlockEntity {
          return;
       }
 
-      long inserted = StorageHelper.poweredInsert(energy, storage, matter, this.pendingMb, this.actionSource);
+      long inserted = this.insertResult(energy, storage, matter, this.pendingMb);
       if (inserted > 0) {
          this.pendingMb -= inserted;
          this.saveChanges();

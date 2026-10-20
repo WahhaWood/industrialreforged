@@ -14,6 +14,9 @@ import appeng.api.networking.security.IActionSource;
 import appeng.api.networking.ticking.IGridTickable;
 import appeng.api.networking.ticking.TickRateModulation;
 import appeng.api.networking.ticking.TickingRequest;
+import appeng.api.stacks.AEKey;
+import appeng.api.storage.MEStorage;
+import appeng.api.storage.StorageHelper;
 import appeng.blockentity.grid.AENetworkedBlockEntity;
 import appeng.me.energy.StoredEnergyAmount;
 import java.util.List;
@@ -54,6 +57,8 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
    public int lastOperations;
    /** Switched off from the GUI: no work, no energy from the network and none from cables into the buffer. */
    public boolean enabled = true;
+   /** Cables only: the machine pays from its own buffer and never draws AE from the network. Only for {@link #supportsCableOnly}. */
+   public boolean cableOnly;
 
    protected AbstractMENodeBlockEntity(BlockEntityType<?> type, BlockPos pos, BlockState state) {
       this(type, pos, state, BUFFER_AE);
@@ -72,6 +77,30 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
    protected abstract TickRateModulation doWork(IGrid grid, int ticks);
 
    protected abstract boolean hasWork();
+
+   /** Machines that can be switched to take no energy from the network (the big consumers); on by default. */
+   public boolean supportsCableOnly() {
+      return false;
+   }
+
+   public final void toggleCableOnly() {
+      if (!this.supportsCableOnly()) {
+         return;
+      }
+
+      this.cableOnly = !this.cableOnly;
+      this.saveChanges();
+      this.wake();
+   }
+
+   /** Inserts into the network, paying AE2's insert fee from the network unless in cable-only mode. */
+   protected final long insertResult(IEnergyService energy, MEStorage storage, AEKey what, long amount) {
+      if (this.cableOnly) {
+         return storage.insert(what, amount, Actionable.MODULATE, this.actionSource);
+      }
+
+      return StorageHelper.poweredInsert(energy, storage, what, amount, this.actionSource);
+   }
 
 
    /** Items held by the machine (queued inputs, undelivered outputs) that drop when it is broken. */
@@ -127,6 +156,7 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
       super.saveAdditional(tag, registries);
       tag.putDouble("me_buffer", this.buffer.getAmount());
       tag.putBoolean("me_enabled", this.enabled);
+      tag.putBoolean("me_cable_only", this.cableOnly);
    }
 
    @Override
@@ -134,6 +164,7 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
       super.loadTag(tag, registries);
       this.buffer.setStored(tag.getDouble("me_buffer"));
       this.enabled = !tag.contains("me_enabled") || tag.getBoolean("me_enabled");
+      this.cableOnly = this.supportsCableOnly() && (!tag.contains("me_cable_only") || tag.getBoolean("me_cable_only"));
    }
 
    // ---- FE input: any energy cable can charge the buffer, 2 FE = 1 AE ------------------------------
@@ -154,7 +185,7 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
          this.saveChanges();
       }
 
-      if (ae - own > 0) {
+      if (ae - own > 0 && !this.cableOnly) {
          energy.extractAEPower(ae - own, Actionable.MODULATE, PowerMultiplier.ONE);
       }
    }
@@ -162,7 +193,7 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
    /** How much of {@code ae} the machine can pay now: its own buffer and what the network would give for the rest. */
    protected final double availableAE(IEnergyService energy, double ae) {
       double own = Math.min(ae, this.buffer.getAmount());
-      return own + (ae - own > 0 ? energy.extractAEPower(ae - own, Actionable.SIMULATE, PowerMultiplier.ONE) : 0.0);
+      return own + (ae - own > 0 && !this.cableOnly ? energy.extractAEPower(ae - own, Actionable.SIMULATE, PowerMultiplier.ONE) : 0.0);
    }
 
    private final IEnergyStorage feInput = new IEnergyStorage() {
