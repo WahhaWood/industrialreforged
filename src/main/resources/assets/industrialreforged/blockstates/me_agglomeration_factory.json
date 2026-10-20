@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "industrialreforged:block/me/me_agglomeration_factory"
+    },
+    "facing=east": {
+      "model": "industrialreforged:block/me/me_agglomeration_factory",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "industrialreforged:block/me/me_agglomeration_factory",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "industrialreforged:block/me/me_agglomeration_factory",
+      "y": 270
+    }
+  }
+}

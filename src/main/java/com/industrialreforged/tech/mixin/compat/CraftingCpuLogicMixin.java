@@ -21,10 +21,10 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 /**
- * Crafting CPU: an ME machine takes a whole task in one push (see {@link MECraftingCpuHooks}).
+ * Crafting CPU: an ME machine (IR's, or one for Botania recipes) takes a whole task in one push (see {@link MECraftingCpuHooks}).
  * AdvancedAE's quantum computer runs a copy of AE2's CPU logic with the same method and local names,
  * so one wrapper serves both. Checked against AE2 19.2.17 and AdvancedAE 1.6.12 (javap: one
- * {@code pushPattern} call, locals {@code task}, {@code expectedOutputs}, {@code patternPower},
+ * {@code pushPattern} call, locals {@code task}, {@code expectedOutputs}, {@code expectedContainerItems}, {@code patternPower},
  * {@code pushedPatterns} in the LVT; both have {@code finishJob(boolean)}). Without a target it does nothing.
  */
 @Pseudo
@@ -50,6 +50,7 @@ public abstract class CraftingCpuLogicMixin {
       @Local(argsOnly = true) IEnergyService energy,
       @Local(name = "task") Map.Entry<IPatternDetails, ?> task,
       @Local(name = "expectedOutputs") KeyCounter expectedOutputs,
+      @Local(name = "expectedContainerItems") KeyCounter expectedContainerItems,
       @Local(name = "patternPower") LocalDoubleRef patternPower,
       @Local(name = "pushedPatterns") LocalIntRef pushedPatterns
    ) {
@@ -74,11 +75,11 @@ public abstract class CraftingCpuLogicMixin {
       TaskProgressAccessor progress = (TaskProgressAccessor)task.getValue();
       // AE2 takes this push off the task itself, so at most value - 1 more
       long extra = MECraftingCpuHooks.pushMore(
-         provider, details, inputs, progress.ir$getValue() - 1, this.inventory, energy, patternPower.get(), expectedOutputs
+         provider, inputs, progress.ir$getValue() - 1, this.inventory, energy, patternPower.get(), expectedOutputs, expectedContainerItems
       );
       if (extra > 0) {
          progress.ir$setValue(progress.ir$getValue() - extra);
-         // drawn by AE2 after this call, together with the expected outputs pushMore added
+         // drawn by AE2 after this call, together with the outputs and container items pushMore scaled
          patternPower.set(patternPower.get() * (extra + 1));
       }
 

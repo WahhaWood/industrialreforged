@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "industrialreforged:block/me/me_alfheim_market"
+    },
+    "facing=east": {
+      "model": "industrialreforged:block/me/me_alfheim_market",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "industrialreforged:block/me/me_alfheim_market",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "industrialreforged:block/me/me_alfheim_market",
+      "y": 270
+    }
+  }
+}

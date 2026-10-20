@@ -41,6 +41,7 @@ repo/
 
 # dedicated dev server dir
 run-server/
+run-gametest/
 
 # python bytecode from tools/ e2e tests and generators
 __pycache__/

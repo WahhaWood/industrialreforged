@@ -102,6 +102,18 @@ config="industrialreforged.tech.mixins.json"
     versionRange="${ae2_version_range}"
     ordering="AFTER"
     side="BOTH"
+# Botania: ME machines for Botania recipes (with AE2 and Botania Reforged's mana key)
+[[dependencies.${mod_id}]]
+    modId="botania"
+    type="optional"
+    versionRange="*"
+    ordering="AFTER"
+    side="BOTH"
+[[dependencies.${mod_id}]]
+    modId="jei"
+    type="optional"
+    versionRange="*"
+    side="BOTH"
 
 # Here's another dependency
 [[dependencies.${mod_id}]]

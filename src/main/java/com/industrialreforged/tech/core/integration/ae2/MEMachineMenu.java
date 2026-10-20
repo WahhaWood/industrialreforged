@@ -1,11 +1,13 @@
 package com.industrialreforged.tech.core.integration.ae2;
 
 import com.industrialreforged.menu.MenuBase;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
+import org.jetbrains.annotations.Nullable;
 
 /** ME machine GUI: no slots, only the recipe switches (sent as {@link MEMachineTogglePayload}) and status. */
-public class MEMachineMenu extends MenuBase<MEMachineBlockEntity> {
+public class MEMachineMenu extends MenuBase<MEMachineBlockEntity> implements METoggleMenu {
    /** Client copy of the machine's AE buffer. */
    public double buffer;
    public int lastOperations;
@@ -18,6 +20,11 @@ public class MEMachineMenu extends MenuBase<MEMachineBlockEntity> {
       this.addToSync(() -> entity.lastOperations, value -> this.lastOperations = value);
       this.addToSync(() -> entity.enabled ? 1 : 0, value -> this.enabled = value != 0);
       this.addToSync(() -> entity.cableOnly ? 1 : 0, value -> this.cableOnly = value != 0);
+   }
+
+   @Override
+   public void applyToggle(MEMachineTogglePayload.Action action, @Nullable ResourceLocation recipe) {
+      this.entity.applyToggle(action, recipe);
    }
 
    @Override

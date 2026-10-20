@@ -86,9 +86,6 @@ public class IR {
       IRCreativeTabs.REGISTRY.register(bus);
       IRArmorMaterials.REGISTRY.register(bus);
       IRSounds.REGISTRY.register(bus);
-      if (ModList.get().isLoaded("botania")) {
-         BotaniaIntegration.init();
-      }
       if (ModList.get().isLoaded("cable_facades")) {
          com.industrialreforged.tech.core.integration.cablefacades.CableFacadesIntegration.init();
       }
@@ -100,6 +97,9 @@ public class IR {
          } catch (LinkageError e) {
             log.error("AE2 integration disabled: incompatible AE2 version", e);
          }
+      }
+      if (ModList.get().isLoaded("botania")) {
+         BotaniaIntegration.init(bus, ae2Integration);
       }
 
       IndustrialReforged.registerMessage(KeyUpdatePacket.TYPE, KeyUpdatePacket::write, KeyUpdatePacket::new, PacketFlow.SERVERBOUND);

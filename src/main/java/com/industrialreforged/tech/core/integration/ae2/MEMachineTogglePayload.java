@@ -49,8 +49,8 @@ public class MEMachineTogglePayload extends BasePayload {
    @Override
    public void executeServer(ServerPlayer player) {
       // only the menu the player really has open, and only while it is still valid
-      if (player.containerMenu instanceof MEMachineMenu menu && menu.containerId == this.containerId && menu.stillValid(player)) {
-         menu.entity.applyToggle(this.action, this.recipe);
+      if (player.containerMenu instanceof METoggleMenu menu && player.containerMenu.containerId == this.containerId && player.containerMenu.stillValid(player)) {
+         menu.applyToggle(this.action, this.recipe);
       }
    }
 

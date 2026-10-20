@@ -40,7 +40,7 @@ import org.jetbrains.annotations.Nullable;
  * crafting CPU pushes, and processes up to {@value #OPERATIONS_PER_TICK} operations per tick, paying
  * the regular machine's FE per operation as AE (2 FE = 1 AE). Results go straight back into the network.
  */
-public class MEMachineBlockEntity extends AbstractMENodeBlockEntity implements ICraftingProvider {
+public class MEMachineBlockEntity extends AbstractMENodeBlockEntity implements ICraftingProvider, MEBulkMachine {
    /** Pushed operations the machine accepts before it reports busy: two work passes, so it never runs dry between CPU pushes. */
    private static final long MAX_QUEUED = 2L * OPERATIONS_PER_TICK * WORK_INTERVAL;
    /** Machines loaded on the server, refreshed when datapacks reload. */
@@ -221,13 +221,13 @@ public class MEMachineBlockEntity extends AbstractMENodeBlockEntity implements I
       return this.queued;
    }
 
-   /** Operations the queue still takes. */
-   long freeCapacity() {
+   @Override
+   public long freeCapacity() {
       return Math.max(0, MAX_QUEUED - this.queued);
    }
 
-   /** More copies of the push just accepted, inputs already taken from the CPU ({@link MECraftingCpuHooks#pushMore}). */
-   void acceptMore(long crafts) {
+   @Override
+   public void acceptMore(long crafts) {
       Job last = this.queue.peekLast();
       if (last != null && crafts > 0) {
          last.crafts += crafts;

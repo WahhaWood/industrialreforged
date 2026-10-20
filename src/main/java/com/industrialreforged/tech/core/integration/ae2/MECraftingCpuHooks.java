@@ -98,22 +98,23 @@ public final class MECraftingCpuHooks {
    }
 
    public static boolean isMEMachine(ICraftingProvider provider) {
-      return provider instanceof MEMachineBlockEntity;
+      return provider instanceof MEBulkMachine;
    }
 
    /**
-    * After AE2 pushed one craft of {@code details} into the ME machine {@code provider}: moves up to
-    * {@code limit} more copies of the same craft (same input items) from the CPU inventory into the machine,
-    * and adds their outputs to {@code expectedOutputs}, which AE2 then books as awaited. The caller scales
-    * the pattern power AE2 is about to draw and takes the returned count off the task.
+    * After AE2 pushed one craft into the ME machine {@code provider}: moves up to {@code limit} more copies
+    * of the same craft (same input keys) from the CPU inventory into the machine. {@code expectedOutputs} and
+    * {@code expectedContainerItems} hold what AE2 awaits from that one craft (results; returned catalysts and
+    * container leftovers); they are scaled to cover the extra crafts, and AE2 books them right after the push.
+    * The caller scales the pattern power AE2 is about to draw and takes the returned count off the task.
     *
     * @return how many more crafts the machine took, 0..limit
     */
    public static long pushMore(
-      ICraftingProvider provider, IPatternDetails details, KeyCounter[] inputs, long limit, ListCraftingInventory cpu,
-      IEnergyService energy, double patternPower, KeyCounter expectedOutputs
+      ICraftingProvider provider, KeyCounter[] inputs, long limit, ListCraftingInventory cpu,
+      IEnergyService energy, double patternPower, KeyCounter expectedOutputs, KeyCounter expectedContainerItems
    ) {
-      if (!(provider instanceof MEMachineBlockEntity machine) || limit <= 0) {
+      if (!(provider instanceof MEBulkMachine machine) || limit <= 0) {
          return 0;
       }
 
@@ -143,11 +144,18 @@ public final class MECraftingCpuHooks {
          cpu.extract(input.getKey(), input.getLongValue() * extra, Actionable.MODULATE);
       }
 
-      for (GenericStack output : details.getOutputs()) {
-         expectedOutputs.add(output.what(), output.amount() * extra);
-      }
-
+      scale(expectedOutputs, extra);
+      scale(expectedContainerItems, extra);
       machine.acceptMore(extra);
       return extra;
+   }
+
+   /** Adds {@code extra} more times what one craft put in {@code counter}. */
+   private static void scale(KeyCounter counter, long extra) {
+      KeyCounter one = new KeyCounter();
+      one.addAll(counter);
+      for (var entry : one) {
+         counter.add(entry.getKey(), entry.getLongValue() * extra);
+      }
    }
 }

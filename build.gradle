@@ -135,6 +135,8 @@ neoForge {
         gameTestServer {
             type = "gameTestServer"
             systemProperty 'neoforge.enabledGameTestNamespaces', project.mod_id
+            // own game dir: optional mods for integration tests (Botania Reforged, Patchouli, Curios) go to run-gametest/mods
+            gameDirectory = project.file('run-gametest')
         }
 
         data {
@@ -203,6 +205,10 @@ dependencies {
     // AE2: optional (ME machines), present in dev runs to test the integration
     compileOnly "org.appliedenergistics:appliedenergistics2:${ae2_version}"
     localRuntime "org.appliedenergistics:appliedenergistics2:${ae2_version}"
+
+    // Botania: optional (ME machines for Botania recipes). There is no 1.21.1 release on a maven; this upstream
+    // build has the same recipe API as Botania Reforged, the fork the pack runs
+    compileOnly "vazkii.botania:botania-xplat-1.21.1:${botania_build}"
 
     // Example project dependency using a sister or child project:
     // implementation project(":myproject")
