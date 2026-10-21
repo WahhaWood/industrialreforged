@@ -83,6 +83,7 @@
     { "id": "industrialreforged:me_metal_former", "required": false },
     { "id": "industrialreforged:me_thermal_centrifuge", "required": false },
     { "id": "industrialreforged:me_recycler", "required": false },
+    { "id": "industrialreforged:me_replicator", "required": false },
     { "id": "industrialreforged:me_matter_generator", "required": false },
     { "id": "industrialreforged:me_mana_infuser", "required": false },
     { "id": "industrialreforged:me_apothecary", "required": false },

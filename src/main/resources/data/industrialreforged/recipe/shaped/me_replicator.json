@@ -1,0 +1,33 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ae2"
+    }
+  ],
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "ae2:molecular_assembler"
+    },
+    "B": {
+      "item": "ae2:pattern_provider"
+    },
+    "M": {
+      "item": "industrialreforged:replicator"
+    },
+    "P": {
+      "item": "ae2:engineering_processor"
+    }
+  },
+  "pattern": [
+    "PAP",
+    " M ",
+    "PBP"
+  ],
+  "result": {
+    "count": 1,
+    "id": "industrialreforged:me_replicator"
+  }
+}

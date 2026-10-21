@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "industrialreforged:block/me/me_replicator",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "industrialreforged:block/me/me_replicator"
+    },
+    "facing=south": {
+      "model": "industrialreforged:block/me/me_replicator",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "industrialreforged:block/me/me_replicator",
+      "y": 270
+    }
+  }
+}

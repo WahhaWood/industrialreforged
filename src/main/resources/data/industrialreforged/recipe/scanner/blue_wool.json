@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 62,
+  "item": {
+    "count": 1,
+    "id": "minecraft:blue_wool"
+  }
+}

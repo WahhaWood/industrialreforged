@@ -152,6 +152,22 @@ def me_recycler_model():
     src.save(ASSETS / "block/me/me_recycler.png")
 
 
+def me_replicator_model():
+    """The ME macerator texture with its blue and violet tones turned magenta; greys and the frame stay."""
+    src = Image.open(ASSETS / "block/me/me_macerator.png").convert("RGBA")
+    px = src.load()
+    for y in range(src.height):
+        for x in range(src.width):
+            r, g, b, a = px[x, y]
+            h, s, v = colorsys.rgb_to_hsv(r / 255, g / 255, b / 255)
+            if a == 0 or s < 0.12:
+                continue
+            h = (h + 0.2) % 1.0
+            r2, g2, b2 = colorsys.hsv_to_rgb(h, min(1.0, s * 1.1), v)
+            px[x, y] = (round(r2 * 255), round(g2 * 255), round(b2 * 255), a)
+    src.save(ASSETS / "block/me/me_replicator.png")
+
+
 def me_matter_generator():
     im = Image.new("RGBA", (256, 256), (0, 0, 0, 0))
     panel(im, 176, 78)  # title y 6, four status rows at y 20, 32, 44, 56 (MEMatterGeneratorScreen)
@@ -178,6 +194,7 @@ if __name__ == "__main__":
     me_machine()
     me_recycler()
     me_recycler_model()
+    me_replicator_model()  # the GUI reuses me_recycler.png (same layout)
     me_matter_generator()
     me_matter_generator_model()
     print("written:", OUT / "me_machine.png", OUT / "me_recycler.png", ASSETS / "block/me/me_recycler.png")

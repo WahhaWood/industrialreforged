@@ -11,6 +11,7 @@
   "me_pattern_recipe": "src/main/java/com/industrialreforged/tech/core/integration/ae2/AE2Integration.java",
   "me_recipe_pattern": "src/main/java/com/industrialreforged/tech/core/integration/ae2/AE2Integration.java",
   "me_recycler": "src/main/java/com/industrialreforged/tech/core/integration/ae2/AE2Integration.java",
+  "me_replicator": "src/main/java/com/industrialreforged/tech/core/integration/ae2/AE2Integration.java",
   "me_thermal_centrifuge": "src/main/java/com/industrialreforged/tech/core/integration/ae2/MEMachineKind.java"
  },
  "block": {

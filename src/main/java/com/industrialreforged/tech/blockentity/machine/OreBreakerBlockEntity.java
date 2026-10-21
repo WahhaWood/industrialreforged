@@ -62,7 +62,7 @@ public class OreBreakerBlockEntity extends AbstractElectricMachineBlockEntity
 
    private static final int CAPACITY = 64_000;
    private static final int ENERGY_PER_TICK = 128;
-   private static final int BASE_TICKS = 60;
+   private static final int BASE_TICKS = 30;
    private static final int LANES = 9;
    /** Real drop rolls kept per ore and reused, see {@link #rollDrops}. */
    private static final int DROP_POOL = 32;

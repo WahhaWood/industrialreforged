@@ -29,6 +29,12 @@ public class ScannerGen implements IRecipeGen {
       ScannerRecipeBuilder.scan(Items.COAL, 91).save(consumer, IR.location("scanner/coal"));
       ScannerRecipeBuilder.scan(Items.LAPIS_LAZULI, 663).save(consumer, IR.location("scanner/lapis_lazuli"));
       ScannerRecipeBuilder.scan(Blocks.GRASS_BLOCK, 2635).save(consumer, IR.location("scanner/grass_block"));
+      // 62 UU = 2.5M FE in the replicator (40k FE per UU: 4M per mB of matter, 100 UU per mB, plus 51.2 FE of machine time)
+      for (net.minecraft.world.level.block.Block wool : new net.minecraft.world.level.block.Block[] {Blocks.WHITE_WOOL, Blocks.ORANGE_WOOL, Blocks.MAGENTA_WOOL, Blocks.LIGHT_BLUE_WOOL, Blocks.YELLOW_WOOL, Blocks.LIME_WOOL,
+         Blocks.PINK_WOOL, Blocks.GRAY_WOOL, Blocks.LIGHT_GRAY_WOOL, Blocks.CYAN_WOOL, Blocks.PURPLE_WOOL, Blocks.BLUE_WOOL, Blocks.BROWN_WOOL,
+         Blocks.GREEN_WOOL, Blocks.RED_WOOL, Blocks.BLACK_WOOL}) {
+         ScannerRecipeBuilder.scan(wool, 62).save(consumer, IR.location("scanner/" + net.minecraft.core.registries.BuiltInRegistries.BLOCK.getKey(wool).getPath()));
+      }
       ScannerRecipeBuilder.scan(Blocks.DIRT, 14).save(consumer, IR.location("scanner/dirt"));
       ScannerRecipeBuilder.scan(Blocks.COBBLESTONE, 1).save(consumer, IR.location("scanner/cobblestone"));
       ScannerRecipeBuilder.scan(Blocks.NETHERRACK, 11).save(consumer, IR.location("scanner/netherrack"));

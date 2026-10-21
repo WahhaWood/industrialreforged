@@ -61,6 +61,7 @@
     { "id": "industrialreforged:me_metal_former", "required": false },
     { "id": "industrialreforged:me_thermal_centrifuge", "required": false },
     { "id": "industrialreforged:me_recycler", "required": false },
+    { "id": "industrialreforged:me_replicator", "required": false },
     { "id": "industrialreforged:me_matter_generator", "required": false },
     "industrialreforged:extractor_1_level",
     "industrialreforged:extractor_2_level",
