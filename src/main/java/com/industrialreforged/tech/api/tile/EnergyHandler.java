@@ -11,7 +11,6 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 public class EnergyHandler extends BigEnergyStorage {
-   private static final int MAX_INT_CALLS = 4096;
    private final BlockEntity blockEntity;
    public final long defaultCapacity;
    public final long defaultReceiveTick;
@@ -72,31 +71,7 @@ public class EnergyHandler extends BigEnergyStorage {
       if (energy == null || !energy.canReceive()) {
          return 0L;
       } else {
-         if (energy instanceof BigEnergyStorage bigStorage) {
-            return bigStorage.receiveEnergy(amount, simulation);
-         }
-
-         // the int-based FE API moves at most 2^31-1 per call, so repeat until the neighbour takes less than offered
-         long moved = 0L;
-         for (int i = 0; i < MAX_INT_CALLS && moved < amount; i++) {
-            int chunk = (int)Math.min(amount - moved, 2147483647L);
-            int done = energy.receiveEnergy(chunk, simulation);
-            if (done <= 0) {
-               break;
-            }
-
-            moved += done;
-            if (done < chunk) {
-               break;
-            }
-
-            // a simulated call changes nothing, so a bounded storage would be counted twice
-            if (simulation && energy.getMaxEnergyStored() < Integer.MAX_VALUE) {
-               break;
-            }
-         }
-
-         return moved;
+         return com.industrialreforged.utils.EnergyUtils.receiveLong(energy, amount, simulation);
       }
    }
 

@@ -11,6 +11,8 @@ import net.neoforged.neoforge.energy.IEnergyStorage;
 import org.jetbrains.annotations.Nullable;
 
 public class EnergyUtils {
+   private static final int MAX_INT_CALLS = 4096;
+
    public static void transferEnergyAllNear(BlockEntity entity, IEnergyStorage basic) {
       transferEnergyAllNear(entity.getLevel(), entity.getBlockPos(), basic);
    }
@@ -86,10 +88,39 @@ public class EnergyUtils {
       if (energy == null || !energy.canReceive()) {
          return 0L;
       } else {
-         return energy instanceof BigEnergyStorage bigStorage
-            ? bigStorage.receiveEnergy(amount, simulation)
-            : energy.receiveEnergy((int)Math.min(amount, 2147483647L), simulation);
+         return receiveLong(energy, amount, simulation);
       }
+   }
+
+   /**
+    * The int-based FE API moves at most 2^31-1 per call, so a long amount is pushed by repeating the call
+    * until the neighbour takes less than offered.
+    */
+   public static long receiveLong(IEnergyStorage energy, long amount, boolean simulation) {
+      if (energy instanceof BigEnergyStorage bigStorage) {
+         return bigStorage.receiveEnergy(amount, simulation);
+      }
+
+      long moved = 0L;
+      for (int i = 0; i < MAX_INT_CALLS && moved < amount; i++) {
+         int chunk = (int)Math.min(amount - moved, 2147483647L);
+         int done = energy.receiveEnergy(chunk, simulation);
+         if (done <= 0) {
+            break;
+         }
+
+         moved += done;
+         if (done < chunk) {
+            break;
+         }
+
+         // a simulated call changes nothing, so a bounded storage would be counted twice
+         if (simulation && energy.getMaxEnergyStored() < Integer.MAX_VALUE) {
+            break;
+         }
+      }
+
+      return moved;
    }
 
    @Nullable
