@@ -1,0 +1,14 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 300,
+  "item": {
+    "count": 1,
+    "id": "alltheores:zinc_ingot"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alltheores"
+    }
+  ]
+}

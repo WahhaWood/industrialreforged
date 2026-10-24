@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 400,
+  "item": {
+    "count": 1,
+    "id": "minecraft:nether_gold_ore"
+  }
+}

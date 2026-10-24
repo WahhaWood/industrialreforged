@@ -1,6 +1,6 @@
 {
   "type": "industrialreforged:scanner",
-  "cost": 9999,
+  "cost": 6000,
   "item": {
     "count": 1,
     "id": "industrialreforged:iridium_ore"

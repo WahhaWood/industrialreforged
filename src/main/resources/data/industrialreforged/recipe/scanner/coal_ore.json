@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 182,
+  "item": {
+    "count": 1,
+    "id": "minecraft:coal_ore"
+  }
+}

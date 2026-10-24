@@ -43,7 +43,7 @@ public class ScannerGen implements IRecipeGen {
       ScannerRecipeBuilder.scan(Items.EMERALD, 40170).save(consumer, IR.location("scanner/emerald"));
       ScannerRecipeBuilder.scan(Items.QUARTZ, 3500).save(consumer, IR.location("scanner/quartz"));
       ScannerRecipeBuilder.scan((ItemLike)IRItems.PLUTONIUM.get(), 29130).save(consumer, IR.location("scanner/plutonium"));
-      ScannerRecipeBuilder.scan((ItemLike)IRItems.IRIDIUM_ORE.get(), 12000).save(consumer, IR.location("scanner/iridium_ore"));
+      ScannerRecipeBuilder.scan((ItemLike)IRItems.IRIDIUM_ORE.get(), 6000).save(consumer, IR.location("scanner/iridium_ore"));
       ScannerRecipeBuilder.scan(Items.CLAY_BALL, 2308).save(consumer, IR.location("scanner/clay_ball"));
       ScannerRecipeBuilder.scan(IRItems.STEEL_INGOT, 213).save(consumer, IR.location("scanner/steel_ingot"));
       ScannerRecipeBuilder.scan(Items.IRON_INGOT, 106).save(consumer, IR.location("scanner/iron_ingot"));
@@ -59,5 +59,16 @@ public class ScannerGen implements IRecipeGen {
       ScannerRecipeBuilder.scan(IRItems.NICKEL_INGOT, 507).save(consumer, IR.location("scanner/nickel_ingot"));
       ScannerRecipeBuilder.scan(Items.NETHER_STAR, 30000).save(consumer, IR.location("scanner/nether_star"));
       ScannerRecipeBuilder.scan((ItemLike)IRItems.RUBBER.get(), 140).save(consumer, IR.location("scanner/rubber"));
+      ScannerRecipeBuilder.scan(Blocks.COAL_ORE, 182).save(consumer, IR.location("scanner/coal_ore"));
+      ScannerRecipeBuilder.scan(Blocks.LAPIS_ORE, 4000).save(consumer, IR.location("scanner/lapis_ore"));
+      ScannerRecipeBuilder.scan(Blocks.REDSTONE_ORE, 600).save(consumer, IR.location("scanner/redstone_ore"));
+      ScannerRecipeBuilder.scan(Blocks.DIAMOND_ORE, 8882).save(consumer, IR.location("scanner/diamond_ore"));
+      ScannerRecipeBuilder.scan(Blocks.EMERALD_ORE, 80340).save(consumer, IR.location("scanner/emerald_ore"));
+      ScannerRecipeBuilder.scan(Blocks.NETHER_QUARTZ_ORE, 7000).save(consumer, IR.location("scanner/nether_quartz_ore"));
+      ScannerRecipeBuilder.scan(Blocks.NETHER_GOLD_ORE, 400).save(consumer, IR.location("scanner/nether_gold_ore"));
+      ScannerRecipeBuilder.scan(Blocks.ANCIENT_DEBRIS, 4000).save(consumer, IR.location("scanner/ancient_debris"));
+      ScannerRecipeBuilder.scan(Items.NETHERITE_SCRAP, 4000).save(consumer, IR.location("scanner/netherite_scrap"));
+      ScannerRecipeBuilder.scan(Items.NETHERITE_INGOT, 19400).save(consumer, IR.location("scanner/netherite_ingot"));
+      // alltheores ores and ingots live in plain JSON under recipe/scanner/alltheores_*.json (mod_loaded condition)
    }
 }

@@ -1,0 +1,14 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 4000,
+  "item": {
+    "count": 1,
+    "id": "alltheores:ruby_ore"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alltheores"
+    }
+  ]
+}

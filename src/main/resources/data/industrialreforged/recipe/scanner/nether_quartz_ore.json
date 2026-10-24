@@ -1,0 +1,8 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 7000,
+  "item": {
+    "count": 1,
+    "id": "minecraft:nether_quartz_ore"
+  }
+}
