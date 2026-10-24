@@ -1,0 +1,14 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 100,
+  "item": {
+    "count": 1,
+    "id": "alltheores:bronze_ingot"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alltheores"
+    }
+  ]
+}

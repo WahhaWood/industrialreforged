@@ -1,0 +1,14 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 174,
+  "item": {
+    "count": 1,
+    "id": "alltheores:tin_ore"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alltheores"
+    }
+  ]
+}

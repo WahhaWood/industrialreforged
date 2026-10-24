@@ -1,0 +1,14 @@
+{
+  "type": "industrialreforged:scanner",
+  "cost": 1114,
+  "item": {
+    "count": 1,
+    "id": "alltheores:lead_ore"
+  },
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "alltheores"
+    }
+  ]
+}
