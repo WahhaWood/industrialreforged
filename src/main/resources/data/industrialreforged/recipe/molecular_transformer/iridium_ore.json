@@ -1,6 +1,6 @@
 {
   "type": "industrialreforged:molecular_transformer",
-  "energy": 480000000,
+  "energy": 320000000,
   "input": {
     "item": "minecraft:iron_ingot"
   },

@@ -24,7 +24,7 @@ public class MolecularTransformerGen implements IRecipeGen {
       MolecularTransformerBuilder.transform(Items.NETHERRACK, 1, Items.GUNPOWDER, 2, 280000L).save(consumer, IR.location("molecular_transformer/gunpowder"));
       MolecularTransformerBuilder.transform(Items.COAL, IRItems.INDUSTRIAL_DIAMOND, 36000000L)
          .save(consumer, IR.location("molecular_transformer/industrial_diamond"));
-      MolecularTransformerBuilder.transform(Items.IRON_INGOT, IRItems.IRIDIUM_ORE, 480000000L)
+      MolecularTransformerBuilder.transform(Items.IRON_INGOT, IRItems.IRIDIUM_ORE, 320000000L)
          .save(consumer, IR.location("molecular_transformer/iridium_ore"));
       MolecularTransformerBuilder.transform(Items.BLUE_WOOL, Items.LAPIS_BLOCK, 2000000L).save(consumer, IR.location("molecular_transformer/lapis_block"));
       MolecularTransformerBuilder.transform(Items.ROTTEN_FLESH, Items.LEATHER, 40000L).save(consumer, IR.location("molecular_transformer/leather"));

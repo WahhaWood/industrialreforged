@@ -31,8 +31,8 @@ import org.jetbrains.annotations.Nullable;
  */
 public class MEReplicatorBlockEntity extends AbstractMENodeBlockEntity {
    public static final int SAMPLES = 18;
-   /** Items made per tick at most, on average. */
-   public static final int ITEMS_PER_TICK = 256;
+   /** Effectively unlimited: the real bounds are power, matter and network room. */
+   public static final int ITEMS_PER_TICK = Integer.MAX_VALUE;
    /** UU units in 1 mB of matter (the regular replicator drains 1 mB per 100 units). */
    public static final int UU_PER_MB = 100;
    /** FE per UU unit in the regular replicator: 512 FE per tick at 10 units per tick. */

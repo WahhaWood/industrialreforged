@@ -41,7 +41,7 @@ public class MEMatterGeneratorScreen extends AbstractContainerScreen<MEMatterGen
       graphics.drawString(this.font, MEMachineScreen.fitTitle(this.font, this.title, this.imageWidth - 80), 8, 6, 0x404040, false);
       this.line(graphics, 20, "gui.industrialreforged.me_machine.buffer", MEMachineScreen.bufferValue(this.menu.buffer, this.menu.entity.getAEMaxPower()).getString());
       this.line(graphics, 32, "gui.industrialreforged.me_matter.produced", NumberUtils.formatToSi(this.menu.produced) + " mB");
-      this.line(graphics, 44, "gui.industrialreforged.me_matter.per_tick", this.menu.lastOperations + " / " + MEMatterGeneratorBlockEntity.MB_PER_TICK);
+      this.line(graphics, 44, "gui.industrialreforged.me_matter.per_tick", this.menu.lastOperations + " / \u221e");
       this.line(graphics, 56, "gui.industrialreforged.me_matter.saved", NumberUtils.formatToSi(this.menu.saved) + " FE");
    }
 

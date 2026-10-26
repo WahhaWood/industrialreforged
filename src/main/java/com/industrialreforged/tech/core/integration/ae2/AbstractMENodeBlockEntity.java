@@ -44,7 +44,7 @@ public abstract class AbstractMENodeBlockEntity extends AENetworkedBlockEntity i
    /** Buffer of the ME molecular transformer, AE: a single recipe of it can cost millions of AE. */
    public static final double MOLECULAR_BUFFER_AE = 100_000_000_000.0;
    /** Upper bound of operations (items) one machine handles per tick, on average. */
-   public static final int OPERATIONS_PER_TICK = 1024;
+   public static final int OPERATIONS_PER_TICK = 4096;
    /**
     * Ticks between two work passes of a busy machine; a pass does the work of the ticks since the last one.
     * Every pass talks to the network (power, inserting results), so batching cuts that cost by this factor.

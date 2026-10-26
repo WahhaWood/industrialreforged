@@ -32,7 +32,7 @@ import org.jetbrains.annotations.Nullable;
 public class MERecyclerBlockEntity extends AbstractMENodeBlockEntity {
    public static final int SAMPLES = 18;
    /** Items eaten per tick, above the crafting machines' {@link #OPERATIONS_PER_TICK}: a sample is one network extraction whatever the amount. */
-   public static final int ITEMS_PER_TICK = 8192;
+   public static final int ITEMS_PER_TICK = 32768;
    /** Ticks a sample that is not in the network waits before the next search. */
    private static final int EMPTY_PAUSE = 20;
    /** AE per recycled item: the regular recycler's FE per operation at 2 FE = 1 AE (22.5). */

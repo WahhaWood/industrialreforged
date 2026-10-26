@@ -44,7 +44,7 @@ public class MEReplicatorScreen extends AbstractContainerScreen<MEReplicatorMenu
             Component.translatable("gui.industrialreforged.me_replicator.replicated"),
             Component.literal(NumberUtils.formatToSi(this.menu.replicated)),
             Component.translatable("gui.industrialreforged.me_replicator.per_tick"),
-            Component.literal(this.menu.lastOperations + " / " + MEReplicatorBlockEntity.ITEMS_PER_TICK)
+            Component.literal(this.menu.lastOperations + " / \u221e")
          )
       );
    }

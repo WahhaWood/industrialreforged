@@ -31,8 +31,8 @@ import org.jetbrains.annotations.Nullable;
 public class MEMatterGeneratorBlockEntity extends AbstractMENodeBlockEntity {
    /** AE the buffer holds: a trillion times a single ME machine's, so a cable never finds it full. */
    public static final double BUFFER_AE = 1.0E15;
-   /** Most mB made per tick, on average. */
-   public static final int MB_PER_TICK = 1024;
+   /** Effectively unlimited: the real bounds are power and network room. */
+   public static final int MB_PER_TICK = Integer.MAX_VALUE;
    private static final long BOX_VALUE = MatterGeneratorBlockEntity.SCRAP_BOX_VALUE;
    private static final long SCRAP_VALUE = MatterGeneratorBlockEntity.SCRAP_VALUE;
    private static final long PRICE = MatterGeneratorBlockEntity.ENERGY_PER_MB;
